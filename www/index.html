@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+	<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- <script src="js/zepto.min.js"></script> -->
+    <script src="js/jquery-1.7.1.js"></script>
+    <script src="js/jquery.animate-enhanced.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/noClickDelay.js"></script>
+    <script src="js/jquery.address-1.4.js"></script>
+    
+    <link rel="stylesheet" href="css/viewnavigator.css" type="text/css" />
+    <script src="js/viewnavigator.js"></script>
+
+	  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+	  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+	  <title>City Art Fest 2011</title>
+    
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    
+    <script src="js/date.format.js"></script>
+    <script src="js/phonegap-1.0.0.js"></script>
+    <script src="js/lawnchair-0.6.1.min.js"></script>
+		<script src="js/underscore-min.js"></script>
+		<script src="js/backbone-min.js"></script>
+
+    
+    
+    <!-- <script src="js/mainsocial-combined.min.js" type="text/javascript" charset="utf-8"></script> -->
+    
+    <script src="js/category.js"></script>
+    <script src="js/category-footer-list-view.js"></script>
+
+    <script src="js/artist.js"></script>
+    <script src="js/artist-view.js"></script>
+    <script src="js/artist-list-view.js"></script>
+    <script src="js/artists-view.js"></script>
+    <script src="js/event.js"></script>
+    <script src="js/event-view.js"></script>
+    <script src="js/event-list-view.js"></script>
+    <script src="js/events-by-day-list-view.js"></script>
+    <script src="js/events-by-day-view.js"></script>
+    <script src="js/events-view.js"></script>
+    
+    <script src="js/sponsor.js"></script>
+    <script src="js/sponsor-view.js"></script>
+    <script src="js/sponsor-list-view.js"></script>
+    <script src="js/sponsors-view.js"></script>
+
+    <script src="js/venue.js"></script>
+    <script src="js/venue-view.js"></script>
+    <script src="js/venue-list-view.js"></script>
+    <script src="js/venues-view.js"></script>
+    
+    <script src="js/festival.js"></script>
+    <script src="js/festival-view.js"></script>
+    <script src="js/festival-view-button.js"></script>
+    <script src="js/festival-router.js"></script>
+    
+    <script src="js/twitter-view.js"></script>
+    <script src="js/info.js"></script>
+    <script src="js/info-view.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <!--<script src="js/twitter.widget.js"></script>-->
+    
+    <script src="js/iscroll.js"></script>
+
+		<script>
+						
+			$(document).ready(function() {			  
+
+        onLoad();
+
+        window.viewNavigator = new ViewNavigator('body'); 
+
+        var hasLoadedData = false;
+        var postDataLoad = function(data){
+          if (!hasLoadedData) {
+            hasLoadedData = true;
+            loadData(data);
+          }
+        };
+
+        // var storeCache = new FileReader(); 
+        // storeCache.onload = function(jsonData){
+        //   console.log("storeCache.onload!");
+        //   var data = JSON.parse(jsonData);
+
+        // }; 
+        // storeCache.onerror = function(err){ 
+        //   debug.error(err); 
+        // }; 
+        // storeCache.readAsText('cityarts.json'); 
+
+
+
+        //TODO apparently there is no JSON object in Android 1.5 + 1.6.
+        //(source: https://groups.google.com/forum/?fromgroups#!topic/phonegap/OtiUFqjhW_E%5B1-25%5D)
+
+        var storedData = window.localStorage.getItem("festivalData");
+        if (storedData) {
+          console.log("from local data!");
+          postDataLoad(JSON.parse(storedData));
+        }
+
+        $.ajax({
+          dataType: "jsonp",
+          jsonpCallback: "jsonp1",
+          url:'http://www.mainsocial.com/fest/cityarts.json?callback=?',
+          success: function(data) {
+            postDataLoad(data);
+            window.localStorage.setItem("festivalData",JSON.stringify(data));
+          }
+        });
+
+
+			  
+			  // TODO most of what is in loadData should be in window.festival constructor
+  			function loadData(data) {
+  			  var i,j,row,tab,eventDay;
+   				window.festival = new Festival(data);
+   			  window.festivalRouter = new FestivalRouter( { model : window.festival } );
+          window.festivalView = new FestivalView( { model : window.festival, router : window.festivalRouter } ); 
+          window.festivalView.render();
+
+          Backbone.history.start();
+
+          window.artistsView = new ArtistsView({
+            router : window.festivalRouter
+          });
+          window.artistsView.render();
+
+          window.eventsByDayView = new EventsByDayView( { festival : festival } );
+          window.eventsByDayView.render();
+
+
+          window.sponsorsView = new SponsorsView( { festival: festival });
+          window.sponsorsView.render();
+
+          window.venuesView = new VenuesView({ festival: festival });
+          window.venuesView.render();
+           
+           // //TODO remove the below.
+           // //create a view for the events-by-day div. populate the category footer in there.
+           // //create a view for the category footer. use it all over.
+           // festival.categories.forEach(function(c) {
+           //   tab = new CategoryFooterListView( { model : c } );
+           //   $("#legend").append(tab.render().el);
+           // });
+
+          window.infoView = new InfoView( { model : festival.get("info") } );
+          window.infoView.render();
+
+          window.twitterView = new TwitterView( { search : "@NewFormsFest" } ); //festival.get("twitter").search });
+          //window.twitterView.render(); 
+       
+        }
+        
+        $('.page').css('height', window.innerHeight);
+        
+			});
+      
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

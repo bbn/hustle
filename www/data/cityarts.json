@@ -1,0 +1,2119 @@
+jsonp1({
+    "twitter": {
+        "search": "city_arts_fest"
+    },
+    "sponsors": [
+        {
+            "name": "Heineken",
+            "url": "http://www.heineken.com",
+            "image": "heineken.png",
+            "id": 1
+        },
+        {
+            "name": "Verizon",
+            "url": "http://www.verizonwireless.com/",
+            "image": "verizon.png",
+            "id": 2
+        },
+        {
+            "name": "Sailor Jerry",
+            "url": "http://sailorjerry.com/",
+            "image": "sailorjerry.png",
+            "id": 3
+        },
+        {
+            "name": "Tullamore Dew",
+            "url": "http://www.tullamoredew.com/",
+            "image": "tullamore_dew.png",
+            "id": 4
+        },
+        {
+            "name": "vitaminwater",
+            "url": "http://www.vitaminwater.com/",
+            "image": "vitaminwater.png",
+            "id": 5
+        },
+        {
+            "name": "Alaska Airlines",
+            "url": "http://www.alaskaair.com/",
+            "image": "alaska_airlines.png",
+            "id": 6
+        },
+        {
+            "name": "Sound Transit",
+            "url": "http://www.soundtransit.org/",
+            "image": "sound_transit.png",
+            "id": 7
+        },
+        {
+            "name": "Segura Viudas",
+            "url": "http://www.seguraviudasusa.com/",
+            "image": "segura_viudas.png",
+            "id": 8
+        },
+        {
+            "name": "KEXP",
+            "url": "http://kexp.org/",
+            "image": "kexp.png",
+            "id": 9
+        },
+        {
+            "name": "The End",
+            "url": "http://www.1077theend.com/",
+            "image": "the_end.png",
+            "id": 10
+        },
+        {
+            "name": "PosterGIANT",
+            "url": "http://www.postergiant.net/",
+            "image": "postergiant.png",
+            "id": 11
+        },
+        {
+            "name": "QFC",
+            "url": "http://www.qfc.com/",
+            "image": "qfc.png",
+            "id": 12
+        }
+    ],
+    "info": {
+        "name": "City Arts Fest 2011",
+        "twitter": "city_arts_fest",
+        "ticketinfo": "<h3>3-Day, All Access Wristbands starting at $69 on sale now!</h3><br>General admission wristbands will give you free access to all Heineken City Arts Fest events and concerts with a dedicated line for entry and the assurance that every venue reserves a large portion of the room for wristband holders.<br><br>You are free to move from venue to venue with no cover charge throughout the festival to see all the music and arts events on our schedule.<br><br> VIP wristbands send you to the front of the lines, allow you entry to the private opening night party on October 19th at Union Station (which will feature special live music guests and art installations, as well as food and a hosted bar) and also entry to the closing night event on October 22. VIP wristbands also gain you access to VIP-only areas at select venues during the festival. You also receive the coveted festival swag-bag full of goodness and cheer. <br><br> Single tickets to events are also available. Please consult the festival schedule page for link to individual show purchases at that time. <br><br> Many festival venues are 21+ and a wristband alone won't allow you access into these venues-you must have valid ID, as well. Our largest venues, Benaroya Hall, Paramount The Moore Theater, Showbox Sodo and The Neptune are all-ages venues every night. Showbox Market is all ages on Friday night. Please review venues and event restrictions. You must be 21+ to purchase a VIP wristband. <br><br> You can purchase tickets by phone during normal business hours by calling 888-377-4510<br><br><a href='http://www.cityartsfest.com/grid/caf-grid.pdf'>Check out the pdf fest schedule here.</a><br><br>",
+        "about": "<h3>CITY ARTS FEST! 50+ UNFORGETTABLE EVENTS. 20+ ICONIC VENUES. 1 AMAZING CITY.</h3>",
+        "url": "http://www.cityartsfest.com/"
+    },
+    "artists": [
+        {
+            "name": "Alexandra Roxo",
+            "url": "",
+            "image": "alexandra-roxo.jpg",
+            "blurb": "Alexandra Roxo is a filmmaker and artist living in Brooklyn, NY. Her Seattle-made experimental films have shown in festivals and galleries around the world including the Free Sheep Foundation, The A.I.R. Biennial in NYC, The New Filmmakers series at the Anthology Film Archives, The Pictures Series in London and Edinburgh and more. She recently co-wrote and directed her first narrative feature film, Mary Marie which premiered at the Brooklyn Film Festival where it received an award for Best Cinematography and was featured in publications such as Wall St Journal, Variety Magazine, Huffington Post, AM NY, NY Press, L Magazine, IndieWire, Cinespect, Twitch Film, and many more. Her fashion films for Suzanne Rae and STUDY NY have screened at Lincoln Center, on NBC NY, and at Fashion's Night Out. New York Magazine called Roxo's work 'sultry' and 'haunting.'",
+            "id": 1
+        },
+        {
+            "name": "Allen Stone",
+            "url": "",
+            "image": "allen-stone.jpg",
+            "blurb": "From backwoods barbecues and community gatherings; Allen Stone emerges to share personal melodies, telling his tales of life after just 23 years. Getting his start singing at his father's church in small-town America, it wasn't until later when introduced to the greats of soul music (Marvin Gaye, Aretha Franklin) and then to the confessional lyrical fashion of the 60's -70's singer/ songwriters did music begin to ignite intense passion, eventually carrying this boy to a musical home.",
+            "id": 2
+        },
+        {
+            "name": "Amanda Manitach",
+            "url": "http://www.amandamanitach.com/",
+            "image": "amanda-manitach.jpg",
+            "blurb": "Amanda Manitach is a Seattle-based artist and independent curator.  Her artistic interests include use of parataxis, repetition, and absurdity through excess in language, drawing, and installation. As a curator and facilitator she is interested in the activation of unused or unusual spaces around Seattle as well as forging connections between Seattle and other regional and international art communities.",
+            "id": 3
+        },
+        {
+            "name": "Amy O'Neal",
+            "url": "",
+            "image": "amy-o-neal.jpg",
+            "blurb": "Amy O'Neal is a performer, choreographer, dance educator, and the creator of AmyO/tinyrage. (tinyrage.com)  AmyO/tinyrage has been presented by the TBA Festival 2009, On the Boards Northwest New Works Festival 2010, Northwest Film Forum 2010, and Seattle Theater Group 2011.  From 2000-2010, Amy was co-director of locust (music/dance/video) with musician/composer Zeke Keeble.  locust was presented by On the Boards (Seattle, WA), Seattle Theater Group at the Moore Theater (Seattle, WA), The Myrna Loy Center (Helena, MT), Jacob's Pillow Inside/Out (Becket, MA), Joyce Soho (New York, NY), TBA Festival (Portland, OR), Bates Dance Festival (Lewiston, ME), University of Montana (Missoula, MT), SUSHI Performing Arts (San Diego, CA), the Southern Theater (Minneapolis, MN), ODC Theater (San Francisco), Kyoto Arts Center (Kyoto, Japan), Next Moment Film Festival (Tokyo, Japan), and UNAM Danza sin Fronteras (Mexico City, Mexico).",
+            "id": 4
+        },
+        {
+            "name": "Big Spider's Back",
+            "url": "http://bigspidersback.com/",
+            "image": "big-spiders-back.jpg",
+            "blurb": "Beginning as a bedroom recording project in Seattle over the summer of  2007, electronic artist Big Spider's Back has amassed a growing following in the Northwest music community, along with his newly adopted home in Brooklyn. Combining haunting vocals with swirling layers of lo-fi psychedelia, synthesizers and field recordings, his music alternates between soaring crescendos and dense thickets of electronic ambience. The result is one big, blissed out cacophony. ",
+            "id": 5
+        },
+        {
+            "name": "Birthday Suits",
+            "url": "http://www.niceandneatrecords.com/",
+            "image": "birthday-suits.jpg",
+            "blurb": "Since their debut in 2005, the Minneapolis-based duo of Matthew Kazama and Hideo Takahashi has excelled at tossing elements of late-‘90s mathcore and classic Reagan-era punk against the wall with disarming power and impressively fresh results. Their latest release, The Minnesota: Mouth To Mouth (Nice and Neat Records), sticks to that formula, but with a smidge more spit-polish shining up their succinct sense of melody. The Birthday Suits' biggest asset remains the way their blurry-but-brilliant mix of sharp edges and curvy hooks matches up neatly with their dark-humored lyrics and stage presence that feels as gleeful as it does dangerous. Fans of Future of the Left and No Means No will not be disappointed. <br> - Hannah Levin, The Weekly",
+            "id": 6
+        },
+        {
+            "name": "Black Whales",
+            "url": "http://www.blackwhales.com/",
+            "image": "black-whales.jpg",
+            "blurb": "Black Whales (black * whAYles), n. : Flowers on drugs, warm-hearted spaghetti-westerns, reverb-soaked, tubey riffs in the hay amidst an organized chaos of booming and danceable rhythms, honey-sticky melodics, jangly guitar hooks, tambourines, shaker magic.",
+            "id": 7
+        },
+        {
+            "name": "Blackalicious",
+            "url": "http://www.blackalicious.com/",
+            "image": "blackalicious.jpg",
+            "blurb": "For its fifth release, Blackalicious has created a record of such sonic depth and breadth and lyrical ambition that it can proudly stand alongside the work of Bay Area funk fathers Sly Stone and Shuggie Otis, or hip-hop classics like Outkast's Aquemini, The Roots' Things Fall Apart and Gang Starr's Daily Operation. But The Craft is not nostalgia for some 'golden era' that never existed, it represents state-of-the-art hip-hop with an expansive worldview.",
+            "id": 8
+        },
+        {
+            "name": "Blue Sky Black Death",
+            "url": "http://www.myspace.com/blueskyblackdeath",
+            "image": "blue-sky-black-death.jpg",
+            "blurb": "Blue Sky Black Death (abbreviated BSBD) is a production duo based in Seattle,Washington. The duo consists of Kingston (full name Kingston Maguire) and Young God (real name Ian Taggart). They are known principally for their hip hop and instrumentalmusic, made with a mix of live instrumentation and sampling. Their name is 'a skydiving phrase alluding to beauty and death'.",
+            "id": 9
+        },
+        {
+            "name": "Boxer Rebellion",
+            "url": "http://theboxerrebellion.com/",
+            "image": "boxer-rebellion.jpg",
+            "blurb": "'In an industry replete with egoism, showmanship and self-aggrandisement, the Boxer Rebellion have always remained refreshingly understated, whilst producing a musical output that is anything but. Comprising a line-up that neither eschews nor basks in the spotlight, what you get with this band more than any other is a sense of shared purpose -- a unity impervious to external influence or critical sloganeering, which divides itself into equally vital parts of a greater whole.' <br> - Stephen Brolan",
+            "id": 10
+        },
+        {
+            "name": "Brain Fruit",
+            "url": "http://www.myspace.com/brainfruitmusic",
+            "image": "brain-fruit.jpg",
+            "blurb": "Brain Fruit is electronic duo Christopher Owen Davis and Jonathan James Carr hijacking the human transport and driving it into sustained temporal anomaly. A motorik synthesizer drum palette that smooths your body into the choral liquid peripheral. Enjoy. ",
+            "id": 11
+        },
+        {
+            "name": "Brendan Kiley",
+            "url": "",
+            "image": "brendan-kiley.jpg",
+            "blurb": "Brendan Kiley is a writer and editor at The Stranger. ",
+            "id": 12
+        },
+        {
+            "name": "Bryan John Appleby",
+            "url": "http://www.facebook.com/bryanjohnappleby",
+            "image": "brian-john-appleby.jpg",
+            "blurb": "Bryan John Appleby spent winter and spring of this year holed up with close friends in a Ballard warehouse beating pots, plucking strings, tapping mason jars, and plunking pianos. What emerged from these musical ramblings? The long awaited debut full-length, Fire on the Vine. ",
+            "id": 13
+        },
+        {
+            "name": "Built to Spill",
+            "url": "http://www.builttospill.com/",
+            "image": "built-to-spill.jpg",
+            "blurb": "For over twenty years, Doug Martsch has been writing and recording music. Built to Spill members Brett Nelson (bass), Scott Plouf (drums) Jim Roth (guitar), and Brett Netson (guitar) have all been musicians for two decades. That adds up to more than a century. Doug's strong aesthetic combines with the band members' mix of approaches to create an aural topography. Doug sets course and navigates. Each member of Built to Spill comes to the music with a different set of expectations and ideals. <br><br> With the complexity and variety of music they have created, Built to Spill endeavors to make songs interesting to themselves and their audience. They hope that the band will remain special and that people will discover the music for themselves. Year after year, new fans show up. Just like the band members, listeners come to the music with expectations and ideals. They make up their own ideas about the songs.",
+            "id": 14
+        },
+        {
+            "name": "Campfire OK",
+            "url": "http://www.myspace.com/campfireok",
+            "image": "campfire-ok.jpg",
+            "blurb": "Campfire OK is a band that's doing it. A team of wise artists and skilled crafts people who have joined with a vision. We are independently supported, community-based adventurers and we are coming to your town.",
+            "id": 15
+        },
+        {
+            "name": "CAPSULA",
+            "url": "http://www.capsula.org/",
+            "image": "capsula.jpg",
+            "blurb": "Since forming in Buenos Aires, South America, Capsula have been on a mission to secure their position as one of the best live bands of our generation, crossing the globe and generating worldwide acclaim. <br><br> The band are based out of Bilbao, Basque Country, just north of Spain, though the hard touring trio are rarely home. Creating a whirlwind of psychedelic wonder and punk rock fury, their music roars with a combination of garage rock toughness and modern style that have earned the band comparisons from The Stooges and The Pixies to Sonic Youth and Black Rebel Motorcycle Club.",
+            "id": 16
+        },
+        {
+            "name": "Casey Curran ",
+            "url": "",
+            "image": "casey-curran.jpg",
+            "blurb": "Casey Curran's interactive sculptures center around the underlying structure of life systems. Highlighting semiotic relationships and Structuralist philosophy, he creates sculptures through physically moving archetypes and naturally bound forms. Associations between literature, philosophy, nature and sexuality are often the focus of these kinetic environments.",
+            "id": 17
+        },
+        {
+            "name": "Cataldo",
+            "url": "http://cataldomusic.com/",
+            "image": "cataldo.jpg",
+            "blurb": "'Let's begin at the end of a bad year, with bad things at my back…' So begins Prison Boxing, the third full length recording from Seattle's Eric Anderson. Recording under the name Cataldo, Anderson marries clever wordplay, lacking in pretension, to immediately arresting indie pop with an effortless grace. This record is, as many are, about a relationship ending. Prison boxing. Feeling trapped, inescapably someone's opponent while also their comrade. Though, really, that's more prologue than preoccupation, more a setting for the real drama: a reckoning of what you are when you're alone. ",
+            "id": 18
+        },
+        {
+            "name": "Charles Krafft",
+            "url": "",
+            "image": "charles-krafft.jpg",
+            "blurb": "Charles Krafft's reputation and body of work has existed on the periphery of the academic dialogue on contemporary American fine art and crafts for some time. But this is changing, as ceramics is being discovered and embraced by new generations of multi-media artists who have stumbled on his work in uPDTart 'low brow' art galleries or in lifestyle magazines that cater to the intemperately tattooed set. He has captured their attention by taking the prosaic Dutch delft tradition of blue and white low fired earthenware and turning into a vehicle for biting sarcasm about war, street violence and the egregious manipulation of news and history. <br><br> A self-taught painter in the tradition of the auto-didactic masters of the 'Northwest School.' Krafft hitched his wagon in mid-career to the pop culture legacy of the gifted American hot rod hero Von Dutch and the dense postmodern retro-avantgardism of Slovenia's NSK collective. This odd mix propelled him beyond regional respectability into international visibility.",
+            "id": 19
+        },
+        {
+            "name": "Chromo-A-Matic",
+            "url": "",
+            "image": "chromamatic.jpg",
+            "blurb": "Chrom-A-Matic is a visual art collaborative born of late night cabarets.  Featuring the talents of Cyn Moore, Trilby Hainstock, Susannah Anderson, and Jennifer Law, they have been entertaining audiences with their live paint on paint action since 2006 at Annex's Spin the Bottle, the Stay Up Late show at ConWorks, Ukelooza at Re-bar, and Northwest Filmforum's Annual Gala.  By day these painters create scenery for local theaters (Seattle Children's Theatre, the theatre formerly known as Intiman, Seattle Opera, and Annex Theatre), create digital environments, and create extraordinary one-of-a-kind jewelry and fine crafts. Chrom-A-Matic is thrilled to be a part of the City Arts Festival.",
+            "id": 20
+        },
+        {
+            "name": "Cobirds Unite",
+            "url": "http://www.rustywilloughby.com/",
+            "image": "cobirds-unite.jpg",
+            "blurb": "Having crafted records for Sub Pop, Sony, and Frontier since 1982, the shy, reclusive Pacific Northwesterner Rusty Willoughby is well loved and cult-followed for his trio of rock/pop bands Pure Joy, Flop and Llama. For his album of lo-electricity duet recordings on Local 638 Records, Willoughby set out to channel his folk influences. <br><br> Notable musicians from Seattle to Denmark took part of the beautifully creative studio sessions. Willoughby is rounded out by a brilliant cast of musicians that includes Johnny Sangster (Tripwires), Barb Hunter (Afghan Whigs), Maggie Bjorklund (Mark Lanegan), and Rachel Flotard (Visqueen). Cobirds Unite has become the name of the band when these musicians play out together. The band has as been snapped up to support the likes of Black Francis, Chrissie Hynde and Bob Mould. They are expecting album number two in 2012.",
+            "id": 21
+        },
+        {
+            "name": "Crypts",
+            "url": "http://www.facebook.com/Cryptsss",
+            "image": "crypts.jpg",
+            "blurb": "CRYPTS are a three piece spawned from the bowels of Seattle, WA. Only together for 7 months, Steve - vocals/chaos, Bryce - synth/beats, Nick - synth/visuals, have acquired a following of millions. <br><br> A message from the CRYPTS: <br><br> 'CRYPTS sees the underground music SEEN as becoming stagnant and more accessible toward commercial MAJOR LABEL interests. Do CRYPTS want to change this? No way! We want to cash in and suck ass up to the big wigs in hopes that we too can get High and Fuck. Soon we will be coming to your town and asking if we can stay at your house and use your friends. Soon we will do encores of Evenflow and Smells Like Teen Spirit at benefit concerts with all our celebrity friends. <br><br> CRYPTS are completely fucked. <br><br> Goodbye.'",
+            "id": 22
+        },
+        {
+            "name": "Crystal Castles",
+            "url": "http://www.myspace.com/crystalcastles",
+            "image": "crystal-castles.jpg",
+            "blurb": "Since forming in the summer of 2004, Crystal Castles, the Toronto, Ontario-based duo of Ethan Kath and Alice Glass began their cult following by releasing a slew of limited edition singles (which sold out immediately), and shows packed solely from word of mouth.  By the time their self-titled debut album was released in 2008, the duo has amassed thousands of international fans from their enigmatic persona -- equally immediate as their unique brand of intense, uncompromising electronic dance music.",
+            "id": 23
+        },
+        {
+            "name": "D. K. Pan",
+            "url": "",
+            "image": "d-k-pan.jpg",
+            "blurb": "D.K. Pan is a Seattle-based performer, installation artist, and curator. D.K.'s performance background includes solo works and directorial productions in dance/theater/Butoh/performance art; and has toured internationally with the Degenerate Art Ensemble, Infernal Noise Brigade, and P.A.N. (of which he was the founding Artistic Director). D.K.'s installation projects often includes video, sculptural/architectural elements, and the body. As an extension to his artistic practice, he is the Co-founder and Director of Free Sheep Foundation, which transforms disused built environments into venues for cultural production. Free Sheep has curated intervention projects at the Bridge Motel (with Seattle School), Moore Inside Out, Tubs Memorial Project, The Belmont, and Third & Battery Project. D.K. also continues to work on film/video projects as an actor and generative artist, and currently, is the Lead Artist/Curator for the STart (Sound Transit Art Program) Capitol Hill Wall Project - aka 'The Red Wall'. D.K.'s belief in the role of art as a catalyst for social change challenges him to explore various mediums and participate in diverse creative endeavors.",
+            "id": 24
+        },
+        {
+            "name": "Dance Belt",
+            "url": "",
+            "image": "dancebelt.jpg",
+            "blurb": "DANCE BELT celebrates iconic pop-culture dance phenomenon through tribute performances, dance education and participatory workshops. Embracing an American art of appropriation, this electric trio bridge and blur music video, social dance, cabaret performance, YouTube culture and gender. The currency is choreography. The aesthetic is now. The brand is universal.",
+            "id": 25
+        },
+        {
+            "name": "Daniel Barrow",
+            "url": "",
+            "image": "daniel-barrow.jpg",
+            "blurb": "Winnipeg-born, Montreal-based artist Daniel Barrow uses obsolete technologies to present written, pictorial and cinematic narratives centering on the practices of drawing and collecting. Since 1993, he has created and adapted comic book narratives to 'manual' forms of animation by projecting, layering and manipulating drawings on overhead projectors. <br><br> Barrow has exhibited widely in Canada and abroad. In 2010 his work was featured in a solo exhibition at the Art Gallery of York University. He has performed at The Walker Art Center (Minneapolis), PS1 Contemporary Art Center (New York), The Museum of Contemporary Art (Los Angeles), The International Film Festival Rotterdam, The Portland Institute for Contemporary Art's 2009 TBA festival, and the British Film Institute (London). Barrow has supported acts such as Antony and the Johnsons, The Hidden Cameras , and Miranda July. Barrow is the 2008 winner of the Images Festival's Images Prize for his episodic performance Every time I see your picture I cry, and the winner of the 2010 Sobey Art Award. He is represented by Jessica Bradley Art + Projects, Toronto.",
+            "id": 26
+        },
+        {
+            "name": "Daniel G. Harmann & the Trouble Starts",
+            "url": "http://www.facebook.com/DGHandTTS",
+            "image": "daniel-harmann-trouble-starts.jpg",
+            "blurb": "Daniel G. Harmann and his band — Forrest Haskell on bass, Shea Bliss on drums and guitarists Aaron Starkey & Kenny Ball — self-identify as master craftsmen of working class art, as sinewy and sensual as Blur, as strong as the late 90s Seattle rock scene and as emotionally honest and deep as melancholy rockers Jimmy Eat World, Idlewild, or even Fugazi.",
+            "id": 27
+        },
+        {
+            "name": "David Schmader",
+            "url": "",
+            "image": "david-schmader.jpg",
+            "blurb": "David Schmader is a writer and performer who's been living and working in Seattle since 1991. His solo plays include Letter to Axl and Straight, which he's performed in Seattle and across the U.S. Since 1998, he's been an editor and writer for The Stranger, writing the pop culture and poltics column 'Last Days.' His next solo work, 'A Short-Term Solution to a Long-Term Problem' will premiere at Hugo House in January, directed by Matthew Richter.",
+            "id": 28
+        },
+        {
+            "name": "Daydream Vacation",
+            "url": "http://www.facebook.com/DaydreamVacation",
+            "image": "daydream-vacation.jpg",
+            "blurb": "After a performance together at this year's Sasquatch Festival, Dave Einmo, mastermind behind Head Like A Kite and Asya of the band Smoosh are pleased to announce their new group Daydream Vacation. Combining the leaders of Seattle's most exciting genre-bending-electro-party unit and indie-dream-pop band, Daydream Vacation will be entering the studio to record their debut album in August.",
+            "id": 29
+        },
+        {
+            "name": "Disco Doom",
+            "url": "http://www.discodoom.net/",
+            "image": "disco-doom.jpg",
+            "blurb": "Disco Doom has existed for about 13 years and is based in Zurich, Switzerland. Currently they play as a trio - mainly two guitars and a drum, sometimes a bass or some keyboard. The core of the band are Gabriele De Mario (main singer, guitar) and Anita Rufer (guitar, bass, keys, vocs). Disco Doom describes the music they play as Adventure Rock. ",
+            "id": 30
+        },
+        {
+            "name": "Don't Talk To The Cops!",
+            "url": "http://donttalktothecops.wordpress.com/",
+            "image": "dont-talk-to-cops.jpg",
+            "blurb": "With fierce b-boy style and head-banging beats, DON'T TALK TO THE COPS! has exploded on the scene with an infectious energy that creates an instant party. DjblesOne and emecks produce songs that are both nostalgic and progressive, combining elements of soul, hip hop, electronic and punk music with their fun attitude, humor and underground dance party vibe. <br><br> Part of the Seattle-based LOVE FAMILY, djblesOne and emecks are both accomplished performers who honed their skills in front of audiences around the country. DjblesOne is a longtime breakdancer, producer, and DJ, works with b-boy supergroup THEM TEAM, has toured the world with the Massive Monkees crew, and is well-known mixtape specialist in the b-boy community. She stands only half his height, but partner-in-crime emecks has a larger than life attitude; the professional choreographer adds wicked dance skills and animated personality to the group's vivacious sound. This dynamic duo is backed by MASH HALL family member El Mizell, the DJ element behind a live show that will smack you in the face and demand attention.",
+            "id": 31
+        },
+        {
+            "name": "Douglas Ridings",
+            "url": "",
+            "image": "douglas-ridings.jpg",
+            "blurb": "Douglas Ridings is an international performer of butoh, Odissi and experimental theater, a singer, and a teacher of Hatha Yoga.  He approaches these various disciplines as an integrated art of the body. Like Bharata, legendary author of the ancient Indian treatise on stagecraft the <i>Natya Shastra</i>, he views performance as a kind of Yogic Sadhana with the ultimate goal being spiritual liberation for both performers and audience.  He has performed extensively in the US as well as at the Donau Festival in Krems, Austria, the Kharavela Festival in Bhubaneswar, India and the Teatro Pradillo in Madrid Spain.  He has performed with PAN, Katsura Kan, dappin' butoh, Implied Violence, Urvasi, Rob Kitsos and locust. ",
+            "id": 32
+        },
+        {
+            "name": "Dyno Jamz",
+            "url": "http://www.facebook.com/dynojamz",
+            "image": "dyno-jamz.jpg",
+            "blurb": "Dyno Jamz is a 7 piece hip hop band making music for you to dance, think and vibe out to. Diverse members, diverse sound. With a three piece horn section, two drummers, two MCs, guitars, keys and MPCs, Dyno puts on a live set like nobody else.",
+            "id": 33
+        },
+        {
+            "name": "Elk and Boar",
+            "url": "http://elkandboar.wordpress.com/",
+            "image": "elk-and-boar.jpg",
+            "blurb": "",
+            "id": 34
+        },
+        {
+            "name": "Erika Wilder",
+            "url": "",
+            "image": "erika-wilder.jpg",
+            "blurb": "Erika Wilder is a current MFA candidate in Poetry at the University of Washington, and Coordinating Editor of The Seattle Review. Her work has been published in Mary, PageBoy, and Filter Literary Journal.",
+            "id": 35
+        },
+        {
+            "name": "Erin Leddy",
+            "url": "http://www.hand2mouththeatre.org/performances/performance-archive/my-mind-is-like-an-open-meadow/",
+            "image": "erin-leddy.jpg",
+            "blurb": "Erin Leddy creates original theatrical works for the stage. For the last 8 years Erin has been a Company Member of Hand2Mouth Theatre, creating, performing and touring new theatre. Through training in and outside of the company, she has learned to make compelling original performance in a variety of styles and lead the company's actor training. Erin has played a key role in the creation of 14 original H2M productions with a special focus on arranging and composing songs and creating and teaching choreography. Erin received her Bachelor's degree from Emerson College and worked there with both the radio and theatre departments. 'My Mind Is Like An Open Meadow' is her first solo piece.",
+            "id": 36
+        },
+        {
+            "name": "Exohxo",
+            "url": "http://www.facebook.com/exohxo",
+            "image": "exohxo.jpg",
+            "blurb": "Exohxo (pronounced XOXO)  is an eight-piece chamber pop/rock band from Seattle, Washington comprised of Danny Oleson (vocals/guitar), Jasen Samford (vocals/guitar), Jason Jordan (bass/vocals), Holly Houser (keyboards/vocals), Johnny Ogle (drums), Scot Porter (percussion/auxiliary), Hiromi Dougherty (violin), and Elizabeth Gue (violin/viola).",
+            "id": 37
+        },
+        {
+            "name": "Fastbacks",
+            "url": "",
+            "image": "fastbacks.jpg",
+            "blurb": "",
+            "id": 38
+        },
+        {
+            "name": "Fences",
+            "url": "http://www.sadcastle.com/",
+            "image": "fences.jpg",
+            "blurb": "Christopher Mansfield is Fences. Don't let the brevity of that sentence deceive you; it contains universes. <br><br> Fences is not merely the recording alias of the Seattle songwriter. It is the distillation of Mansfield's entire aesthetic. 'I've tried to take everything in the world that I love, and turn it into this thing that's Fences,' says the straightforward 27-year-old. Fences starts with Mansfield's life experience to date, and ends… well, when he says so. Hopefully not for a long time. Because right now, Fences is just coming into its own, with the release of a stunning debut album, entitled, naturally, Fences.",
+            "id": 39
+        },
+        {
+            "name": "Fly Moon Royalty",
+            "url": "",
+            "image": "fly-moon-royalty.jpg",
+            "blurb": "The combination that makes up Electro-Soul duo Fly Moon Royalty is Vocalist/ Fast Talker Adra Boo and DJ/Producer/Emcee Action Jackson.  Adra, a Seattle native and sophisticated songstress, whose inspiration is drawn from everyday life, has been blazing trails in the theater and burlesque community, and is building her name as a one of a kind host for special events.  Jackson, who re-located to Seattle from Grand Rapids, Michigan in 2009, is the musician's musician in every sense of the phrase. He credits great artists such as Danny Elfman, DJ Premier and Stevie Wonder as some of his biggest influences and inspirations; he also continues to make his mark on the radar as a DJ in the Seattle area.",
+            "id": 40
+        },
+        {
+            "name": "Francesca Lohmann",
+            "url": "",
+            "image": "francesca-lohmann.jpg",
+            "blurb": "Francesca Lohmann's work stems from observation of replication and growth, focusing on the massive scale of detail from which larger forms are created.  Born in San Francisco, CA in 1986, she holds a BFA from the Rhode Island School of Design, where she majored in printmaking. She currently lives and works in Seattle, WA.",
+            "id": 41
+        },
+        {
+            "name": "Freestyle Felloswhip",
+            "url": "http://freestylefellowship.bandcamp.com/",
+            "image": "freestyle-fellowship.jpg",
+            "blurb": "Calling Freestyle Fellowship legendary is far from a hyperbolic claim, having made an indelible mark on hip-hop since the release of 1991's <i>To Whom It May Concern</i>. Establishing themselves as one of the most prominent hip hop acts on the West Coast in the 90s, the five members of the group have exhibited breathless prolificacy, issuing a staggering run of solo albums, splinter groups and guest spots. In Freestyle Fellowship each member brings the strengths of their diverse musical backgrounds to the forefront, with Myka 9's intelligent and meticulous rhymes, Aceyalone's distinct rhythm and old school folklore, Self Jupiter's creation of suspense and theatrical craziness, and P.E.A.C.E.'s southern demeanor matched in stride with his country swagger. ",
+            "id": 42
+        },
+        {
+            "name": "Fucking Eagles",
+            "url": "",
+            "image": "fucking-eagles.jpg",
+            "blurb": "'This Tacoma band branches out by injecting some seriously catchy power pop into their potent blend of ‘60s garage-rock and high-energy R&B on their excellent 2nd album. There are fewer Gerry Roslie-style primal screams this time around, but more harmonies and hooks, not to mention great songs.' <br> - Don Yates, Music Director KEXP 90.3 Seattle, August 2009 <br><br> <h3>The Fucking Eagles Cover the Flirtations, Prep Fab New LP</h3> <br> 'The Fucking Eagles' joyous new album, Midnight Sour (out Sept. 1 on Gaptooth Jukebox Records), includes a cover the Flirtations' 'Nothing But A Heartache'. Amid all the buoyant, instantly memorable garage-rock winners the Fucking Eagles pump out on this 13-track disc, there's this valiant rendition of a northern soul classic, done with sloppy-kissed, flush-of-new-love fervor. It's not as sublime as the original (not much is), but the Fucking Eagles deserve credit for tackling such a shiny gem and for having the great taste to know about it in the first place.' <br> - Dave Segal, The Stranger, August 2009",
+            "id": 43
+        },
+        {
+            "name": "Gala Bent",
+            "url": "http://www.galabent.com/",
+            "image": "gala-bent.jpg",
+            "blurb": "Gala Bent is an enthusiast and a drawing addict. She makes drawing-centric installation, work on paper and animation. Gala was born in Michigan, raised in Indiana, schooled in New York and now lives in Washington with her husband, fellow artist Zack Bent, and three young sons. Since living in Seattle, Gala has been a recipient of the GAP grant, a 4Culture individual artist grant and a CityArtist grant. As such, she is deeply grateful to live in a city that champions the arts.",
+            "id": 44
+        },
+        {
+            "name": "Gorman Bechard",
+            "url": "http://www.gormanbechard.com/",
+            "image": "gorman-bechard.jpg",
+            "blurb": "Gorman Bechard is the author of seven novels: THE SECOND GREATEST STORY EVER TOLD, UNWOUND (under the pseudonym Jonathan Baine), NINTH SQUARE, THE HAZMAT DIARY, GOOD NEIGHBORS, BALLS, and the just published NOT SO PRETTY. <br><br> He directed/wrote the indie features FRIENDS (WITH BENEFITS) (2009) and YOU ARE ALONE (2006), the horror comedy cult-classic PSYCHOS IN LOVE (1986), as well as the award winning shorts OBJECTS IN THE MIRROR ARE FURTHER THAN THEY APPEAR (2003) and THE PRETTY GIRL (2000), and most recently completed COLOR ME OBSESSED, A FILM ABOUT THE REPLACEMENTS, which Rolling Stone named one of the seven best music docs of the year.",
+            "id": 45
+        },
+        {
+            "name": "Grand Archives",
+            "url": "http://www.grandarchives.com/",
+            "image": "grand-archives.jpg",
+            "blurb": "",
+            "id": 46
+        },
+        {
+            "name": "Grand Hallway",
+            "url": "",
+            "image": "grand-hallway.jpg",
+            "blurb": "<i>Winter Creatures</i>, the third album by Seattle band Grand Hallway, was recorded over several weekend sessions this past winter at Scenic Burrows in Portland, Oregon. The band holed up in the tiny studio (where the latest albums by Dodos, Castanets, Richmond Fontaine, and the soundtrack of 'Portlandia' were also recorded) with producer Cory Gray over many rain and snow filled days, and worked into the wee hours of the morning fueled by endless cups of coffee. Sometime before sunrise each night, they would retire with a bottle of whiskey to sneak in a game of Baseball Stars 2 on NES and maybe sleep for a couple hours in the apartment (a former dentist's office) right above the studio.",
+            "id": 47
+        },
+        {
+            "name": "Greg Lundgren",
+            "url": "",
+            "image": "greg-lundgren.jpg",
+            "blurb": "Greg Lundgren is interested in gigantic, probably never going to work, way outside of your comfort zone dreams.  He also likes bourbon and Yogurtland, for the times they work and the times they don't.",
+            "id": 48
+        },
+        {
+            "name": "Gretchen Bennett",
+            "url": "",
+            "image": "gretchen-bennett.jpg",
+            "blurb": "This year Gretchen Bennett developed a site-specific work for the Olympic Sculpture Park in Seattle, and her work is to be featured in The River is the Road exhibition at the The Sacred Heart Chapel, Riudosa, TX. In 2010, Bennett was awarded a Lower Manhattan Cultural Council Swing Space residency on Governors Island. In 2009 she was awarded an Artist Trust GAP Grant toward making a piece featured in the Seattle Art Museum video gallery in 2010. Her work was also included in the exhibition 'Kurt', at the Seattle Art Museum.In 2008 and 2009 She was awarded residencies in Iceland with the The Association of Icelandic Visual Artists. She received her MFA at Rutgers University in 2001. <br><br> A central characteristic of her work is the use of unorthodox sculptural materials and combinations - including found debris, ranging from collected street stickers to windfall sticks from the forest floor. A recent characteristic of her work - and one, which emphasizes its extra-linguistic properties - is its use of music and lyrics. This is a recent development for her work, in the form of compatible song lists, video works and recordings of new songs.",
+            "id": 49
+        },
+        {
+            "name": "Heather McHugh",
+            "url": "http://www.seattleweekly.com/bestof/2011/award/best-local-poet-1387982/",
+            "image": "heather-mchugh.jpg",
+            "blurb": "Heather McHugh is Pollock Professor of Creative Writing at the University of Washington.  She's taught there since 1984.  Her many published works include books of poems, essays and translation-- most recently UPGRADED TO SERIOUS from Copper Canyon Press.  She was a Chancellor of the Academy of American Poets for 6 years; was elected a fellow of the American Academy of Arts and Sciences in 2001; and won a MacArthur Fellowship in 2009.",
+            "id": 50
+        },
+        {
+            "name": "Helio Sequence",
+            "url": "http://www.myspace.com/theheliosequence",
+            "image": "helio-sequence.jpg",
+            "blurb": "The collective wisdom of Wikipedia currently describes The Helio Sequence as 'indie electronica' (bonus points to whoever fixes that one). One listen to Keep Your Eyes Ahead, which was self-produced by the duo and then mastered by Greg Calbi (Iron and Wine, Interpol, and Paul Simon's Graceland), confirms The Helio Sequence teem with an energy and a range that continues to defy such narrow categorization. Unapologetic pop and folk meld seamlessly to create songs that are bigger, more epic and polished than anything they've ever done. Keep Your Eyes Ahead is the sound of a band and a decade-old partnership that's been invigorated. And that's exactly how the songs will make you feel: invigorated.",
+            "id": 51
+        },
+        {
+            "name": "Hi-Life Soundsystem",
+            "url": "http://hilifesoundsystem.bandcamp.com/album/hi-life-soundsystem",
+            "image": "hi-life-soundsystem.jpg",
+            "blurb": "At a time when Seattle's explosive hip-hop scene continues to expand in various directions, there's a highly animated new music group that's eager to push those boundaries even further. Hi-Life Soundsystem, comprised of talented emcees Khingz and B-Flat, are two of Seattle's hardest working, yet often under appreciated rap figures, that have banded together to create 15 clever songs that nobody would expect from either one of them. The group is anchored by ace producer, Crispy, who handles the beats on every track and helps to make Hi-Life one of the freshest West Coast groups to fully emerge in 2011.",
+            "id": 52
+        },
+        {
+            "name": "Horde and the Harem",
+            "url": "http://hordeandtheharem.com/",
+            "image": "horde-harem.jpg",
+            "blurb": "The Horde and the Harem are a ragged band of untrustables hailing from the Pacific Northwest. They boast four voices that combine in harmony over a solid rhythm section. Surrounded on all sides by sizzling and sputtering guitars, and anchored into place by the weight and grace of the piano. The results are thick layers of melody that infiltrate your senses, lodging themselves in your brain and cursing you with their inherent catchiness. ",
+            "id": 53
+        },
+        {
+            "name": "Inga Ingenue",
+            "url": "http://www.littleblondebomb.com/",
+            "image": "inga-ingenue.jpg",
+            "blurb" : "Inga Ingénue, 'The Little Blonde Bomb', was recently crowned Miss Viva Las Vegas 2011 at the Viva Las Vegas international burlesque competition!  Born and raised in Seattle, WA, Inga studied ballet, tap, jazz, modern dance and choreography for dance and theater starting at age three; since joining the Seattle burlesque community in 2005, Inga has performed in shows all over the world including the Burlesque Hall of Fame Competition in Las Vegas, the Amsterdam Burlesque Festival, Lily Verlaine & Jasper McCann's 'Land of The Sweets: The Burlesque Nutcracker' and 'Through The Looking Glass: The Burlesque Alice in Wonderland', in which she plays the lead role of Alice.  In 2009, Inga co-founded Dance Belt, Seattle's burlesque/dance super-troupe, along with Waxie Moon, Lou Henry Hoover and Ruby Mimosa, with whom she also co-teaches pop-culture choreography classes at Century Ballroom.  In 2010, Inga was the lead choreographer for the critically acclaimed U.S. run of 'SHINE: A Burlesque Musical', written and composed by Canadian musical duet The Wet Spots.  Inga joined The Atomic Bombshells in 2011, one of the world's most famous and respected burlesque troupes.  In addition, Ms. Ingénue is an instructor for Miss Indigo Blue's Academy of Burlesque, and was featured in the burlesque documentaries 'A Wink And A Smile' and 'Waxie Moon', as well as in the upcoming film 'Waxie Moon in Fallen Jewel'.  ",
+            "id": 54
+        },
+        {
+            "name": "Jason Hirata",
+            "url": "",
+            "image": "jason-hirata.jpg",
+            "blurb": "The other day I was sitting in my apartment reading, when a cat jumped in through the window. I sat motionless across the room, and watched it just nonchalantly walk around. It went into the kitchen and drank some water from the dishes in the sink, then went back out through the window. I don't think it noticed me sitting there. ",
+            "id": 55
+        },
+        {
+            "name": "Jeannie Yandel",
+            "url": "",
+            "image": "jeannie-yandel.jpg",
+            "blurb": "Jeannie Yandel has always been a sucker for two things: a good story and a good piece of pie. So this event is kind of the best thing ever for her.  Her day job is as a producer and host at KUOW Public Radio.  In her free time, she runs the DIY storytelling organization A Guide To Visitors.  She also emcees the bimonthly diary reading series the Salon Of Shame. http://salonofshame.com/ She looks forward to hearing some amazing stories at Pie Life, and eating so much pie her stomach starts hurting.  Oh, she also hopes to stop talking about herself in the third person.  So three things.",
+            "id": 56
+        },
+        {
+            "name": "Jennifer Borges Foster",
+            "url": "",
+            "image": "jennifer-borges-foster.jpg",
+            "blurb": "Jennifer Borges Foster is a poet, bookmaker, and the editor of <i>Filter</i>, a hand bound limited edition literary journal. She is the recent recipient of grants from Art Patch, 4Culture, and the Office of Arts and Cultural Affairs, and was short-listed for The Stranger's 2007 Genius Award in literature. She has completed several residencies in the States and abroad. Her poems have appeared in <i>The Beloit Poetry Journal</i>, <i>Prairie Schooner</i>, <i>ZYZZYVA</i>, <i>Failbetter</i>, <i>Hoarse</i> and other journals.",
+            "id": 57
+        },
+        {
+            "name": "Jennifer Zwick",
+            "url": "",
+            "image": "jennifer-zwick.jpg",
+            "blurb": "Trained in photography, Jennifer Zwick works in a variety of media, preferring those with a fixed vantage point.  She is the recipient of a 2008 Artist Trust Fellowship, a 2010 Artist Trust Jini Dellaccio GAP Grant, and a 2011 baby boy.",
+            "id": 58
+        },
+        {
+            "name": "Jess Marie",
+            "url": "",
+            "image": "jess-marie.jpg",
+            "blurb": "Jess Marie is an artist based in Seattle and Los Angeles. Her work reflects on the relationship between place and identity through traditional applications of craft, map imagery, and family photographs. She received her BA from Seattle Pacific University, and studied at New York Center for Art and Media Studies, NYC.  She has exhibited in Seattle and New York.",
+            "id": 59
+        },
+        {
+            "name": "Jessica Jobaris",
+            "url": "",
+            "image": "jessica-jobaris.jpg",
+            "blurb": "Jessica Jobaris is a performer, choreographer, and instructor. She has worked with Lingo dance theater, Scott/Powell Performance, Maureen Whiting Company, Bryon Carr Performance (NYC) and SaltHorse. From 2004-2009, Jessica was Co-Artistic Director of CorpusCorpus Movement Association, a multi-media performance art company funded by city, state and corporate sponsors. From 2008-2009, she lived in Berlin  working with choreographers Kirsten Burger (for MTV), Jess Curtis, visual artist Eloise de Hauteclocque, choreographer/body artist Felix Ruckert and Maria Scaroni. Her love of experimental performance & process has taken her to film, study, perform and/or choreograph in Vienna, Berlin, Italy, Amsterdam, Vancouver. Jobaris has received several choreographic residencies and commissions throughout the U.S. She is an instructor at Lotus Yoga, Yoga Tree, The Evergreen School, and Velocity Dance Center.",
+            "id": 60
+        },
+        {
+            "name": "Jessie Smith",
+            "url": "",
+            "image": "jessie-smith.jpg",
+            "blurb": "Jessie Smith is Artistic Director of Dead Bird Movement, a modern dance and film production company. She also plays guitar in the band The Gargle Blasters. She is a founding member of Implied Violence and was their choreographer and an ensemble member from 2003-2009. She danced for Amy O'Neal and Zeke Keeble's company locust from 2006-2010 and is currently working with Dayna Hanson.",
+            "id": 61
+        },
+        {
+            "name": "Jim Demetre",
+            "url": "",
+            "image": "jim-demetre.jpg",
+            "blurb": "Jim Demetre is a Seattle-based writer and art critic. He was the publication manager at Reflex Magazine and the publisher and editor of Aorta and Artdish. His writings have appeared in the Stranger, the Seattle P-I and the Seattle Weekly.",
+            "id": 62
+        },
+        {
+            "name": "Joanna Lepore",
+            "url": "",
+            "image": "joanna-lepore.jpg",
+            "blurb": "'I began my pastry career in 1996 as a 14 year old dishwasher at a small artisan bakery in the Midwest. I've spent the last 14 years switching between Fine Art and Pastry, learning design theories and culinary skills along the way. After studying chocolate techniques under William Leaman, now of Bakery Nouveau, and receiving a BA in Sculpture from the UW, I was thrilled to combine my passions as chocolatier and production manager at Theo Chocolate. I am continually inspired by our company's commitment to quality and excellence as well as the artistic potential of chocolate.'",
+            "id": 63
+        },
+        {
+            "name": "Joey Veltkamp",
+            "url": "",
+            "image": "joey-veltkamp.jpg",
+            "blurb": "Joey Veltkamp is an artist living and working in Seattle. He was the 2009 Seattle University Visual Artist in Residence, a 2010 Neddy Nominee and shows locally at SOIL. He has written for City Arts Magazine, Visual Art Source, New American Paintings Blog, and his personal blog, best of, which covers visual arts in the Puget Sound.",
+            "id": 64
+        },
+        {
+            "name": "Jose Bold",
+            "url": "http://josebold.com/",
+            "image": "jose-bold.jpg",
+            "blurb": "Jose Bold, aka John Osebold, often combines music, theater, sound design, and film into projects such as MOUNTAIN (a film with live music performance), Spidermann (a stage 'musical' with video segues), and <symphony> (an experimental symphony with musicians and actors). He also makes a free album every December at josebold.com.",
+            "id": 65
+        },
+        {
+            "name": "Joseph Giant",
+            "url": "",
+            "image": "joseph-giant.jpg",
+            "blurb": "Songwriter Joe Syverson (he performs under the moniker Joseph Giant) has been playing music for over 15 years. Hailing from the small town of Maple Valley, just 40 minutes outside of Seattle, WA, Joe has lent his talents to many music projects over the years. Some of his more recent and notable projects include Throw Me The Statue (Secretly Canadian), Pearly Gate Music (Barsuk Records), and Final Spins.",
+            "id": 66
+        },
+        {
+            "name": "Justine Ashbee",
+            "url": "",
+            "image": "justine-ashbee.jpg",
+            "blurb": "Ashbee developed the technique of weaving with metal during her studies in textile design at RISD. Her work focuses on illustrating the vibrations and sensations that we feel and yet cannot see. Whether she is shaping her woven metal sheets into the pillowy brass clouds for this project, or free handing her striking line drawings, Justine works intuitively to develop organic forms with a very cosmic vibe.",
+            "id": 67
+        },
+        {
+            "name": "Karen Finneyfrock",
+            "url": "",
+            "image": "karen-finneyfrock.jpg",
+            "blurb": "Karen Finneyfrock is a poet, novelist and teaching artist in Seattle, WA. Her second book of poems, <i>Ceremony for the Choking Ghost</i>, was released on Write Bloody press in 2010. Her young adult novel, <i>Celia, the Dark and Weird</i>, is due from Viking Children's Books, a division of Penguin Group USA in Spring 2012. She is a former Writer-in-Residence at Richard Hugo House in Seattle and teaches for Seattle Arts and Lectures' Writers-in-the-Schools program. In 2010, Karen traveled to Nepal as a Cultural Envoy through the US Department of State to perform and teach poetry and in 2011, she did a reading tour in Germany sponsored by the US Embassy.",
+            "id": 68
+        },
+        {
+            "name": "Kary Wayson",
+            "url": "",
+            "image": "kary-wayson.jpg",
+            "blurb": "Kary Wayson's poems have appeared in Crazyhorse, Poetry Northwest, Alaska Quarterly Review, The Nation, The Journal, FIELD, Filter, The Best American Poetry 2007, and the 2010 Pushcart Prize anthology. Kary was a 2003 Discovery/The Nation award winner, and her chapbook, Dog & Me, was published in 2004 by LitRag Press. Her first full collection, American Husband, won the Ohio State University Press/ The Journal Award in 2009. Kary lives and works in Seattle.",
+            "id": 69
+        },
+        {
+            "name": "Kate Lebo",
+            "url": "http://goodeggseattle.blogspot.com/",
+            "image": "kate-lebo.jpg",
+            "blurb": "Kate Lebo can't decide whether her favorite pie is peach or cherry, so she makes a lot of peach cherry pie. She's a poet and pie maker from Seattle, where she attends the University of Washington's MFA program. Her poems have appeared most recently in <i>Poetry Northwest</i>, <i>Bateau</i>, and <i>The Portland Review</i>, and she's the recipient of a Nelson Bentley Fellowship, a 4Culture grant, and a SoaPDTone residency. For more about Kate's zine, <i>A Commonplace Book of Pie</i>, and other tasty treats visit her blog Good Egg.",
+            "id": 70
+        },
+        {
+            "name": "Kelly O",
+            "url": "",
+            "image": "kelly-o.jpg",
+            "blurb": "Kelly O—photographer, writer, and Drunk of the Week columnist for The Stranger Newsweekly—grew up on a 20-acre farm in Northern Michigan where her mother taught her how to find the beauty in ugly things. <br><br> After a short love affair with downtown Detroit, she fled the Midwest and landed in Seattle in 1998. Kelly's photography has appeared Spin, The FADER, URB, Mojo Magazine, and two solo gallery shows—100 BALLS at Sweatshop Inc., and BOYS at Ghost Gallery. She's interviewed Hugh Hefner on the telephone, seen the band Slayer 19 times, attended three AVN porn conventions, and one Gathering of the Juggalos. She's a firm believer in being in the worst place at the best time.",
+            "id": 71
+        },
+        {
+            "name": "Klara Glosova",
+            "url": "",
+            "image": "klara-glosova.jpg",
+            "blurb": "Klara Glosova is the founder and curator of NEPO House, an experimental project space/gallery she opened in her home on Beacon Hill. NEPO house, by it's very nature, is an investigation into the personal. It opens up questions of how we interact with one another and what boundaries we set. <br><br> Klara's approach to curating and art making stems from her desire to learn, to better understand and to shed light on objects and subjects that seem obscure to her. As outcome is often unexpected she is continuously reminded to stay open and to work consciously with her fear of being vulnerable and exposed. Similarly she strives to create art that infiltrates life without being protected from the elements. She likes art to be an integral part of life, to be accessible and receptive. So perhaps it is the practice of openness, both external and internal, that connects her larger curatorial projects like NEPO House with more intimate forms of art (and home) making.",
+            "id": 72
+        },
+        {
+            "name": "Kris Orlowski",
+            "url": "http://krisorlowski.bandcamp.com/album/fremont-abbey-ep",
+            "image": "kris-orlowski.jpg",
+            "blurb": "Singer-songwriter Kris Orlowski's new folk-rock sound is turning heads. Drawing comparisons of Paul Westerberg and Elliot Smith, the band's spring release meshing folk and classic string quartet arrangements has got the band buzzing.  With the recent addition of new banjo/pedal steel/guitarist Mark Isakson (Kate Tucker & the Sons of Sweden), keys/glockenspiel/vocalist Torry Anderson (Washington Mile) and seasoned drummer Aaron O'Neil (Painted Hills, Devotion), they are developing new material for release in time for City Arts.",
+            "id": 73
+        },
+        {
+            "name": "Leah Baltus",
+            "url": "",
+            "image": "leah-baltus.jpg",
+            "blurb": "Leah Baltus is the editor in chief of <i>City Arts</i> magazine. In previous incarnations of her arts existence, she founded and edited <i>RIVET</i> magazine, co-founded Shunpike and played consultant to dozens of organizations that make Seattle interesting. As a staunch believer that all ships really do rise, Leah is determined to bring together artists and audiences from disciplines of all kinds. ",
+            "id": 74
+        },
+        {
+            "name": "Lemolo",
+            "url": "http://lemolomusic.com/",
+            "image": "lemolo.jpg",
+            "blurb": "Lemolo is a dream-pop duo from Seattle, Washington. The band is comprised of Meagan Grandall on vocals, guitar and keyboard and Kendra Cox on drums and keyboard.  'The energy these two produce live is a force to be reckoned with,' according to Victoria VanBruinisse of <i>Three Imaginary Girls</i>, and Abbey Simmons of <i>Sound on the Sound</i> adds that Lemolo leaves the listener 'aching for more.'",
+            "id": 75
+        },
+        {
+            "name": "Lindsey Apodaca",
+            "url": "",
+            "image": "lindsey-apodaca.jpg",
+            "blurb": "Lindsey Apodaca was born on the living room floor in the summer of 1986 on Bainbridge Island. <br><br> Her earliest memories involve crawling through piles of old People magazines and making beds out of her grandmother's kimonos. <br><br> As a toddler, she was prone to extended bouts of seclusion. Perhaps it was in these formative years that she preened her obsessive tendencies. <br><br> After barely graduating from Cornish College of the Arts in 2008, Lindsey works from her pillow-top, queen-size bed, editing her heaping collections. She arranges, constructs and alters her belongings in order to better understand her relationship to each of them.",
+            "id": 76
+        },
+        {
+            "name": "Long Winters",
+            "url": "http://thelongwinters.com/",
+            "image": "long-winters.jpg",
+            "blurb": "John Roderick is the songwriter, singer, and guitarist for Seattle band The Long Winters, and has made guest appearances on albums and in music videos by Death Cab for Cutie, The Decemberists, Harvey Danger, and Nada Surf among others.  He's written commentary and music criticism for MSNBC, CMJ, and The Stranger, as well as a regular column for the Seattle Weekly.  He's also taught writing classes at 826 Seattle, UW Bothell, and EMP.",
+            "id": 77
+        },
+        {
+            "name": "Lou Henry Hoover",
+            "url": "",
+            "image": "lou-henry-hoover.jpg",
+            "blurb": "In addition to being one third of Seattle's Sexiest Dance Company (The Stranger), Lou Henry Hoover is half of sort-of celebrity duo The Cherdonna and Lou Show, a drag dance duo that performs at a wide range of venues from On the Boards to your living room. The Cherdonna and Lou Show has been funded by 4Culture and the Seattle Office of Arts & Cultural Affairs. Lou also appears with the Atomic Bombshells as the troupe's first Atomic Boyshell in such exotic locales as Provincetown, MA. Lou is thrilled to be currently collaborating with Kitten LaRue and BenDeLaCreme as DeLouRue, which launched it's premier production, Freedom Fantasia, in July 2011.  Lou teaches ongoing dance classes at Century Ballroom and Velocity Dance Center. ",
+            "id": 78
+        },
+        {
+            "name": "Lovesick Empire",
+            "url": "",
+            "image": "lovesick-empire.jpg",
+            "blurb": "",
+            "id": 79
+        },
+        {
+            "name": "Mad Rad",
+            "url": "http://www.madradmusic.com/",
+            "image": "mad-rad.jpg",
+            "blurb": "There is a hunger in Mad Rad. A want. A want to kill and be killed, to feast and be feasted on, to love and be loved. Animalistic, the crux. Pressing, the message. You are sentient, with ears. You're alive now, in skin. Mad Rad is here to save you, and your deepest darkest fantasy. Everything is going to be alright. Just hang on tight. <br><br> Mad Rad's music is a combination of hip hop, electro, dance, newer wave, and face melting rock and roll. Seattle based MC's Buffalo Madonna, P Smoov, Terry Radjaw, and DJ Darwin swarm a stage. Shows gyrate. Rooms are taken, in sweat, flesh, and heat. It's a swell. Get in. Give in. Be hunted, spill blood. Hunt back. Spear a Puma. Get laid. Howler monkeys swing through canopy level strobes. <br><br> At the heart is P Smoov's production: icy, beat driven compositions that build and build then break hard and clean. Synthesizers tightly arpeggiate, then unfold, gain, and get dirty. The Youth Die Young is Mad Rad's second full length. The songs see the band refining, reflecting, and examining lost minds. It's the morning after. What happened? Why? It's a bullet proof confessional. <br><br> Mad Rad; solving the energy crisis in a city near you. Make noise. Break bread. Break hearts. Love is better loud.",
+            "id": 80
+        },
+        {
+            "name": "Maile Martinez",
+            "url": "",
+            "image": "maile-martinez.jpg",
+            "blurb": "Maile Martinez (<i>The Cherdonna and Lou Show: The Movie!</i>) is the Program Manager at Reel Grrls, a nonprofit organization empowering young women in the Seattle area to realize their power, talent, and influence through media production. She holds a BA from Mount Holyoke College, an M.Ed from Arizona State University, and an MPhil from the University of Cambridge, St John's College. She has produced, written, and/or directed four award-winning short documentaries, most recently <i>The Cherdonna and Lou Show: The Movie</i>. Maile serves on the board of Velocity Dance Center. ",
+            "id": 81
+        },
+        {
+            "name": "Male Bonding",
+            "url": "http://www.youtube.com/user/TheMalebonding",
+            "image": "male-bonding.jpg",
+            "blurb": "Initial contact with Endless Now triggers a quandary rather like that faced by the wise owl in those old Saturday morning Tootsie Roll Pop commercials: how many listens does it take before you start singing along with these new Male Bonding songs? One time? Two? If you make it to three, you have either a will of iron or an ear of tin. These are eleven selections- plus a wee reprise- imbued with the fierce urgency of now, and catchy as all get-out.",
+            "id": 82
+        },
+        {
+            "name": "Man Man",
+            "url": "http://www.myspace.com/wearemanman",
+            "image": "man-man.jpg",
+            "blurb": "It's hard to imagine what looked worse: the night a sleep-deprived, Ambien-addled Ryan Kattner hallucinated his way into a motor bike accident or the afternoon an electrician checking out his sublet's faulty wiring walked into his room and found nothing but a boar's head, half-drained bottles of booze, scattered tax forms, a Wurlitzer, a frame-less mattress, and writing on the walls. (They were song lyrics, but still.) <br><br> 'He was severely freaked out. A haunted, wordless, freaked out. Maybe I wasn't living very sanely,' says the Man Man frontman, who also goes by his keyboard-clobbering alter ego Honus Honus.'",
+            "id": 83
+        },
+        {
+            "name": "Mark Haim",
+            "url": "",
+            "image": "mark-haim.jpg",
+            "blurb": "Mark Haim holds a BFA degree from The Juilliard School and an MFA from Hollins University. He was Artistic Director of Mark Haim & Dancers from 1984-1987, and the Companhia de Danca de Lisboa from 1987-1990. Mark has created new works for many dance companies in the US, Europe and Asia, among them the Nederlands Dans Theater, Ballet Frankfurt, the Jose Limon Dance Company, the Joffrey II Dancers, the Rotterdamse Dansgroep, the Silesian Dance Theater, the Companhia de Danca de Lisboa, CoDanceCo, the TRANS Dance Co., and Ballet Pacifica.",
+            "id": 84
+        },
+        {
+            "name": "Metal Chocolates",
+            "url": "http://metalchocolates.com/",
+            "image": "metal-chocolates.jpg",
+            "blurb": "Metal Chocolates consists of Rik Rude, OCnotes (pronounced o-see-notes), Chocolate Chuck, Trent Moorman, & Jordan Turner. Rik Rude is mostly recognized as the rapper for Fresh Espresso; OCnotes is a rising star whose studio, which is located in Pioneer Square, pumps out a constant and dazzling stream of experimental music. Nothing, it seems, is alien to OCnotes & Riks musical imagination. They are accompanied by Trent Moorman on drums, Chocolate Chuck on live visuals and sound fx, & Jordan Turner aka Swapman programming beats & also doing sound fx.",
+            "id": 85
+        },
+        {
+            "name": "Michael Van Horn",
+            "url": "",
+            "image": "michael-van-horn.jpg",
+            "blurb": "Michael Van Horn is an artist and the curatorial advisor for the Joseph and Elaine Monsen Photography Collection in Seattle. <br><br> In 2011, he selected Mitzi Pederson for a residency and exhibition at the <i>Open Satellite Gallery</i> in Bellevue, Washington. During her residency, Pederson developed work for an exhibition and publication titled <i>the still night air</i>. In 2010, Michael organized <i>Contemporary Works from the Monsen Family Collection</i>, a selection of recent acquisitions, for the Henry Art Gallery in Seattle. He has created exhibitions of virtual and physical works that explore the online world Second Life, such as <i>Sudo Island</i> for the 2006 Aqua Art Miami project room and <i>Pixel Dolls, Meat-Space, and Everything At All Once</i> for Seattle's 2006 Arts Festival.",
+            "id": 86
+        },
+        {
+            "name": "Midday Veil",
+            "url": "http://middayveil.com/",
+            "image": "midday-veil.jpg",
+            "blurb": "Known for intense multimedia performances as well as subtle, varied recordings, Seattle's Midday Veil draw from an ever-deepening well of influences including improvisation, krautrock, psych, noise, drone, folk, new age, metal, and a broad range of non-Western and traditional music. The band began in 2008 as the duo of David Golightly (synths) and Emily Pothast (vocals + guitar) and quickly expanded to include Timm Mason on lead baritone guitar and Chris Pollina on drums. In early 2011, the band recruited Jayson Kochan on bass guitar. <br><br> David and Emily are members of the Portable Shrines Collective, the co-founders of Translinguistic Other Recordings, and give site-specific duo performances as Hair and Space Museum. Timm performs and records solo material as Mood Organ, Jayson flies solo as Airport.",
+            "id": 87
+        },
+        {
+            "name": "Mike Pham",
+            "url": "http://www.mikepham.us/",
+            "image": "mike-pham.jpg",
+            "blurb": "Mike Pham is a performance artist, director and designer based in Seattle. He attended New York University and the Atlantic Theater Company Acting School and is a graduate of Seattle Central Creative Academy with a degree in graphic design. He is co-creative principal of Helsinki Syndrome, an experimental performance group presenting new, generative ensemble and solo performance work that incorporates elements of theater, movement and video. Once called 'Seattle's foremost practitioner of the classic avant-garde, a medium he both subverts and invigorates' (Jim Demetre, Artdish), Pham has participated in two consecutive artist residencies at Richard Foreman's Ontological-Hysteric Incubator in 2008-09 and was nominated for the 2011 Henry Art Gallery Brink Award for emerging Pacific Northwest artists. He has performed in Seattle: (On the Boards' NW New Works Festival and 12 Minutes Max, Seattle Art Museum REMIX, Henry Art Gallery at Bumbershoot, Annex Theatre, Seattle School, Strange Coupling, Open Circle Theater), Portland, OR: (Risk/Reward Festival of New Performance), New York: (Ontological-Hysteric Incubator), Vancouver BC: (Or Gallery) and London, UK: (Camden People's Theatre SPRINT Festival).",
+            "id": 88
+        },
+        {
+            "name": "Mudhoney",
+            "url": "http://www.mudhoneysite.com/",
+            "image": "mudhoney.jpg",
+            "blurb": "'Mudhoney has always had a smidgeon of that weird-ass, psychedelic Thirteenth Floor Elevators 'eye mind' about them, and that too crops up in weird places on <i>The Lucky Ones</i>, just when you thought it was safe to cut your hair and start a pit. The grand majority of these numbers were intentionally written 'from the rhythm up' instead of from the riff and the lyrics down, if you know what I mean. The effect is to thrust out the bottom-end rumble of drummer Dan Peters and bassist Guy Maddison, and to bring about a cohesive whole not entirely ruled by the almighty riff—although you certainly don't have to look hard to find 'em. <br><br> Opening <i>The Lucky Ones</i>, the band defiantly looks twenty years of heaviness and critical hosannas in the eye and spits out the anthemic 'I'm Now,' an existential place where 'the past makes no sense, the future looks tense.' Finding eager new converts locked firmly in the present who'll agree should not prove difficult.' <br>- Jay Hinman",
+            "id": 89
+        },
+        {
+            "name": "Nazca Lines",
+            "url": "http://www.stressedsumorecords.co.uk/",
+            "image": "nazca-lines.jpg",
+            "blurb": "Formed in the summer of 2005 by Brett Wedeking (guitar) and Cory Alfano (guitar), Nazca Lines emerged as Seattle's answer to the post-punk movement, paved by bands such as Fugazi, At The Drive In, and Drive Like Jehu. The original lineup was rounded out by Brad Curran (bass), Scot Porter (drums) and Brett's brother Garin Wedeking on lead vocals. The band immediately began to cut its teeth locally and throughout the surrounding Pacific northwest.",
+            "id": 90
+        },
+        {
+            "name": "Nightmare Fortress",
+            "url": "http://soundcloud.com/nightmarefortress",
+            "image": "nightmare-fortress.jpg",
+            "blurb": "",
+            "id": 91
+        },
+        {
+            "name": "No Touching Ground",
+            "url": "",
+            "image": "no-touching-ground.jpg",
+            "blurb": "No Touching Ground (NTG) is a mural and installation artist/shaman. Conceptually his artwork deals with the under represented and is most often presented in marginalized spaces. The pure, imagistic quality of NTG's graphic based work exists outside the traditional graffiti paradigm, and focuses on producing moments of pure transcendence, disseminating images of past inhabitants and prophesizing their return. His collaborative efforts include co-founding the New Mystics and extensive participation with the Free Sheep Foundation. Notable works in 2010 included the 'John T. Williams Memorial' and the 'Beating of Maikoiyo Alley-Barnes', both unsanctioned murals in Seattle. An installation in an abandoned warehouse in South Seattle entitled 'Tomb' was also completed. Nationally, NTG collaborated with Over/Under on the 'Helping Hand' mural in Brooklyn for those affected by the Tsunami in Japan. No Touching Ground is frequently published on Wooster Collective and was the winner of Seattle Weekly's Best of 2011 street artist award.",
+            "id": 92
+     	 },
+       {
+           "name": "Noah Gundersen",
+           "url": "http://noahgundersen.bandcamp.com/",
+           "image": "noah-gundersen.jpg",
+           "blurb": "Noah's newest EP, called Family, pays homage to the people who have shaped his life-- rather than the self-aggrandizing so common to the often homogeneous world of singer-songwriters. 'Family comes in many forms,' says Noah. 'It lives with us, for better and for worse. It shapes us. Thats what this album is about.' ",
+           "id": 93
+     	 },
+       {
+           "name": "Ozomatli",
+           "url": "http://ozomatli.com/",
+           "image": "ozomatli.jpg",
+           "blurb": "In their fifteen years together as a band, celebrated Los Angeles culture-mashers Ozomatli have gone from being hometown heroes to being named U.S. State Department Cultural Ambassadors. <br><br> Ozomatli has always juggled two key identities. They are the voice of their city and they are citizens of the world. <br><br> Their music — a notorious urban-Latino-and-beyond collision of hip hop and salsa, dancehall and cumbia, samba and funk, merengue and comparsa, East LA R&B and New Orleans second line, Jamaican ragga and Indian raga— has long followed a key mantra: it will take you around the world by taking you around L.A.",
+           "id": 94
+       },
+       {
+           "name": "Pickwick",
+           "url": "",
+           "image": "pickwick.jpg",
+           "blurb": "Pickwick was formed in 2008 when singer Galen Disston left Los Angeles and relocated to Seattle, Washington. Originally an alt-country group, Pickwick spent the following two years trying to establish themselves in the Seattle Folk scene. Amidst a barrage of similarly-minded artists, the band struggled to connect with audiences and was on the verge of disintegration. <br><br> Around that time Disston heard Sam Cooke's classic, 'A Change is Gonna Come.' Floored by the poignance of Cooke's voice, the band began experimenting with music that would allow Disston the same kind of vocal freedom. It was not long before the band had completely revamped their sound.",
+           "id": 95
+       },
+       {
+           "name": "Picoso",
+           "url": "http://picoso.net/",
+           "image": "picoso.jpg",
+           "blurb": "Since its establishment in 2004, Picoso has evolved from a trio playing on the streets of Seattle into a smoking seven piece band that regularly lights up venues around the northwest and beyond. Grounded in the Afro- Latino sounds of the Caribbean, Picoso's 100% original music spans a dynamic spectrum from traditional Cuban son and cha cha to dubbed out cumbia and reggaeton, and of course their mainstay, salsa. Picoso makes any event a party, and whether in clubs, festivals, or private functions Picoso brings a fire that is sure to get things moving. Integrating a fully capable horn section with hard hitting rhythms, the dance floor is blazing from the first note. The lyrical delivery, led by Puerto Rican cantante (singer) Alfonso Gonzalez and backed up by 7-part harmonies is both passionate and playful, drawing in audiences like a warm hearth in winter. Time and again Picoso proves their ability to control the stage with facility and to send their audience home full of joy and asking for more. ",
+           "id": 96
+       },
+       {
+           "name": "Pogo",
+           "url": "http://www.pogomix.net/",
+           "image": "pogo.jpg",
+           "blurb": "Pogo (born Nick Bertke) is an internationally renowned electronic musician and VJ from Perth, Australia. He has gained popularity for his unique work recording small sounds from a film or a specific scene, and sequencing the sounds together to form a new piece of music.",
+           "id": 97
+       },
+       {
+           "name": "Rainbow Fletcher",
+           "url": "",
+           "image": "rainbow-fletcher.jpg",
+           "blurb": "Rainbow is the Dance Director, Choreographer, and a founding member of the Can Can Castaways. The Castaways are the original in house performance group for the Can Can Cabaret. Rainbow is also the co-artistic director, alongside Ezra Dickinson, of The Offshore Project. Rainbow started dancing when she was three years old and never stopped.",
+           "id": 98
+       },
+       {
+           "name": "Rebecca Gates",
+           "url": "http://parcematone.com/",
+           "image": "rebecca-gates.jpg",
+           "blurb": "Rebecca Gates is a US based musician, curator, artist and audio editor. She has released four albums, three as leader of the critically acclaimed group The Spinanes (Sub Pop), toured internationally and appeared as a vocalist on numerous records by artists as wide ranging as The Decemberists and Willie Nelson. Her record Ruby Series was hailed by Spin Magazine  as 'warm, thoughtful, and melodically gorgeous.'",
+           "id": 99
+       },
+       {
+           "name": "Red Night Lights",
+           "url": "",
+           "image": "red-night-lights.jpg",
+           "blurb": "Red Light Nights is a monthly series that is held at Canoe Social Club for the Capitol Hill Art Walk/Blitz.  Each month, in the style of Amsterdam's most decadent district, Canoe puts 2 artists in its sultry red lit windows and offers passersby the chance to buy a 'private art experience' with one of the artists in the back room.  The charge is nominal - a few dollars for a 5-minute experience. All experiences are strictly for an audience of one.  Past  Red Light Nights have included a 5-minute 8-course dinner by culinary artist Chris Cvetkovich, 5-minute portraits by Troy Gua, private poetry recitations by Doug Nufer, a dance on a giant bed by ticktock and an interactive concert by Saskia Delores.",
+           "id": 100
+       },
+       {
+           "name": "Richard Cheese & Lounge Against the Machine",
+           "url": "http://www.richardcheese.com/",
+           "image": "richard-cheese.jpg",
+           "blurb": "America's loudest lounge singer Richard Cheese performs swingin' Vegas versions of rock, rap, and Top40 hits, 'swankifying' contemporary songs into traditional pop vocal standards. Cheese has sold more than 175,000 CDs; his albums include Lounge Against The Machine, Tuxicity, I'd Like A Virgin, Aperitif For Destruction, The Sunny Side Of The Moon, his Christmas album Silent Nightclub, his TV Themes album Dick At Nite, his live album, Viva La Vodka, and his latest album OK Bartender.  He also just produced a new album by Johnny Aloha called Lavapalooza.",
+           "id": 101
+       },
+       {
+           "name": "Robb Kunz",
+           "url": "",
+           "image": "robb-kunz.jpg",
+           "blurb": "Robb Kunz is a recordist and sound engineer/artist. He is the founder of the Berlin-based ethnoelectro group Alcalica and the short-lived Urban Guerrilla Audio Kollective. A core member of the militant marching band Infernal Noise Brigade from 2000 to 2006, Kunz produces large-scale, often politically charged sound installations and broadcasts that transform public spaces.",
+           "id": 102
+       },
+       {
+           "name": "Robyn",
+           "url": "http://robyn.com/",
+           "image": "robyn.jpg",
+           "blurb": "<i>Body Talk PT 1</i>, which came out in June, was called 'the best pop album of the year' by <i>US Weekly</i> and Pitchfork.com gave it an 8.5 out of 10, observing: 'Robyn doesn't just walk the line between what she has called the ‘commercial' and ‘tastemaker' realms. She obliterates it.' Released in September, <i>Body Talk PT 2</i> earned an 'A' from <i>Entertainment Weekly</i>, and 3.5 stars from both <i>Rolling Stone</i> (which described <i>Body Talk PT 2</i> as 'another batch of great, club-ready songs') and <i>People</i>. ",
+           "id": 103
+       },
+       {
+           "name": "Rodrigo Valenzuela",
+           "url": "",
+           "image": "rodrigo-valenzuela.jpg",
+           "blurb": "Rodrigo Valenzuela is a visual artist and filmmaker. Born in Chile and currently resident of Seattle, he studied photography at University of Chile, Aesthetics at Evergreen State College and is a second year MFA student at University of Washington. Rodrigo Valenzuela will be presenting his new work 'Diamond box' a video piece inspired by the artist´s experiences as an undocumented construction worker.",
+           "id": 104
+       },
+       {
+           "name": "Rose Windows",
+           "url": "http://www.facebook.com/rosewindows",
+           "image": "rose-windows.jpg",
+           "blurb": "They will drive into your town like a raging 8 man thunderstorm, rock and shake your house until everyone bleeds then take all of your booze and women from your willing hands. These are not mere mortals. They have been known to drink enough alcohol to drown small elephants and smoke enough marijuana to put Snoop Dogg in a coma. Seriously, they don't fuck around.",
+           "id": 105
+       },
+       {
+           "name": "Ryan Adams",
+           "url": "http://paxamrecords.com/",
+           "image": "ryan-adams.jpg",
+           "blurb": "Ryan Adams is a multiple-Grammy-nominated singer songwriter from Jacksonville, NC whose critically acclaimed and commercially successful albums both as a solo artist and with the Cardinals have included <i>Heartbreaker</i> (2000), <i>Gold</i> (2001), <i>Love Is Hell</i> (2004), <i>Cold Roses</i> (2005) and <i>Easy Tiger</i> (2007) which TIME magazine hailed as 'a career breakthrough.' Adams is also the CEO of his own PAX-AM label through which he has released numerous singles and last year's Cardinals <i>III/IV</i> double album, among others. Adams is also an accomplished author, with two Akashic books to his credit, <i>Infinity Blues</i> and <i>Hello Sunshine</i>. He recently completed a sold out tour of the UK and Europe and returned to Los Angeles where he has been putting finishing touches on his new record with producer Glyn Johns and featuring contributions from the likes of Norah Jones and Benmont Tench.",
+           "id": 106
+       },
+       {
+           "name": "Sandi Kurtz",
+           "url": "",
+           "image": "",
+           "blurb": "Sandi Kurtz is a dance critic writing regularly for the <i>Seattle Weekly</i>, and occasionally for <i>Dance Magazine</i> and <i>Pointe</i>. Her work has also appeared in <i>DanceView Times</i>, <i>Metropolitan Living</i>, <i>Eastside Week</i>, <i>DanceNet</i> and <i>Interchange</i>. She began dance training at the University of Washington, earning degrees in theater from Reed College, dance criticism from Sarah Lawrence College and movement analysis from the Laban Institute of Movement Studies. She has taught dance history, research practice, notation, repertory and technique at the University of Washington and Cornish College. She's served on the board of the Dance Critics Association and edited newsletters for the DCA and the Society of Dance History Scholars.",
+           "id": 107
+       },
+       {
+           "name": "Sara Dickerman",
+           "url": "http://saradickerman.com/",
+           "image": "sara-dickerman.jpg",
+           "blurb": "Sara Dickerman is a former restaurant cook whose writings on food and culture have appeared in Saveur, Bon Appetit, Slate, The New York Times, and Seattle Magazine. Her work can be found at saradickerman.com, and her pie of choice is apple.",
+           "id": 108
+       },
+       {
+           "name": "Saskia Delores",
+           "url": "",
+           "image": "saskia-delores.jpg",
+           "blurb": "Saskia Delores is a multimedia conceptual artist, musician, and performer based in the Pacific Northwest. She has performed as various personas in all kinds of venues including On the Boards, the Showbox, the Crocodile, Bagley Wright Theater, Annex Theater, and the O.K. Hotel in Seattle as well as Ars Nova, Fez, and the Sidewalk Cafe in NYC. ",
+           "id": 109
+       },
+       {
+           "name": "School of Rock",
+           "url": "http://seattle.schoolofrock.com/",
+           "image": "school-of-rock.jpg",
+           "blurb": "The best way to learn music is to play music. School of Rock teaches guitar, bass, vocals, keyboards, drums and combines weekly private music lessons and group band rehearsals to prepare students to take the stage in front of live audiences in an authentic concert setting. To date students have played thousands of concerts, to more than 100,000 people, at such legendary venues as CBGB's, The Trocadero, The Knitting Factory, The Whiskey, The Roxy, The Experience Music Project, The Big Easy and BB King's Blues Club in Times Square. They have also had the great fortune to be able to perform at music festivals from Lollapalooza and Austin City Limits, to Zappanale in Bad Doberan, Germany. ",
+           "id": 110
+       },
+       {
+           "name": "Sean Johnson",
+           "url": "",
+           "image": "sean-johnson.jpg",
+           "blurb": "Sean M. Johnson was born in 1981 to a working class biracial family in Columbus, Ohio. His work is an endeavor to convey experience through objects in which the viewer can relate. He composes and constructs sculptures that challenge a suspension of disbelief using the act of balance as a metaphor. Sean sets up narratives and dichotomies that disarm the observer so that experiences of his life are there to be discovered through investment. Sean lives and works in Seattle and has been a finalist for the Seattle Art Museum's Betty Bowen Memorial Award in 2005 and 2009.",
+           "id": 111
+       },
+       {
+           "name": "Seapony",
+           "url": "http://www.myspace.com/seaponyband",
+           "image": "seapony.jpg",
+           "blurb": "The music of Seapony is refreshing in its simplicity. Most songs on Go With Me use no more than three chords, with an average running time around two-and-a-half minutes. In lieu of a human drummer, the Seattle trio entrusts time-keeping to a vintage gizmo the size of a desktop calculator. The lyrics to 'Dreaming,' the track that catapulted them into the spotlight, are just six lines long. Like Young Marble Giants and Beat Happening before them, this young three-piece has generated excitement that belies their music's modest means. And their back story is just as no-nonsense. <br><br> Seapony is songwriter Danny Rowland, singer Jen Weidl, and bass player Ian Brewer. Danny and Ian grew up and made music together in Oklahoma. In 2001, they moved to Olympia, WA. In 2004, Danny visited Cincinnati, missed his flight home, and ended up staying in Ohio for four years; he met Jen during his Buckeye State sojourn. After a period of work and study in Lawrence, KS, the happy couple came west in 2010 and were reunited with Ian in Seattle. Seapony was born.",
+           "id": 112
+       },
+       {
+           "name": "Serrah Russell",
+           "url": "http://www.serrahrussell.com/",
+           "image": "serrah-russell.jpg",
+           "blurb": "Serrah Russell is an artist and curator living in Seattle. She currently runs and curates the online project Violet Strays. As a weekly rotating online exhibition space, Violet Strays seeks to create an environment to forge connections between artists and the internet. <br><br> Encouraged to trust their own instincts, artists create work specific to the site, allowing their work to follow the inevitable passing of time with its removal. Past curatorial experience includes a pop-up exhibition at Cairo gallery entitled Our Family; consisting of artist's interpretation of family through their manipulation of found snapshot photography. Upcoming projects include an interactive exhibition for NEPO House where viewers are invited to actively participate in the curation process through their arrangement, removal and inclusion of an archive of images. Serrah's artistic and curatorial work continues to be motivated by fascination with appropriation, the space between the past and the present and visual depictions of the presence of absence.",
+           "id": 113
+       },
+       {
+           "name": "Shabazz Palaces",
+           "url": "http://shabazzpalaces.com/",
+           "image": "shabazz-palaces.jpg",
+           "blurb": "Black Up is the new sonic move from Shabazz Palaces. Like rich velvet hijabs or gold threaded abayas. Luxury as understood by the modest. Shabazz Palaces. If Bedouins herded beats instead of goats and settled in Seattle instead of the Atlas Mountains, this would be their album. Forward thinkers but nostalgic for a sparer time when ancient astronomers only recognized five planets. Hip hop. Black light uses electromagnetic radiation to eradicate microorganisms, but shabazz didn't come to kill a sound, just to shine their own incandescent lamp on this. Hear. Hard and clear. Fifty thousand years in the making. Honorable.—palaceer pink gators. Produced by Knife Knights.plcrs at Gunbeat Serenade Studio in Outplace Palacelands. It was recorded and mixed in Lixx-alog by Blood.",
+           "id": 114
+       },
+       {
+           "name": "Shelby Earl",
+           "url": "http://www.shelbyearl.com/",
+           "image": "shelby-earl.jpg",
+           "blurb": "Shelby Earl is not a country singer, as her name suggests. She is a city girl with a 'world-class voice' and a universe of stories to tell. Entrenched in the Seattle music scene for years, Earl worked in music-industry day jobs and headed up a multitude of grassroots endeavors. She booked, mentored, and promoted loads of bands, all the while keeping her own musical dreams safely on the shelf. Earl also spent many years fronting various bands of her own, one of which gained industry and major label interest, but none of which prompted her to take big risks or to commit to life as a full-time musician.",
+           "id": 115
+       },
+       {
+           "name": "Shelby Lynne",
+           "url": "http://www.shelbylynne.com/",
+           "image": "shelby-lynne.jpg",
+           "blurb": "Shelby Lynne was destined to be a singer. Born a singer. She was raised in rural Alabama by musical parents who stressed individuality and the importance of standing apart from others. A terrible student, but avid reader, she loved the written lyric and a beautiful melody. Around the house she was surrounded by country music from the past, Hank Williams, Dottie West, Waylon Jennings, as well as old 45's that belonged to her parents stacked high with most all Everly Brothers, Beatles, Elvis. It was the old pop music that really turned her soul on. The harmonies that came so naturally to her from such an early age stemmed from her mother, a naturally gifted singer, who guided the diamond in the rough talent on rides to school on freezing Alabama mornings with her younger sister Allison. They sang three part harmonies to pass the time, which brought the threesome so close in life, and in music. The Mills Brothers, Ink Spots, Kay Starr, Everly's and anything that needed a harmony -- this was the car in which to find it.",
+           "id": 116
+       },
+       {
+           "name": "Sierra Stinson",
+           "url": "http://www.sierrastinson.com/",
+           "image": "sierra-stinson.jpg",
+           "blurb": "Sierra Stinson is the founder and curator of Vignettes, an alternative exhibition space in Seattle. The one night only exhibitions take place in her studio apartment on a biweekly basis and feature artists in many stages of their process and practice. She enjoys exploring the sense of urgency behind concept, creation and exhibition. The transition from the studio to gallery, as well as exploring and re-evaluating what it takes to live, work and create here and now.",
+           "id": 117
+       },
+       {
+           "name": "Smokey Brights",
+           "url": "",
+           "image": "smokey-brights.jpg",
+           "blurb": "The original intention was to make a record. After years of touring and recording with the brash and energetic garage punk outfit The Whore Moans, songwriter Ryan Devlin had notebooks full of material that just didn't fit: folk tunes that sounded more like the Bob Dylan and Paul Simon he grew up on; finger picking ramblers and Nashville style ballads. The songs kept playing through his mind, insisting he find an outlet for them. A year before Smokey Brights would play their first note together, Devlin sought out the musicians whose talents he wanted to help him realize these persistent songs: <br><br> Jim Vermillion and Nick Krivchenia had been playing bass and drums together every week for the past five years for upwards of twenty hours—just the two of them—working on tight syncopations, in time signatures that read like long division. Their efforts have been under the names Armed with Legs and Kill Kill Orchestra. To have one in a band was to have the other, like brothers, or house players in an old soul studio. The duo agreed to try some songs out with Devlin, and work began in the summer of 2010. <br><br> Mike Kalnoky was best known for his angular lead guitar lines in What What Now, the DIY Seattle art-punk band. Though, if you'd ever had the chance to see his old outfit Thunderbird Motel, you'd know that Mike can play the blues—the area where his musical roots truly reside. When Devlin asked him to sit in on a rehearsal with a yet un-named trio, it all came together. Mike's bright Telecaster bends sounded like a young Mike Bloomfield, weaving through the melodies, bringing the twang that brought it all back home. <br><br> In the first week of 2011, they got down to business and made the record that had been spinning through Devlin's mind for years. The result was a sum of their parts: some rock, some blues, some R&B, some twang. By the time the boys released <i>Can't Rightly Say</i>, they were already filling up clubs, playing festivals, and even garnering some national attention. The songs and Devlin's efforts have found their outlet, and the boys in Smokey Brights have been more than happy to oblige.",
+           "id": 118
+       },
+       {
+           "name": "Sol Hashemi",
+           "url": "",
+           "image": "sol-hashemi.jpg",
+           "blurb": "Sol's first words were 'garage sale.' ",
+           "id": 119
+       },
+       {
+           "name": "Sons of Warren Oates",
+           "url": "http://www.facebook.com/SonsofWarrenOates",
+           "image": "sons-of-warren-oates.jpg",
+           "blurb": "The Sons of Warren Oats take their name from a 70's B-movie icon and prolific TV actor best known for his roles in <i>The Wild Bunch</i>, <i>Two Lane Black Top</i>, and <i>Stripes</i> (as Drill Sergeant Hulka) and a variety of guest roles on shows as diverse as <i>Gunsmoke</i> and <i>The Twilight Zone</i>. It was his portrayal of Lyle Gorch in Sam Peckinpah's <i>The Wild Bunch</i> which first caught the attention of Sons frontman and instigator Jason Dodson (The Maldives) who admired the guy who chose to die with his friends at the culmination of that film. <br><br> Sons of Warren Oates were conceived as a more traditional acoustic outlet for Dodson, a prolific songwriter. And, seeing as how he knows a thing or two about wrangling a posse of his own, he enlisted the picks, strings, vocal chords and vim of some of Ballard Avenue's most beloved mainstays including Kevin Barrans (The Maldives), Seth Warren (The Maldives), Zoe Muth, and Kevin Murphy (The Moondoggies) among others. While Barrans and Warren complete the core of the group, an intended function of the Sons is to provide an ongoing platform for collaboration with some of the amazingly talented musicians who have shared the stage with The Maldives.",
+           "id": 120
+       },
+       {
+           "name": "Stag",
+           "url": "http://www.facebook.com/pages/STAG/119577781437745",
+           "image": "stag.jpg",
+           "blurb": "Stag is the kind of band that formed for exactly the right reason: because the five members found joy in making music together. If that seems simple, and old-fashioned in a way, there was once a time when that was the only reason music was ever crafted by any rock band. It was that reason that inspired bands in dank clubs of Liverpool, beery barrooms of Cleveland, or in the tiny taverns that made up the Seattle music scene back in the day.",
+           "id": 121
+       },
+       {
+           "name": "Steve Cuiffo",
+           "url": "http://www.newyorker.com/talk/2011/01/24/110124ta_talk_friend",
+           "image": "steve-cuiffo.jpg",
+           "blurb": "Steve Cuiffo is an actor and magician who creates solo shows and works collaboratively with a range of artists. He has created original works such as <i>Steve Cuiffo Is Lenny Bruce</i> and <i>The Amazing Russello Magic Hour</i>. His performing credits include The Wooster Group's <i>North Atlantic</i>, Radiohole's <i>Fluke</i>, The Foundry Theatre's <i>Major Bang</i> and <i>The Roaring Girle</i>, Donald Byrd's Byrdlesque and Tea Alagic's <i>The Filament Cycle</i>.  Steve's new show, <i>ELEPHANT ROOM</i>, a collaboration with Geoff Sobelle and Trey Lyford, will premiere in September 2011 at the Philadelphia Live Arts Festival.",
+           "id": 122
+       },
+       {
+           "name": "Steven Miller",
+           "url": "http://smiller555.com/",
+           "image": "steven-miller.jpg",
+           "blurb": "After a decade working as a graphic designer, writer, and performance artist and playing bass for the agitprop music group ¡TchKung!, Steven Miller opened a professional photography studio in 2002. His performance background led to his ongoing series of conceptual portraiture, created in collaboration with a select number of Seattle's most adventurous musicians and performers. His photographs have been published in Europe, Japan, and the United States, including in <i>NY Arts Magazine</i>, <i>Art Lies</i>, <i>London Gay Times</i>, <i>Slurp</i>, <i>Headmaster</i>, <i>White Crane</i>, <i>The Seattle Times</i>, <i>The Stranger</i>, <i>Seattle Weekly</i>, and <i>Seattle Magazine</i>, as well as <i>Milky</i>, a monograph published by DECODE Books. <br><br> Miller's art has been exhibited at Gallery 110, Seattle; Davidson Contemporary, Seattle; and Northern Georgia College and State University, Dahlonega. His work has also been included in regional group exhibitions at the Seattle Art Museum Rental/Sales Gallery, the Tacoma Art Museum, and the Frye Art Museum as well as SF Camerawork, San Francisco; Deborah Colton Gallery, Houston; Fototage Trier, Germany; and New York Photo Festival, New York City. His photographs are featured in the public collections of the Tacoma Art Museum, Northern Georgia College and State University, and Public Art 4Culture, as well as numerous private collections.",
+           "id": 123
+       },
+       {
+           "name": "Strong Killings",
+           "url": "",
+           "image": "strong-killings.jpg",
+           "blurb": "",
+           "id": 124
+       },
+       {
+           "name": "Sue Corcoran",
+           "url": "",
+           "image": "sue-corcoran.jpg",
+           "blurb": "Sue Corcoran has produced, written, and directed award-winning film and video for more than 15 years with experience ranging from feature production, commercials and music videos to corporate film and video. Sue's first feature <i>Gory Gory Hallelujah</i> is currently in worldwide release after winning <i>Best Feature</i> at Shockerfest then being awarded the <i>Bravest Feature of the Bend Film Festival</i> by Gus Van Sant. Besides being called a bankable yankee blond by the London Standard, Sue's directorial style has been described as 'Felliniesque' by visual effects pioneer Douglas Trumbull (2001: A Space Odyssey, Star Trek, Blade Runner) and countless others.",
+           "id": 125
+       },
+       {
+           "name": "Susan Robb",
+           "url": "",
+           "image": "strong-killings.jpg",
+           "blurb": "Susan Robb, unquestionably interested in involving rather then addressing her viewers, creates medium-spanning art that is an ongoing exploration of the inter-relatedness of people and place. In July 2011 Robb masterminded <i>The Long Walk</i> where she led 50 participants on a 4-day walk from Puget Sound to Snoqualmie Falls - www.thelongwalkseattle.com.  Beginning in October Susan will open a 3-month exhibition, <i>Floating Gold</i>, installed in a store front in the International District. Robb recently received residencies for 2012 from both the Vermont Studio Center and Djerassi. For more information visit her at www.susanrobb.com",
+           "id": 126
+       },
+       {
+           "name": "Susie Lee",
+           "url": "",
+           "image": "susie-lee.jpg",
+           "blurb": "Susie Lee's work bridges the gap between technology driven, time-based media with intimate human experience. Shortly after completing her MFA, Lee was recognized by Seattle Weekly as the '2006 Emerging Artist of the Year' for the 'intelligence, emotion and sensuality' of her new media works. Following her first solo exhibition at Lawrimore Project in 2007, Lee was named 'An Artist to Watch' by the national publication Artnews. Lee's work has been exhibited widely, from Miami to Los Angeles, at the Denver Art Museum, Denver, and Blanton Museum of Art, Austin, and internationally in Italy (Galleria Tiziana Di Caro, Salerno; and Artefiere Bologna, Bologna), and at Gallery Hyundai, Seoul, Korea. She was the winner of the 2010 Stranger Visual Art Genius Award. <br><br> In 2011, as a recipient of the Northwest Contemporary Art Awards, her work was recently featured at the Portland Art Museum. The Susie Lee ensemble premiered a full-length piece in September 2011. Her first museum solo exhibition, 'Of Breath and Rain' will be presented at the Frye Art Museum in February, 2012. Lee is represented by Lawrimore Project, Seattle; Myers Contemporary, Baltimore; and Galleria Tiziana Di Caro, Salerno.",
+           "id": 127
+       },
+       {
+           "name": "Tea Cozies",
+           "url": "http://www.tea-cozies.com/",
+           "image": "tea-cozies.jpg",
+           "blurb": "Steeped in garage rock and british indie, Tea Cozies take influences from guitar-driven pop bands as Blur, Elastica, and the Pixies. Though Seattle-based, the origins of Tea Cozies began in Northern Colorado where Jessi Reed (vocals, guitar), Brady Harvey (vocals, guitar) and former drummer Kelly Viergutz attended Fort Collins High School together.",
+           "id": 128
+       },
+       {
+           "name": "Thao with the Get Down Stay Down",
+           "url": "http://thaomusic.com/",
+           "image": "thao-get-down.jpg",
+           "blurb": "'The album is named Know Better Learn Faster because you can't,' explains Thao. 'By the time you realize you should, it's too late. And I enjoy the predicament and the totally devastating, unfunny humor of that.' <br><br> Thao and the ever-versatile Get Down Stay Down (Adam Thompson on bass, keys and additional guitar, and Willis Thompson on drums and percussion) return with the follow up to their critically lauded and riotously applauded previous album, <i>We Brave Bee Stings and All</i>, the breakout success and best-selling record of 2008 for Kill Rock Stars. With super-producer and friend Tucker Martine (The Decemberists, Bill Frisell, Spoon) again at the helm, <i>Know Better Learn Faster</i> perfectly captures the band as their more mature, tastefully raucous, tastefully subdued and musically adventurous selves.",
+           "id": 129
+       },
+       {
+           "name": "That 1 Guy",
+           "url": "http://www.that1guy.com/",
+           "image": "that-1-guy.jpg",
+           "blurb": "'Funky Bean,' 'Buttmachine,' Mustaches and Laser beams. It reads like a page out of a Dr. Seuss book, but for Mike Silverman, better known as That 1 Guy, it is just the reality he was searching for. At 150-200 live shows each year people gather to see his mad scientist at work, curiously watching as That 1 Guy plugs an electric chord into the heel of a cowboy boot and transforms it into an instrument. He howls and the audience joins him like a pack of coyotes. They even chime in for the song 'Weasel Pot Pie,' offering rhymes to finish a line about 'cinnamon scones': Twilight Zones? Al Capones? Frank Stallones? That 1 Guy laughs and offers the grin of a Cheshire cat. Here is a man who loves his job.",
+           "id": 130
+       },
+       {
+           "name": "The Cherdonna and Lou Show",
+           "url": "",
+           "image": "the-cherdonna-lou-show.jpg",
+           "blurb": "Jody Kuehner (Cherdonna Shinatra) and Ricki Mason (Lou Henry Hoover) are contemporary dance artists who began working together in Seattle in 2004. They soon discovered a synergy of comedic timing and a shared passion for character driven movement. Jody and Ricki invented The Cherdonna and Lou Show in 2009 to combine their choreographic backgrounds with their desire to create comedic politicized and personal performance. They merge movement as the impetus for character development with the artifice of drag to reveal something true.  The Cherdonna and Lou Show has been supported by 4Culture, Artist Trust, and The Mayor's Office for Arts and Cultural Affairs.",
+           "id": 131
+       },
+       {
+           "name": "The Cops",
+           "url": "http://www.thecopsmusic.com/",
+           "image": "the-cops.jpg",
+           "blurb": "The Cops are a band of the people; born out of repression, revulsion, frustration and all the other things that make life so horrible and rock bands so great. After spending much of 2006 on the road they now present to you their razor-sharpened 2nd full-length, <i>Free Electricity</i>. Dynamiting the walls of classic rock and rebuilding on the crumbling foundations, The Cops have constructed a set filled with scratching, twitching, aching, unholy rock music that still manages to be both familiar and crucially entertaining. Topical without being political and political without being preachy, <i>Free Electricity</i> is eleven dark, roughhousing manifestos broadcast from roughly 5.3 meters below the sidewalk of every major street in the world. No fuss, no muss, no stupid hippie haircuts. No shit.",
+           "id": 132
+       },
+       {
+           "name": "The Felice Brothers",
+           "url": "http://www.thefelicebrothers.com/",
+           "image": "the-felice-brothers.jpg",
+           "blurb": "Here's what's already known about The Felice Brothers: they are a close-knit band of two brothers and three longtime friends, all in their twenties. They are self-taught, not one of them played an instrument prior to the band's inception in 2006 when they started busking in New York City subway stations. The Felice Brothers have released three full-length albums; their last, <i>Yonder Is The Clock</i>, on Team Love Records (2009). The majority of their work was recorded in a converted chicken coop in uPDTate New York near their hometown of Palenville.",
+           "id": 133
+       },
+       {
+           "name": "The Half Brothers",
+           "url": "",
+           "image": "the-half-brothers.jpg",
+           "blurb": "The Half Brothers have been playing indie-inflected bluegrass and new-fangled old-timey music since 2006. Replete with lush three-part vocal harmonies and tight, intricate string-band arrangements, their songs are noteworthy for non-traditional lyrics and an oddly reverent irreverence for this uniquely American musical form. They have graced the barroom stages of Chop Suey, the Sunset, Jules Mae's and Conor Byrne as well as the theatrical stages of Annex Theatre, On The Boards, Seattle Town Hall and Theatre Off Jackson. Their piece 'Things Have Never Been the Same' was performed at the 2008 Bumbershoot Festival.  The Half Brothers are: John Ackermann (mandolin), Rick Miller (guitar), and David Nixon (banjo). ",
+           "id": 134
+       },
+       {
+           "name": "The Hold Steady",
+           "url": "http://theholdsteady.net/",
+           "image": "the-hold-steady.jpg",
+           "blurb": "The Hold Steady was born out of some loose talk in my Boreum Hill apartment in 2002. I had moved to Brooklyn about two years earlier. I was thirty-one years old, and the other dudes were about my same age. Our concept was to start a straight rock band, with low aspirations. Just local shows, no touring, and most likely, no real records. We practiced for a while and then played our first show in January 2003 at North Six, in Williamsburg. I was surprised at how many people showed up. <br><br> The show went well. It reminded us, all veterans of hard luck bands, that music can be fun. We played our second show in Baltimore, and it sort of becomes a blur after that. We quickly broke our rules about no touring and records, and released three records in three years. We lost one member and added two others. The most recent record, 2006's Boys & Girls in America, was successful enough to get us in a bunch of magazines and take us pretty much around the world. It was, to be honest, pretty ironic -- the band that set out to do nothing became a critics favorite and a touring machine. The Hold Steady had become our lives.",
+           "id": 135
+       },
+       {
+           "name": "The Nameless",
+           "url": "",
+           "image": "the-nameless.jpg",
+           "blurb": "Stephen Pancerev and Kelly Grohs currently live in Portland Oregon, where they work together as singer/ songwriter, uniting both Stephen's Berklee background and Kelly's life long experience as lead vocalist in projects varying from punk to jazz. Lyrically driven, their songs are inspired by the likes of John Lennon, Earth Kit, and Elliot Smith. Comfortable and confident, they are not afraid to allow these influences to be heard subtly throughout their music. The two are most often accompanied by local talents such as Dan Duval, Bill Athens, and Willie Mathias.",
+           "id": 136
+       },
+       {
+           "name": "The Tallboys",
+           "url": "http://www.oldtimeseattle.com/",
+           "image": "the-tallboys.jpg",
+           "blurb": "Based in Seattle, Washington, The Tallboys are a four piece old time string band well-versed in traditional fiddle tunes and mountain songs. They stay honest to their traditional inspirations, yet charge up their sound with a raw edge of gritty enthusiasm conjured from their years of street performing. The Tallboys consistently deliver exciting stage performances and hard-driving dance tunes. ",
+           "id": 137
+       },
+       {
+           "name": "TheeEmergency",
+           "url": "http://www.theeemergency.com/",
+           "image": "thee-emergency.jpg",
+           "blurb": "",
+           "id": 138
+       },
+       {
+           "name": "Theoretics",
+           "url": "http://www.theoreticsmusic.com/",
+           "image": "theoretics.jpg",
+           "blurb": "Carrying on a tradition best exemplified by 'The Roots,' THEORETICS is a true Hip Hop band. They build their songs from the ground up with each musician contributing from their eclectic backgrounds outside of Hip Hop. <br><br> Their self‐titled debut album features thirteen original songs, including four instru-mentals. The album showcases the groups' skill at creating exciting, neck‐cracking material, with a sound both new and known, and a positive message delivered in an uncompromising style.",
+           "id": 139
+       },
+       {
+           "name": "Tonya Lockyer",
+           "url": "",
+           "image": "tonya-lockyer.jpg",
+           "blurb": "Tonya Lockyer is Executive Director of Velocity Dance Center. She also serves on the faculty of Cornish College of the Arts in the departments of Dance, and Humanities and Sciences. Lockyer has taught, performed and presented her performance work internationally. Her writing on movement and performance is published in <i>Contact Quarterly</i>, exhibition catalogues and the book <i>Vu Du Corps: Lisa Nelson Mouvement et Perception</i>.",
+           "id": 140
+       },
+       {
+           "name": "Unnatural Helpers",
+           "url": "http://www.myspace.com/unnaturalhelpers",
+           "image": "unnatural-helpers.jpg",
+           "blurb": "The Unnatural Helpers have been banging around Seattle for a few years now as the perennial hobbyhorse of singer / drummer / songwriter / sole consistent member Dean Whitmore, who has also spent time with such Seattle outfits as the Intelligence, Welcome and Dipers. Despite the myriad lineup changes over the years, the band has managed to retain and expand on its original sound in a steady and cohesive way -- anyone who has witnessed the live show over the years will be well familiar with the band's taut, muscular guitar-rock, driven by Whitmore's whip-tight drumming and usually caustic, often self-deprecating vocals. Oh, and the songs are always short. Very short.",
+           "id": 141
+       },
+       {
+           "name": "USF (formerly Universal Studios Florida)",
+           "url": "http://usftheband.bandcamp.com/",
+           "image": "usf.jpg",
+           "blurb": "USF (formerly Universal Studios Florida) is an electronic duo that began in the fall of 2008. Band members Kyle Hargus and Jason Baxter released their eponymous debut EP in January 2009, and followed it with the critically-acclaimed full-length <i>Ocean Sunbirds</i> in June 2010, both on Brooklyn's Little Fury Things Records. Described as 'primitive in its joy, and cosmic in its intention' (Chocolate Bobka) and '[a merging of] psychotropic house music with sonic textures long foreign to dance music' (Impose Magazine), <i>Ocean Sunbirds</i> was an attempt at maintaining a uniform feeling across a sixty-minute exploration of imagined landscapes, and was featured in a variety of online and print publications, including Pitchfork Media and international press in Italy, Japan, Germany, the U.K., and Spain. ",
+           "id": 142
+       },
+       {
+           "name": "Viper Creek Club",
+           "url": "http://vipercreekclub.com/",
+           "image": "viper-creek-club.jpg",
+           "blurb": "Viper Creek Club (VCC) is the joint effort of Seattleites Mat Wisner and Brandon Jensen. Originally an idea in one of Mat's demo songs for a previous project, VCC is their alliance, formed by their sometimes diverging fascinations. The unlikely combination of styles and ideas that emerge from this duo makes for a refreshing brand of electro-pop music. VCC is inherently influenced by Mat and Brandon's separate undertakings and their own ideas about sound, composition methods, and genre are continually expanding through them.",
+           "id": 143
+       },
+       {
+           "name": "Virgin Islands",
+           "url": "http://virginislandsband.com/",
+           "image": "virgin-islands.jpg",
+           "blurb": "Last wave punks Virgin Islands have been making waves in their home city of Seattle and beyond since their inception in the fall of 2009. The band releases their debut full-length <i>Ernie Chambers v. God</i> on May 10th, 2011 via The Control Group. ECvG is a politically provocative and musically bold rock album, yes - album, with 11 socially charged manifestos that could be the perfect house music for the last party on earth, or the fight songs for your next revolutionary meeting. Arguably post punk and definitely post modern, this record is an intense and sincere statement from a band who's not afraid to buck the status quo, much like the man Ernie Chambers himself. Virgin Islands usher in the last wave of rock music with conviction and soul.",
+           "id": 144
+       },
+       {
+           "name": "Waxie Moon",
+           "url": "http://www.myspace.com/waxiemoon",
+           "image": "waxie-moon.jpg",
+           "blurb": "'Waxie Moon', a gender-blending 'boylesque' performance-art stripping sensation has performed at various venues throughout Seattle including Key Arena, On the Boards, The Seattle Rep, ACT Theatre, The Moore Theatre and The Triple Door. Career highlights include being featured in Land of the Sweets, A Burlesque Nutcracker (produced by Lily Verlaine and Jasper McCann), performing in and choreographing House of Thee Unholy #2, 3 and 4 (produced by The Swedish Housewife) and being presented by numerous performance organizations including On The Boards (Northwest New Works Festival and 12 Minutes Max), Bumbershoot and The Seattle Erotic Arts Festival.",
+           "id": 145
+       },
+       {
+           "name": "Wes Hurley",
+           "url": "",
+           "image": "wes-hurley.jpg",
+           "blurb": "Wes Hurley is an award-winning filmmaker whose films screened across the US and around the world.  Born and raised in Soviet Union, he studied drama and interdisciplinary arts at the University of Washington.  In 2011 he completed his first narrative feature, 'Waxie Moon in Fallen Jewel' starring Waxie Moon, Sarah Rudinoff, Marya Sea Kaminski, John Osebold, Nick Garrison and many others.",
+           "id": 146
+       },
+       {
+           "name": "Whalebones",
+           "url": "",
+           "image": "whalebones.jpg",
+           "blurb": "'Since their promising 2007 EP, this Seattle band has slimmed down to a trio (complete with new rhythm section) while also becoming a more potent, hard-driving rock band steeped in the music of the late ‘60s-early ‘70s, particularly the likes of Neil Young & Crazy Horse and the Stones. Their long-awaited debut full-length is a masterful blend of trippy psych-rock, garage and folk-rock, featuring lots of distortion-fried guitar riffs, primal rock rhythms, earthy harmonies and Justin Deary's assured lead vocals.' <br>1/7/2011 -Don Yates.",
+           "id": 147
+       },
+       {
+           "name": "William Elliott Whitmore",
+           "url": "http://www.williamelliottwhitmore.com/",
+           "image": "william-elliot-whitmore.jpg",
+           "blurb": "A man armed only with a banjo and a bass drum can be a formidable force, especially if his name is William Elliott Whitmore. On the new Anti- Records album FIELD SONGS, Whitmore uses this two-instrument attack to go straight to the source, leaving no doubt where he comes from. William comes from the land, growing up on a farm in Lee County, Iowa, at the southeastern tip of the state, between the Des Moines and Mississippi Rivers. 'It's some of the most fertile land in the world,' Whitmore proudly proclaims. Still living on the same farm today, Whitmore has truly taken the time to discover where his center lies. From that he will not be moved. With his powerful voice and honest approach he makes his claim, and when the eight tracks that make up FIELDSONGS end there is no doubt this is someone who will be heard.",
+           "id": 148
+       },
+       {
+           "name": "Witch Gardens",
+           "url": "http://witchgardens.bandcamp.com/",
+           "image": "witch-gardens.jpg",
+           "blurb": "Witch Gardens are four friends who love playing music together and writing songs in the kitchen of the modest home where ½ of the band live. They've written winsome pop songs about cheaters, liars, brooms, windshield wipers, and woodpeckers, and have established themselves as 'a band to fuck with in Seattle.' The boy-girl-girl-girl group has been called the cutest band in Seattle more times than they can count. Guitarist/vocalist Casey Catherwood has been a booker/performer/chiller in the Seattle DIY scene since he was 13 (previously he played with Little Party and the Bad Business); Witch Gardens is the first band for drummer Sara Beabout, bassist Beth Corry, and Autoharpist Karolyn Kukoski.",
+           "id": 149
+       },
+       {
+           "name": "Yuni In Taxco",
+           "url": "http://yuni.bandcamp.com/",
+           "image": "yuni-in-taxco.jpg",
+           "blurb": "Formed in the fall of 2009 while on holiday in the Mexican beach town of Sayulita, Yuni In Taxco has been turning heads in Seattle with their eclectic blend of tropical post punk and psychedelia. Their debut EP, released by Portuguese label Cakes & Tapes, was an instant hit with the DJ's at KEXP who proclaimed they have '..the right balance of Beach Boys-esque reverb and harmonies along with playful Caribbean rhythms that seem to herald sunnier times ahead.'",
+           "id": 150
+       },
+       {
+           "name": "Zack Bent",
+           "url": "",
+           "image": "zack-bent.jpg",
+           "blurb": "Zack Bent was born in 1975 in Sunnyvale, California, but considers Indiana his formative homeland. Trained as an architect, his art practice is hallmarked by an investigation of social dynamics within built environments. Whether working in photography, sculpture, or installation, his works focus on constructing mythological spaces in time by re-purposing objects and people to create meditations that transform the normative into the extra-ordinary. ",
+           "id": 151
+       },
+       {
+           "name": "Douglas Horn",
+           "url": "http://www.douglashorn.com/",
+           "image": "douglas-horn.jpg",
+           "blurb": "With sharp, evocative dialog and striking visual flair, writer-director Douglas Horn's work has quickly gained a following among film audiences. Douglas's feature, <i>Entry Level</i> starring DB Sweeney, Missi Pyle, and Kurtwood Smith was released by PorchLight Entertainment.  Entry Level played film festivals across the country and won Best Feature and Best Screenplay in New York City's 2007 VisionFest Film Festival.  His short film, <i>Full Disclosure</i> starring Judy Greer and Brent Sexton won over a dozen awards for Best Short Film and went on to become a #1-selling short film on Apple's iTunes Store. ",
+           "id": 152
+       },
+       {
+           "name": "Mark Titus",
+           "url": "http://www.augustisland.com/",
+           "image": "mark-titus.jpg",
+           "blurb": "Award winning screenwriter, Mark Titus is the principal owner of August Island Pictures in Seattle. Mr. Titus studied at The University of Oregon's actor training program then moved to Seattle in 1995, where he worked as an actor. <br><br> Since 2006, Mr. Titus has written, directed and produced brand films for clients like: Amazon, Microsoft, Nintendo, Nordstrom, T-Mobile, The University of Washington, United Nations Development Programme, Washington's Lottery and World Vision.",
+           "id": 153
+       },
+       {
+           "name": "Canon Blue",
+           "url": "",
+           "image": "",
+           "blurb": "",
+           "id": 154
+       },
+       {
+            "name": "YACHT",
+            "url": "http://teamyacht.com/",
+            "image": "yacht.jpg",
+            "blurb": "YACHT was born in 2002 in Portland, Oregon as a solo cross-disciplinary experiment for Jona Bechtolt, using technology to extend physical boundaries of communication, performance, and music. In 2008, after a shared mystical experience in the Far West Texas desert, Bechtolt was joined in the YACHT endeavor by longtime collaborator Claire L. Evans. Spurred by this paranormal bond, this new incarnation of YACHT wrote and recorded 'See Mystery Lights' in Marfa, Texas. In 2010, The Straight Gaze — Robert 'Bobby Birdman' Kieswetter and Jeffrey 'Jerusalem' Brodsky — rounded out the live presentation of all YACHT music.",
+            "id": 155
+        }
+],
+    "venues": [
+        {
+            "name": "Neptune",
+            "address": "1303 NE 45th Street, Seattle, WA",
+            "id": 1
+        },
+        {
+            "name": "SIFF Cinema",
+            "address": "321 Mercer Street, Seattle, WA",
+            "id": 2
+        },
+        {
+            "name": "Laser Dome",
+            "address": "200 Second Ave N, Seattle, WA",
+            "id": 3
+        },
+        {
+            "name": "Rendezvous",
+            "address": "2322 2nd Avenue, Seattle, WA",
+            "id": 4
+        },
+        {
+            "name": "The Crocodile",
+            "address": "2200 2nd Avenue, Seattle, WA",
+            "id": 5
+        },
+        {
+            "name": "Moore Theatre",
+            "address": "1932 2nd Avenue, Seattle, WA",
+            "id": 6
+        },
+        {
+            "name": "Can Can",
+            "address": "2107 3rd Ave, Seattle, WA",
+            "id": 7
+        },
+        {
+            "name": "Shadowbox at the Market",
+            "address": "1426 1st Avenue, Seattle, WA",
+            "id": 8
+        },
+        {
+            "name": "Benaroya Hall",
+            "address": "200 University Street, Seattle, WA",
+            "id": 9
+        },
+        {
+            "name": "The Triple Door",
+            "address": "216 Union Street, Seattle, WA",
+            "id": 10
+        },
+        {
+            "name": "The Paramount",
+            "address": "911 Pine Street, Seattle, WA",
+            "id": 11
+        },
+        {
+            "name": "Town Hall",
+            "address": "1119 8th Avenue, Seattle, WA",
+            "id": 12
+        },
+        {
+            "name": "FRED Wildlife Refuge",
+            "address": "127 E Bolyston, Seattle, WA",
+            "id": 13
+        },
+        {
+            "name": "Comet Tavern",
+            "address": "922 East Pike Street, Seattle, WA",
+            "id": 14
+        },
+        {
+            "name": "Neumos",
+            "address": "1122 E. Pike Street, Seattle, WA",
+            "id": 15
+        },
+        {
+            "name": "Northwest Film Forum",
+            "address": "1515 12th Avenue, Seattle, WA",
+            "id": 16
+        },
+        {
+            "name": "Velocity Dance Center",
+            "address": "1621 12th Avenue, Seattle, WA",
+            "id": 17
+        },
+        {
+            "name": "Chop Suey",
+            "address": "1325 East Madison Street, Seattle, WA",
+            "id": 18
+        },
+        {
+            "name": "Theatre Off Jackson",
+            "address": "409 7th Avenue South, Seattle, WA",
+            "id": 19
+        },
+        {
+            "name": "Showbox SoDo",
+            "address": "1700 1st Avenue S, Seattle, WA",
+            "id": 20
+        }
+    ],
+    "categories": [
+        {
+            "name": "music",
+            "id": 1
+        },
+        {
+            "name": "art",
+            "id": 2
+        },
+        {
+            "name": "poetry",
+            "id": 3
+        },
+        {
+            "name": "film",
+            "id": 5
+        },
+        {
+            "name": "performance",
+            "id": 6
+        }
+    ],
+    "events": [
+        {
+            "name": "ROBYN w/ YACHT",
+            "date": "Thu, 20 Oct 2011 19:00:00 PDT",
+            "venue": 11,
+            "category": 1,
+            "url": "",
+            "image": "robyn.jpg",
+            "description": "Special for Robyn! Canoe Social Club brings their provocative Red Light Nights to the Paramount Theater especially for the City Arts Festival. Solo performance artist Marya Sea Kaminski, visual artist Tim Stackpole, theater ensemble The Satori Group and video artist Dayton Allemann will be on hand to provide private art experiences to patrons before they head into the Robyn concert at the Paramount.  Daring patrons can check out the artists in the window, pay the Art Madame (and curator) Daryle Conners for a spot and then be led to a back room for an intimate creative encounter with the artist of their choice.",
+						"artist": [
+							103,
+							100,
+              155
+							],
+            "id": 1
+        },
+        {
+            "name": "CRYSTAL CASTLES w/ Crypts, Nightmare Fortress",
+            "date": "Thu, 20 Oct 2011 19:00:00 PDT",
+            "venue": 20,
+            "category": 1,
+            "url": "",
+            "image": "crystal-castles.jpg",
+            "description": "<strong>Nightmare Fortress</strong><br>8:35 pm - 9:05 pm<br><strong>Crypts</strong><br>9:25 pm - 9:55 pm<br><strong>Crystal Castles</strong><br>11:30 pm - 1:00 am",
+						"artist": [
+							23,
+							22,
+							91
+							],
+            "id": 2
+        },
+        {
+            "name": "THE LONG WINTERS w/ Campfire OK, Cobirds Unite, Cataldo",
+            "date": "Thu, 20 Oct 2011 19:00:00 PDT",
+            "venue": 8,
+            "category": 1,
+            "url": "",
+            "image": "long-winters.jpg",
+            "description": "",
+						"artist": [
+							77,
+							15,
+							18,
+							21
+							],
+            "id": 3
+        },
+        {
+            "name": "MAD RAD w/ Katie Kate (cd release), Helluvastate, Slow Dance",
+            "date": "Thu, 20 Oct 2011 19:00:00 PDT",
+            "venue": 15,
+            "category": 1,
+            "url": "",
+            "image": "mad-rad.jpg",
+            "description": "",
+						"artist": [
+							80
+							],
+            "id": 4
+        },
+        {
+            "name": "THE FELICE BROTHERS w/ Gill Landry (of Old Crow Medicine Show), Shelby Earl, Gabriel Mintz",
+            "date": "Thu, 20 Oct 2011 19:00:00 PDT",
+            "venue": 5,
+            "category": 1,
+            "url": "",
+            "image": "the-felice-brothers.jpg",
+            "description": "",
+						"artist": [
+							133,
+							115
+							],
+            "id": 5
+        },
+        {
+            "name": "POGO w/ That 1 Guy, Daydream Vacation, Viper Creek Club",
+            "date": "Thu, 20 Oct 2011 19:00:00 PDT",
+            "venue": 18,
+            "category": 1,
+            "url": "",
+            "image": "pogo.jpg",
+            "description": "",
+						"artist": [
+							97,
+							29,
+							130,
+							143
+							],
+            "id": 6
+        },
+        {
+            "name": "THE COPS w/ Birthday Suits, Strong Killings, Nazca Lines",
+            "date": "Thu, 20 Oct 2011 19:00:00 PDT",
+            "venue": 14,
+            "category": 1,
+            "url": "",
+            "image": "the-cops.jpg",
+            "description": "",
+						"artist": [
+							132,
+							6,
+							124
+							],
+            "id": 7
+        },
+        {
+            "name": "ALLEN STONE w/ Fly Moon Royalty",
+            "date": "Thu, 20 Oct 2011 19:00:00 PDT",
+            "venue": 10,
+            "category": 1,
+            "url": "",
+            "image": "allen-stone.jpg",
+            "description": "",
+						"artist": [
+							2,
+							40
+							],
+            "id": 8
+        },
+        {
+            "name": "SCHOOL of ROCK: Live Laser Grunge Show",
+            "date": "Thu, 20 Oct 2011 18:30:00 PDT",
+            "venue": 3,
+            "category": 1,
+            "url": "",
+            "image": "school-of-rock.jpg",
+            "description": "Please note: This is not a production of Pacific Science Center and tickets will not be available through Pacific Science Center or it's ticketing agencies. ",
+						"artist": [
+							110
+							],
+            "id": 9
+        },
+        {
+            "name": "HORDE and the HAREM w/Exohxo, Elk and Boar, The Nameless",
+            "date": "Thu, 20 Oct 2011 19:00:00 PDT",
+            "venue": 4,
+            "category": 1,
+            "url": "",
+            "image": "horde-harem.jpg",
+            "description": "",
+						"artist": [
+							53,
+							34,
+							37,
+							136
+						],
+            "id": 10
+        },
+        {
+            "name": "THE ECSTASY OF INFLUENCE: An evening featuring Heather McHugh",
+            "date": "Thu, 20 Oct 2011 19:00:00 PDT",
+            "venue": 12,
+            "category": 3,
+            "url": "",
+            "image": "heather-mchugh.jpg",
+            "description": "Heather McHugh is one of the most distinct and important voices in American poetry. Her words sing off the page and tickle the brain. This remarkable pairing of wit and hymn has transfixed audiences for decades, and in this reading we will celebrate the cerebral song of McHugh while taking a closer look at her influence on NW poetics. Heather will be joined by 3 of her most talented former and current students, Kary Wayson, Kate Lebo and Erika Wilder. We'll hear short readings from each of these young luminaries punctuated by songs based on McHugh's poems by spunky bluegrass trio The Half Brothers, followed by a reading from Heather McHugh herself. The event will be hosted by Jennifer Borges Foster. Chrom-A-Matic, a visual arts collective and on-the-spot painting troupe will be creating new paintings based on the poems and songs presented throughout the evening. These paintings will be autctioned off after the readings to benefit Heather McHugh's favorite charity, the World Society for the Protection of Animals.",
+						"artist": [
+							50,
+							20,
+							35,
+							57,
+							69,
+							70,
+							134
+							],
+            "id": 11
+        },
+        {
+            "name": "SEATEETH: Jose Bold (John Osebold of 'Awesome', Premiere performance)",
+            "date": "Thu, 20 Oct 2011 22:30:00 PDT",
+            "venue": 19,
+            "category": 6,
+            "url": "",
+            "image": "seateeth.jpg",
+            "description": "One of Seattle's most strange and beloved interdisciplinary artists premieres a new show combining music, theater and whales. Presented as a simple reading, Seateeth follows the story of a nameless narrator whose ineffectual life is complicated by a chain of surreal events that draws him toward an island guarded by a formidable whale. As the tale progresses, the reading itself becomes strangely affected by the fictional events.",
+						"artist": [
+							65
+							],
+            "id": 12
+        },
+        {
+            "name": "HEDWIG and the ANGRY INCH: Movie Sing Along",
+            "date": "Thu, 20 Oct 2011 20:00:00 PDT",
+            "venue": 2,
+            "category": 5,
+            "url": "",
+            "image": "hedwig.jpg",
+            "description": "'Don't you know me Kansas City, I'm the new Berlin wall. Try and tear me down!'<br><br>Dress up in your biggest wigs and craziest heels and sing out loud along with the wig-wearing wunderkind. And for Pete's sake do not put a bra in a dryer. It warps! Director John Cameron Mitchell. (USA, 2001, 95 min.)",
+            "id": 13
+        },
+        {
+            "name": "CULTURE CLUB: Celebrity Karaoke",
+            "date": "Thu, 20 Oct 2011 21:00:00 PDT",
+            "venue": 13,
+            "category": 6,
+            "url": "",
+            "image": "",
+            "description": "Ever had an inkling to be a rock star? Take your singing out of the shower and put it on the stage. The Celebrity Karaoke party at Culture Club will feature outrageous and heartfelt karaoke performances by over 20 City Arts Fest artists and local celebrities. From classic to obscure song selections, this will be karaoke like you've never seen it with live vjing, back up dancing and costumes, hosted by local art karaoke aficionados Eric Fredericksen (Western Bridge) and Betsey Brock (Henry Art Gallery). Audience members can submit their own songs, to be performed in-between some of your favorite local super stars' acts.",
+            "id": 14
+        },
+        {
+            "name": "POP-UP ART MARKET",
+            "date": "Thu, 20 Oct 2011 16:00:00 PDT",
+            "venue": 13,
+            "category": 2,
+            "url": "",
+            "image": "pop-up-market.jpg",
+            "description": "Especially for the festival, we are creating an art market of local publications, hand selected goods from collectives in the city and surrounding areas. <br><br> The visual art program for City Arts Festival is being conceived and curated by Sierra Stinson in collaboration with festival arts curator Sara Edwards.",
+						"artist": [
+							117
+							],
+            "id": 15
+        },
+        {
+            "name": "CULTURE CLUB: VISUAL ART CURATED BY FREE SHEEP FOUNDATION",
+            "date": "Thu, 20 Oct 2011 18:00:00 PDT",
+            "venue": 13,
+            "category": 2,
+            "url": "",
+            "image": "cc-free-sheep.jpg",
+            "description": "City Arts Festival's visual art program features three one night only exhibitions at Fred Wildlife Refuge, with a new opening event each day. Peering through the lenses of three diverse local curators, the exhibits will showcase a wide array of visual art genres and uncover how the contemporary visual art scene interacts with music and comes to life in our city and the festival setting.",
+						"artist": [
+							1,
+							3,
+							19,
+							24,
+							61,
+							71,
+							92,
+							102,
+							117,
+							123
+							],
+            "id": 16
+        },
+        {
+            "name": "CULTURE CLUB: Selling without Selling Out, a Film Event and Happy Hour",
+            "date": "Thu, 20 Oct 2011 16:00:00 PDT",
+            "venue": 13,
+            "category": 2,
+            "url": "",
+            "image": "cc-selling-sellout.jpg",
+            "description": "Are commerce and art really as mutually exclusive as they appear? The accepted paradigm has long been that a businessperson cannot be artistic and the artist cannot profit from their work without 'selling out', but is this perception a reality? <br><br> The night will consist of an hour of conversation, followed by an hour of socialization to allow the community to continue the discussion and share their own insights into this exciting topic.",
+						"artist": [
+							152,
+							153,
+							125
+						],
+            "id": 17
+        },
+        {
+            "name": "RYAN ADAMS w/ Rebecca Gates",
+            "date": "Fri, 21 Oct 2011 19:00:00 PDT",
+            "venue": 9,
+            "category": 1,
+            "url": "",
+            "image": "ryan-adams.jpg",
+            "description": "",
+						"artist": [
+							106,
+							99
+						],
+            "id": 18
+        },
+        {
+            "name": "BUILT TO SPILL w/ Disco Doom, Seapony",
+            "date": "Fri, 21 Oct 2011 19:00:00 PDT",
+            "venue": 6,
+            "category": 1,
+            "url": "",
+            "image": "built-to-spill.jpg",
+            "description": "",
+						"artist": [
+							14,
+							30,
+							112
+						],
+            "id": 19
+        },
+        {
+            "name": "Richard Cheese & Lounge Against the Machine",
+            "date": "Fri, 21 Oct 2011 19:00:00 PDT",
+            "venue": 8,
+            "category": 1,
+            "url": "",
+            "image": "richard-cheese.jpg",
+            "description": "America's loudest lounge singer Richard Cheese performs swingin' Vegas versions of rock, rap, and Top40 hits, 'swankifying' contemporary songs into traditional pop vocal standards. Cheese has sold more than 175,000 CDs; his albums include <i>Lounge Against The Machine</i>, <i>Tuxicity</i>, <i>I'd Like A Virgin</i>, <i>Aperitif For Destruction</i>, <i>The Sunny Side Of The Moon</i>, his Christmas album, <i>Silent Nightclub</i>, his TV Themes album, <i>Dick At Nite</i>, his live album, <i>Viva La Vodka</i>, and his latest album <i>OK Bartender</i>.",
+						"artist": [
+							101
+							],
+            "id": 20
+        },
+        {
+            "name": "HELIO SEQUENCE: Live Laser Show",
+						"date": "Fri, 21 Oct 2011 22:30:00 PDT",
+            "venue": 3,
+            "category": 1,
+						"image": "helio-sequence.jpg",
+						"description": "Please note: This is not a production of Pacific Science Center and tickets will not be available through Pacific Science Center or it's ticketing agencies. ",
+            "artist": [
+                51
+            ],
+            "id": 21
+        },
+        {
+						"name": "FENCES w/ William Elliot Whitmore, Black Whales, Daniel G Harmann",
+            "date": "Fri, 21 Oct 2011 20:00:00 PDT",
+            "venue": 15,
+            "category": 1,
+						"image": "fences.jpg",
+            "artist": [
+                39,
+                7,
+                27
+            ],
+            "id": 22
+        },
+        {
+						"name": "BOXER REBELLION w/ Pickwick, Canon Blue, Yuni in Taxco",
+		        "date": "Fri, 21 Oct 2011 19:00:00 PDT",
+		        "venue": 5,
+		        "category": 1,
+						"image": "boxer-rebellion.jpg",
+		        "artist": [
+		            10,
+								154,
+								95,
+								150
+		        ],
+            "id": 23
+        },
+        {
+            "name": "BLUE SKY BLACK DEATH + USF w/ Big Spiders Back And Brain Fruit",
+		        "date": "Fri, 21 Oct 2011 19:00:00 PDT",
+		        "venue": 18,
+		        "category": 1,
+						"image": "blue-sky-black-death.jpg",
+		        "artist": [
+		            9,
+								5,
+								11,
+								142
+		        ],
+            "id": 24
+        },
+        {
+            "name": "SONS OF WARREN OATES w/ Smokey Brights, Joseph Giant, Bryan John Appleby",
+		        "date": "Fri, 21 Oct 2011 19:00:00 PDT",
+		        "venue": 4,
+		        "category": 1,
+						"image": "sons-of-warren-oates.jpg",
+		        "artist": [
+		            120,
+								13,
+								66,
+								118
+		        ],
+            "id": 25
+        },
+        {
+            "name": "ALL STAR TRIBUTE TO THE REPLACEMENTS feat. members of The Fastbacks, The Cops, Virgin Islands, Kinski, Fort Union, Concourse d'Elegance, Cataldo, Kyle Bradford, Ben Fisher, Gabriel Mintz and a special appearance by John Roderick",
+		        "date": "Fri, 21 Oct 2011 20:00:00 PDT",
+		        "venue": 14,
+		        "category": 1,
+						"image": "the-replacements.jpg",
+						"description": "ALL STAR TRIBUTE TO THE REPLACEMENTS feat. members of The Fastbacks, The Cops, Virgin Islands, Kinski, Fort Union, Concourse d'Elegance, Cataldo, Kyle Bradford, Ben Fisher, Gabriel Mintz and a special appearance by John Roderick",
+		        "artist": [
+		        ],
+            "id": 26
+        },
+        {
+            "name": "ERIN LEDDY (Hand2Mouth Theatre): My Mind Is Like An Open Meadow",
+		        "date": "Fri, 21 Oct 2011 22:00:00 PDT",
+		        "venue": 19,
+		        "category": 1,
+						"image": "erin-leddy.jpg",
+						"description": "Hand2Mouth and Erin Leddy return to Seattle with the full version of 'My Mind Is Like An Open Meadow,' the show that played at the Northwest New Works Festival in 2010 and recently won five Portland Drammy awards including Outstanding Production of 2010‐11.",
+		        "artist": [
+							36
+		        ],
+            "id": 27
+        },
+        {
+            "name": "GENRE-BENDER w/ Karen Finneyfrock, Rainbow Fletcher, Joanna Lepore, Mark Haim, Wes Hurley, Amy O'Neal, Mike Pham, Mark Haim & more",
+		        "date": "Fri, 21 Oct 2011 19:00:00 PDT",
+		        "venue": 7,
+		        "category": 6,
+						"image": "rainbow-fletcher.jpg",
+						"description": "What's a food poem? A dance film? A performance art musical? For the 'Genre Bender' showcase, City Arts Festival is creating an exciting new platform for some of Seattle's favorite theater, dance, food, music, literary and performing artists to create new projects (and new artistic genres) together. This summer, CAF will play match maker and assemble 4-6 teams of interdisciplinary artists who haven't collaborated together before. Each team will receive $500 to create a brand new project to present one night only to the City Arts Festival audience. By intermixing artistic disciplines, these artists will experiment with the boarders of art to create new works that combine forces and stretch the limits of innovation.",
+		        "artist": [
+							4,
+							17,
+							49,
+							63,
+							68,
+							84,
+							88,
+							98,
+							111,
+							146
+		        ],
+            "id": 28
+        },
+        {
+            "name": "THRILLER DANCE CLASS: Waxie Moon, Inga Ingenue and Lou Henry Hoover",
+		        "date": "Fri, 21 Oct 2011 16:00:00 PDT",
+		        "venue": 17,
+		        "category": 6,
+						"image": "thriller.jpg",
+						"description": "Anyone can dance! Learn the choreography from Michael Jackson's Thriller. Join 'Dance Belt' (Seattle dance stars -- Inga Ingenue, Lou Henry Hoover and Waxie Moon) for a fun and exciting dance class. All ages and levels of experience are welcome.",
+		        "artist": [
+							25,
+							54,
+							78,
+							145
+		        ],
+            "id": 29
+        },
+        {
+            "name": "COLOR ME OBSESSED: Replacements Documentary",
+		        "date": "Fri, 21 Oct 2011 19:00:00 PDT",
+		        "venue": 16,
+		        "category": 5,
+						"image": "color-me-obsessed.jpg",
+						"description": "Gorman Bechard's newest film is a strange animal: a documentary whose subject never actually appears. Bechard has been a diehard fan of 1980s rock icons The Replacements for nearly 30 years, and <i>Color Me Obsessed</i> is a movie about that fandom. Unlike other music docs, there's no concert or other footage of the band in the film—in fact, Bechard has still not met a single Replacement. Their music appears nowhere on the soundtrack. Instead, the film engages fans like Dave Foley, critics like Robert Christgau, and other musicians like Colin Meloy and Lori Barbero to talk about this iconoclastic, deeply influential group and their music. It was Bechard's way of making a movie about his favorite band that anyone who's ever had a favorite band can relate to. And if he picks up a few new fans for the Replacements along the way, even better.",
+		        "artist": [
+							45
+						],
+            "id": 30
+        },
+        {
+            "name": "PURPLE RAIN: Movie Sing Along",
+		        "date": "Fri, 21 Oct 2011 21:30:00 PDT",
+		        "venue": 2,
+		        "category": 5,
+						"image": "purple-rain.jpg",
+						"description": "'Dig if you will a picture of you and I engaged in a kiss.' <br>Sing along to Prince's finest songs - but don't laugh at the corny acting or we'll force you to take a frozen skinny dip in the waters of Lake Minnetonka! Director Albert Magnoli. (USA, 1984, 111 min.)",
+            "id": 31
+        },
+        {
+            "name": "CULTURE CLUB: Factory: Feat. MC's and DJ's of Mad Rad, The Physics, DJ Swervewon, SOTA, Amos Miller, Helluvastate, DJ 100 Proof, OC Notes, Fresh Espresso, Neema, Canary Sing, and tons more.",
+		        "date": "Fri, 21 Oct 2011 23:00:00 PDT",
+		        "venue": 13,
+		        "category": 1,
+						"image": "",
+						"description": "Grynch<br> Parker Joe of SOTA<br> OC Notes of Metal Chocolates<br> Khingz of Hi-Life Soundsystem<br> Mat Wisner of Viper Creek Club<br> Thaddeus David of SOTA<br> B-Flat of Hi-Life Soundsystem<br> DJ100proof of Members Only<br> Hyphen8d of SOTA<br> Swervewon of Members Only<br> Crispy of Hi-Life Soundsystem<br> BenadriLL of Lakehouse Ent<br> Mr. Hill of Old Dominion<br> Neema<br> Havi Blaze<br> Stay Low<br> Luck One<br> Notion of That 1 Show<br> Evergreen One of City Hall<br> Sonny Bonoho<br> Hollis of Canary Sing + The Heartfelts<br> Katie Kate<br> Malice Sweet of Malice + Mario & The Physics<br> Mario Sweet of Malice +Mario & The Physics<br> BangBang of Side Pony<br> Ginja Please of Side Pony<br> Amos Miller<br> Dice<br> Jay Battle of Gran Rapids",
+            "id": 32
+        },
+        {
+            "name": "CULTURE CLUB: VISUAL ART CURATED BY MICHAEL VAN HORN",
+		        "date": "Fri, 21 Oct 2011 18:00:00 PDT",
+		        "venue": 13,
+		        "category": 2,
+						"image": "CC-michael-van-horn.jpg",
+						"description": "This show presents new work by artists Sol Hashemi and Jason Hirata. Their 'making and doing' draws from shared and individual personal interests (Japanese rock gardens, 'audiophilia', and seasonal décor to name a few) and utilizes whatever media, processes or activities they determine to be appropriate. Referring to early collaborative work with Hashemi, Hirata said 'We would do whatever we do in the world and use it in our art.'",
+						"artist": [
+                86,
+                55,
+                117,
+								119
+            ],
+            "id": 33
+        },
+        {
+            "name": "CULTURE CLUB: VISUAL ART HAPPY HOUR WITH SIERRA STINSON AND KLARA GLOSOVA",
+		        "date": "Fri, 21 Oct 2011 16:00:00 PDT",
+		        "venue": 13,
+		        "category": 2,
+						"image": "CC-happy-hour.jpg",
+						"description": "Is the glass half empty or half full? In either case watch it fill up with concoctions by local visual and video artists during City Arts Fest' Happy Hour. <br><br> Let the sights nourish your spirit and let the spirits nourish you. Drink it all up!",
+						"artist": [
+                117,
+								72,
+								44,
+								48,
+								62,
+								64,
+								76,
+								126
+            ],
+            "id": 34
+        },
+        {
+            "name": "POP-UP ART MARKET",
+            "date": "Fri, 21 Oct 2011 16:00:00 PDT",
+            "venue": 13,
+            "category": 2,
+            "url": "",
+            "image": "pop-up-market.jpg",
+            "description": "Especially for the festival, we are creating an art market of local publications, hand selected goods from collectives in the city and surrounding areas. <br><br> The visual art program for City Arts Festival is being conceived and curated by Sierra Stinson in collaboration with festival arts curator Sara Edwards.",
+						"artist": [
+							117
+							],
+            "id": 35
+        },
+        {
+            "name": "COLOR ME OBSESSED: Replacements Documentary",
+		        "date": "Fri, 21 Oct 2011 21:30:00 PDT",
+		        "venue": 16,
+		        "category": 5,
+						"image": "color-me-obsessed.jpg",
+						"description": "Gorman Bechard's newest film is a strange animal: a documentary whose subject never actually appears. Bechard has been a diehard fan of 1980s rock icons The Replacements for nearly 30 years, and <i>Color Me Obsessed</i> is a movie about that fandom. Unlike other music docs, there's no concert or other footage of the band in the film—in fact, Bechard has still not met a single Replacement. Their music appears nowhere on the soundtrack. Instead, the film engages fans like Dave Foley, critics like Robert Christgau, and other musicians like Colin Meloy and Lori Barbero to talk about this iconoclastic, deeply influential group and their music. It was Bechard's way of making a movie about his favorite band that anyone who's ever had a favorite band can relate to. And if he picks up a few new fans for the Replacements along the way, even better.",
+		        "artist": [
+							45
+						],
+            "id": 36
+        },
+        {
+            "name": "OZOMATLI w/ Theoretics, Picoso, Dyno Jamz",
+		        "date": "Sat, 22 Oct 2011 19:00:00 PDT",
+		        "venue": 20,
+		        "category": 1,
+						"image": "ozomatli.jpg",
+						"description": "",
+		        "artist": [
+							94,
+							33,
+							96,
+							139
+						],
+            "id": 37
+        },
+        {
+            "name": "BLACKALICIOUS w/ Freestyle Fellowship, Hi Life, Don't Talk to the Cops",
+		        "date": "Sat, 22 Oct 2011 19:00:00 PDT",
+		        "venue": 8,
+		        "category": 1,
+						"image": "blackalicious.jpg",
+						"description": "",
+		        "artist": [
+							8,
+							31,
+							42,
+							52
+						],
+            "id": 38
+        },
+        {
+            "name": "MUDHONEY + FASTBACKS, Thee Emergency, Lovesick Empire",
+		        "date": "Sat, 22 Oct 2011 19:00:00 PDT",
+		        "venue": 15,
+		        "category": 1,
+						"image": "mudhoney.jpg",
+						"description": "",
+		        "artist": [
+							89,
+							38,
+							79,
+							138
+						],
+            "id": 39
+        },
+        {
+            "name": "THAO WITH THE GET DOWN STAY DOWN w/ Grand Hallway, Lemolo, Kris Orlowski",
+		        "date": "Sat, 22 Oct 2011 19:00:00 PDT",
+		        "venue": 5,
+		        "category": 1,
+						"image": "thao-get-down.jpg",
+						"description": "",
+		        "artist": [
+							129,
+							47,
+							73,
+							75
+						],
+            "id": 40
+        },
+        {
+            "name": "MAN MAN: Live Laser Show",
+		        "date": "Sat, 22 Oct 2011 22:30:00 PDT",
+		        "venue": 3,
+		        "category": 1,
+						"image": "man-man.jpg",
+						"description": "Please note: This is not a production of Pacific Science Center and tickets will not be available through Pacific Science Center or it's ticketing agencies. ",
+		        "artist": [
+							83
+						],
+            "id": 41
+        },
+        {
+            "name": "THE HOLD STEADY w/ Grand Archives",
+		        "date": "Sat, 22 Oct 2011 21:00:00 PDT",
+		        "venue": 1,
+		        "category": 1,
+						"image": "",
+						"description": "",
+		        "artist": [
+							135,
+							46
+						],
+            "id": 42
+        },
+        {
+            "name": "SHELBY LYNNE w/ Noah Gunderson",
+		        "date": "Sat, 22 Oct 2011 18:00:00 PDT",
+		        "venue": 10,
+		        "category": 1,
+						"image": "shelby-lynne.jpg",
+						"description": "",
+		        "artist": [
+							116
+						],
+            "id": 43
+        },
+        {
+            "name": "MALE BONDING W/ Unnatural Helpers, Virgin Islands, Fucking Eagles",
+		        "date": "Sat, 22 Oct 2011 19:00:00 PDT",
+		        "venue": 18,
+		        "category": 1,
+						"image": "male-bonding.jpg",
+						"description": "",
+		        "artist": [
+							82,
+							43,
+							141,
+							144
+						],
+            "id": 44
+        },
+        {
+            "name": "ERIN LEDDY (Hand2Mouth Theatre): My Mind Is Like An Open Meadow",
+		        "date": "Sat, 22 Oct 2011 15:30:00 PDT",
+		        "venue": 19,
+		        "category": 1,
+						"image": "erin-leddy.jpg",
+						"description": "Hand2Mouth and Erin Leddy return to Seattle with the full version of 'My Mind Is Like An Open Meadow,' the show that played at the Northwest New Works Festival in 2010 and recently won five Portland Drammy awards including Outstanding Production of 2010‐11.",
+		        "artist": [
+							36
+		        ],
+            "id": 45
+        },
+        {
+            "name": "SEAPONY w/ Tea Cozies, Midday Veil, Witch Gardens",
+		        "date": "Sat, 22 Oct 2011 17:00:00 PDT",
+		        "venue": 4,
+		        "category": 1,
+						"image": "seapony.jpg",
+						"description": "",
+		        "artist": [
+							112,
+							87,
+							128,
+							149
+		        ],
+            "id": 46
+        },
+        {
+            "name": "CAPSULA w/ Whalebones, Stag, Rose Windows",
+		        "date": "Sat, 22 Oct 2011 19:00:00 PDT",
+		        "venue": 14,
+		        "category": 1,
+						"image": "capsula.jpg",
+						"description": "",
+		        "artist": [
+							16,
+							105,
+							121,
+							147
+		        ],
+            "id": 47
+        },
+        {
+            "name": "DANIEL BARROW: EVERY TIME I SEE YOUR PICTURE I CRY",
+		        "date": "Sat, 22 Oct 2011 20:00:00 PDT",
+		        "venue": 13,
+		        "category": 2,
+						"image": "daniel-barrow-every-time.jpg",
+						"description": "Barrow has developed an intimate mode of 'manual animation' using the antiquated technology of an overhead projector. From a position amongst the audience he recites live narration while manipulating layers of transparencies in continuous motion. Accentuated by interference patterns and sleight-of-hand trickery, Barrow's hand-drawn images contrive an absorbing tale of comic book grotesques. 'Every Time I See Your Picture I Cry' is a bizarre confessional detailing the grand but hopeless scheme of an estranged garbage collector and failed art student.",
+		        "artist": [
+							26
+		        ],
+            "id": 48
+        },
+        {
+            "name": "STEVE CUIFFO IS LENNY BRUCE",
+		        "date": "Sat, 22 Oct 2011 22:00:00 PDT",
+		        "venue": 7,
+		        "category": 6,
+						"image": "lenny-bruce.jpg",
+						"description": "The celebrated performer Steve Cuiffo has immersed himself in the work of Lenny Bruce, delivering sublime, hyper-real, verbatim resurrections of the great American thinker's monologues. The New York Times has declared, 'Lenny Bruce is brought back from the dead in the form of Mr. Cuiffo.'  Cuiffo will perform a compilation of Bruce 'bits' on still-hot topics, including organized religion, race, illegal and prescription drugs, sexual mores, obscenity and the Constitution. It's 50 years later, but Bruce's often prophetic, freedom-loving skewering of American culture is as dazzling, hilarious and insightful as ever.",
+		        "artist": [
+							122
+		        ],
+            "id": 49
+        },
+        {
+            "name": "SO YOU THINK IT'S DANCE: Show (+Tell)",
+		        "date": "Sat, 22 Oct 2011 15:00:00 PDT",
+		        "venue": 17,
+		        "category": 6,
+						"image": "so-you-think-dance.jpg",
+						"description": "Velocity's debut Speakeasy Series 'So You Think It's Dance?' is a behind the scenes Show + Tell with Seattle artists famous for pushing the boundaries of dance and performance.",
+		        "artist": [
+							12,
+							32,
+							60,
+							74,
+							81,
+							107,
+							131,
+							140,
+							145
+		        ],
+            "id": 50
+        },
+        {
+            "name": "SEATEETH: Jose Bold (John Osebold of 'Awesome', Premiere performance)",
+            "date": "Sat, 22 Oct 2011 22:00:00 PDT",
+            "venue": 19,
+            "category": 6,
+            "url": "",
+            "image": "seateeth.jpg",
+            "description": "One of Seattle's most strange and beloved interdisciplinary artists premieres a new show combining music, theater and whales. Presented as a simple reading, Seateeth follows the story of a nameless narrator whose ineffectual life is complicated by a chain of surreal events that draws him toward an island guarded by a formidable whale. As the tale progresses, the reading itself becomes strangely affected by the fictional events.",
+						"artist": [
+							65
+							],
+            "id": 51
+        },
+        {
+            "name": "COLOR ME OBSESSED: Replacements Documentary",
+		        "date": "Sat, 22 Oct 2011 19:00:00 PDT",
+		        "venue": 16,
+		        "category": 5,
+						"image": "color-me-obsessed.jpg",
+						"description": "Gorman Bechard's newest film is a strange animal: a documentary whose subject never actually appears. Bechard has been a diehard fan of 1980s rock icons The Replacements for nearly 30 years, and <i>Color Me Obsessed</i> is a movie about that fandom. Unlike other music docs, there's no concert or other footage of the band in the film—in fact, Bechard has still not met a single Replacement. Their music appears nowhere on the soundtrack. Instead, the film engages fans like Dave Foley, critics like Robert Christgau, and other musicians like Colin Meloy and Lori Barbero to talk about this iconoclastic, deeply influential group and their music. It was Bechard's way of making a movie about his favorite band that anyone who's ever had a favorite band can relate to. And if he picks up a few new fans for the Replacements along the way, even better.",
+		        "artist": [
+							45
+						],
+            "id": 52
+        },
+        {
+            "name": "GREASE: Movie Sing Along",
+		        "date": "Sat, 22 Oct 2011 21:30:00 PDT",
+		        "venue": 2,
+		        "category": 5,
+						"image": "grease.jpg",
+						"description": "'I got chills. They're multiplyin,' and I'm losin' control…' <br><br>Join Danny and Sandy with your own crew of T-Birds and Pink Ladies for this newly restored print of one of the highest grossing musicals of all time-complete with interactive subtitles! Director Randal Kleiser. (USA, 1978, 110 min.)",
+            "id": 53
+        },
+        {
+            "name": "COLOR ME OBSESSED: Replacements Documentary",
+		        "date": "Sat, 22 Oct 2011 21:30:00 PDT",
+		        "venue": 16,
+		        "category": 5,
+						"image": "color-me-obsessed.jpg",
+						"description": "Gorman Bechard's newest film is a strange animal: a documentary whose subject never actually appears. Bechard has been a diehard fan of 1980s rock icons The Replacements for nearly 30 years, and <i>Color Me Obsessed</i> is a movie about that fandom. Unlike other music docs, there's no concert or other footage of the band in the film—in fact, Bechard has still not met a single Replacement. Their music appears nowhere on the soundtrack. Instead, the film engages fans like Dave Foley, critics like Robert Christgau, and other musicians like Colin Meloy and Lori Barbero to talk about this iconoclastic, deeply influential group and their music. It was Bechard's way of making a movie about his favorite band that anyone who's ever had a favorite band can relate to. And if he picks up a few new fans for the Replacements along the way, even better.",
+		        "artist": [
+							45
+						],
+            "id": 54
+        },
+        {
+            "name": "GREASE: Movie Sing Along",
+		        "date": "Sat, 22 Oct 2011 19:00:00 PDT",
+		        "venue": 2,
+		        "category": 5,
+						"image": "grease.jpg",
+						"description": "'I got chills. They're multiplyin,' and I'm losin' control…'<br><br>Join Danny and Sandy with your own crew of T-Birds and Pink Ladies for this newly restored print of one of the highest grossing musicals of all time-complete with interactive subtitles! Director Randal Kleiser. (USA, 1978, 110 min.)",
+            "id": 55
+        },
+        {
+            "name": "CULTURE CLUB: City? Arts? Festival? A Creative Conversation by Arts Leadership Lab",
+		        "date": "Sat, 22 Oct 2011 16:00:00 PDT",
+		        "venue": 13,
+		        "category": 2,
+						"image": "cc-leadership-lab.jpg",
+						"description": "",
+            "id": 56
+        },
+        {
+            "name": "CULTURE CLUB: VISUAL ART CURATED BY AMANDA MANITACH AND SERRAH RUSSELL",
+		        "date": "Sat, 22 Oct 2011 18:00:00 PDT",
+		        "venue": 13,
+		        "category": 2,
+						"image": "cc-manitach-russell.jpg",
+						"description": "<i>Lightness</i> features local artists working (at least for one night) in digital video, analog projection, light installation and other illuminating mediums. The term <i>lightness</i> connotes a philosophical weightlessness and mobility while also alluding to the physical ethereality of soundless video and illumination not intended to serve a strictly functional purpose. In Lightness both the compelling glow and the obscuring glare of light media are explored within the bounds of intimate and public space.",
+						"artist": [
+                3,
+                41,
+                49,
+                58,
+								59,
+								67,
+								104,
+								109,
+								113,
+								117,
+								127,
+								151
+            ],
+            "id": 57
+        },
+        {
+            "name": "CULTURE CLUB: Pie Life",
+		        "date": "Sat, 22 Oct 2011 13:00:00 PDT",
+		        "venue": 13,
+		        "category": 6,
+						"image": "cc-pie-life.jpg",
+						"description": "Everyone has a pie story, whether it's about grandma's secret recipe, dessert with the president, or a big fat slice of humble pie. Pie Life asks a local politician, writer, food critic, and musician to tell us their favorite pie stories. Once storytime is over, we'll fill our pie holes with fresh-baked treats from the best pie-makers in Seattle--you! Bring your best pie recipe and be eligible to win prizes, fame, and pie-glory. Pie banquet and country dancing with the Tall Boys to follow, and limited edition handmade zines of the stories and recipes will be available. Hosted by Kate Lebo and KUOW's Jeannie Yandel.",
+						"artist": [
+                28,
+								56,
+								70,
+								108,
+								137
+            ],
+            "id": 58
+        },
+				{
+				"name": "POP-UP ART MARKET",
+        "date": "Sat, 22 Oct 2011 13:00:00 PDT",
+        "venue": 13,
+        "category": 2,
+        "url": "",
+        "image": "pop-up-market.jpg",
+        "description": "Especially for the festival, we are creating an art market of local publications, hand selected goods from collectives in the city and surrounding areas. <br><br> The visual art program for City Arts Festival is being conceived and curated by Sierra Stinson in collaboration with festival arts curator Sara Edwards.",
+				"artist": [
+					117
+					],
+					"id": 59
+				}
+    ]
+})
