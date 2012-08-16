@@ -17,6 +17,8 @@ APP_PATH = "NFF2012"
 PACKAGE_NAME = "com.sportsbutter.new_forms_fest_2012"
 PROJECT_NAME = "NewFormsFest2012"
 
+task 'build', 'Build phonegap project', (options) ->
+  invoke "copywww"
 
 task "create", 'Create phonegap project', (options)->
   exec "../phonegap-2.0/lib/ios/bin/create #{CORDOVA_PATH}/#{APP_PATH} #{PACKAGE_NAME} #{PROJECT_NAME}", (code)->
@@ -25,10 +27,12 @@ task "create", 'Create phonegap project', (options)->
 task "copywww", 'Copy www directory into build source', (options)->
   exec "cp -R www/ #{CORDOVA_PATH}/#{APP_PATH}/www/", (code)->
     print "copied www.\n"
+    invoke "copyconfig"
 
 task "copyconfig", 'Copy configuration into build source', (options)->
   exec "cp config/Cordova.plist #{CORDOVA_PATH}/#{APP_PATH}/#{PROJECT_NAME}/", (code)->
     print "copied config.\n"
+    invoke "build-debug"
 
 task "build-debug", 'Build phonegap debug', (options) ->
   exec "#{CORDOVA_PATH}/#{APP_PATH}/cordova/debug", (code)->
@@ -71,22 +75,7 @@ browserify = (callback) ->
 
 option '-n', '--notest', 'do not run tests'
     
-task 'build', 'Build lib/ from src/', (options) ->
-  sourceCount = 0
-  for lib,src of sources
-    sourceCount += 1
-  for lib,src of sources
-    compile lib,src, (lib,src) ->
-      print "compiled #{src} -> #{lib}\n"
-      sourceCount -= 1
-      if sourceCount == 0
-        print "compiled successfully.\n"
-        print "browserifying...\n"
-        browserify (resultCode) ->
-          if resultCode != 0
-            print "ERROR BROWSERIFYING"
-            return
-          invoke("freshtest") unless options.notest
+
   
 
 task 'freshtest', 'Run tests, wiping test db first', (options) ->
