@@ -7,7 +7,7 @@ var EventsByDayListView = Backbone.View.extend({
     this.date = options.date;
   },
 
-  template : _.template("<a href='#events/<%= slug %>'><%= dateString %></a>"),
+  template : _.template("<a class='button' href='#events/<%= slug %>'><%= dateString %></a>"),
 
   render : function() {
     var dateString = dateFormat(this.date, "dddd, mmmm dS");
