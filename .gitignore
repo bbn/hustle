@@ -1,0 +1,10 @@
+#*.gitignore
+*~
+*.cache
+*.log
+*.pid
+.DS_Store
+*.tmproj
+*.pyc
+
+

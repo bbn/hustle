@@ -15,6 +15,8 @@
 	  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	</head>
 
+
+
 	<body>
     <script type="text/javascript" src="cordova-2.0.0.js"></script>
 
@@ -65,105 +67,10 @@
     <script src="http://widgets.twimg.com/j/2/widget.js"></script>
     <!--<script src="js/twitter.widget.js"></script>-->
 
-
-
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript">
       app.initialize();
-
-        
-      $(document).ready(function() {        
-
-        window.viewNavigator = new ViewNavigator('body'); 
-
-        var hasLoadedData = false;
-        var postDataLoad = function(data){
-          if (!hasLoadedData) {
-            hasLoadedData = true;
-            loadData(data);
-          }
-        };
-
-        // var storeCache = new FileReader(); 
-        // storeCache.onload = function(jsonData){
-        //   console.log("storeCache.onload!");
-        //   var data = JSON.parse(jsonData);
-
-        // }; 
-        // storeCache.onerror = function(err){ 
-        //   debug.error(err); 
-        // }; 
-        // storeCache.readAsText('cityarts.json'); 
-
-
-
-        //TODO apparently there is no JSON object in Android 1.5 + 1.6.
-        //(source: https://groups.google.com/forum/?fromgroups#!topic/phonegap/OtiUFqjhW_E%5B1-25%5D)
-
-        var storedData = window.localStorage.getItem("festivalData");
-        if (storedData) {
-          console.log("from local data!");
-          postDataLoad(JSON.parse(storedData));
-        }
-
-        $.ajax({
-          dataType: "jsonp",
-          jsonpCallback: "jsonp1",
-          url:'http://www.mainsocial.com/fest/cityarts.json?callback=?',
-          success: function(data) {
-            postDataLoad(data);
-            window.localStorage.setItem("festivalData",JSON.stringify(data));
-          }
-        });
-
-
-        
-        // TODO most of what is in loadData should be in window.festival constructor
-        function loadData(data) {
-          var i,j,row,tab,eventDay;
-          window.festival = new Festival(data);
-          window.festivalRouter = new FestivalRouter( { model : window.festival } );
-          window.festivalView = new FestivalView( { model : window.festival, router : window.festivalRouter } ); 
-          window.festivalView.render();
-
-          Backbone.history.start();
-
-          window.artistsView = new ArtistsView({
-            router : window.festivalRouter
-          });
-          window.artistsView.render();
-
-          window.eventsByDayView = new EventsByDayView( { festival : festival } );
-          window.eventsByDayView.render();
-
-
-          window.sponsorsView = new SponsorsView( { festival: festival });
-          window.sponsorsView.render();
-
-          window.venuesView = new VenuesView({ festival: festival });
-          window.venuesView.render();
-           
-           // //TODO remove the below.
-           // //create a view for the events-by-day div. populate the category footer in there.
-           // //create a view for the category footer. use it all over.
-           // festival.categories.forEach(function(c) {
-           //   tab = new CategoryFooterListView( { model : c } );
-           //   $("#legend").append(tab.render().el);
-           // });
-
-          window.infoView = new InfoView( { model : festival.get("info") } );
-          window.infoView.render();
-
-          window.twitterView = new TwitterView( { search : "@NewFormsFest" } ); //festival.get("twitter").search });
-          //window.twitterView.render(); 
-       
-        }
-        
-        $('.page').css('height', window.innerHeight);
-        
-      });
-      
-      
+      console.log("blahblhahH!!!")
     </script>
 	</body>
 </html>
