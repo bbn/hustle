@@ -6,5 +6,4 @@
 .DS_Store
 *.tmproj
 *.pyc
-
-
+node_modules
