@@ -42,7 +42,7 @@ var FestivalRouter = Backbone.Router.extend({
     // $('.active').removeClass('active');
     // $(selector).addClass('active');   
     
-    setContentHeight();   
+    //setContentHeight();   
     // $('.dir-button.black').css('color','#fff');
   },
 
