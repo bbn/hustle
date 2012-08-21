@@ -1,5 +1,5 @@
 _ = require "underscore"
-Backbone = require "backbone"
+Backbone = require "backbone-browserify"
 
 module.exports = class EventsByDayListView extends Backbone.View
 

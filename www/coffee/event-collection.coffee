@@ -1,4 +1,4 @@
-Backbone = require "backbone"
+Backbone = require "backbone-browserify"
 Event = require "./event"
 
 module.exports = class EventCollection extends Backbone.Collection

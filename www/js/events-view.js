@@ -1,14 +1,14 @@
 (function() {
-  var Backbone, EventsByDayListView, EventsView, _,
+  var Backbone, EventListView, EventsView, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
   _ = require("underscore");
 
-  Backbone = require("backbone");
+  Backbone = require("backbone-browserify");
 
-  EventsByDayListView = require("./events-by-day-list-view");
+  EventListView = require("./event-list-view");
 
   module.exports = EventsView = (function(_super) {
 
@@ -49,13 +49,6 @@
           dateFormatString: _this.dateFormatString
         });
         return eventListEl.append(item.render().el);
-      });
-      festival.categories.forEach(function(c) {
-        var tab;
-        tab = new CategoryFooterListView({
-          model: c
-        });
-        return _this.$('#legend').append(tab.render().el);
       });
       return this;
     };

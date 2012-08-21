@@ -1,5 +1,5 @@
 _ = require "underscore"
-Backbone = require "backbone"
+Backbone = require "backbone-browserify"
 EventListView = require "./event-list-view"
 
 module.exports = class ArtistView extends Backbone.View

@@ -1,4 +1,9 @@
-Backbone = require "backbone"
+Backbone = require "backbone-browserify"
+EventView = require "./event-view"
+EventsView = require "./events-view"
+ArtistView = require "./artist-view"
+VenueView = require "./venue-view"
+SponsorView = require "./sponsor-view"
 
 module.exports = class FestivalRouter extends Backbone.Router
   
@@ -52,6 +57,7 @@ module.exports = class FestivalRouter extends Backbone.Router
     @showPage(view)
 
   event: (id)=>
+    id = parseInt(id)
     evnt = null
     for e in @model.events.models
       if e.id == id

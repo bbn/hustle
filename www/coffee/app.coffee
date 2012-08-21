@@ -1,14 +1,18 @@
-Backbone = require "backbone"
+Backbone = require "backbone-browserify"
 Festival = require "./festival"
 FestivalRouter = require "./festival-router"
 FestivalView = require "./festival-view"
 
 ArtistsView = require "./artists-view"
-
+EventsByDayView = require "./events-by-day-view"
+SponsorsView = require "./sponsors-view"
+VenuesView = require "./venues-view"
+InfoView = require "./info-view"
+TwitterView = require "./twitter-view"
 
 
 window.app =
-  
+
   initialize: ()->
     @bind()
   

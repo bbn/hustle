@@ -1,14 +1,16 @@
 (function() {
-  var Backbone, EventView, VenueListView, _,
+  var ArtistListView, Backbone, EventView, VenueListView, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
   _ = require("underscore");
 
-  Backbone = require("backbone");
+  Backbone = require("backbone-browserify");
 
   VenueListView = require("./venue-list-view");
+
+  ArtistListView = require("./artist-list-view");
 
   module.exports = EventView = (function(_super) {
 
@@ -46,7 +48,7 @@
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         artist = _ref[_i];
         item = new ArtistListView({
-          model: artists.at(i)
+          model: artist
         });
         this.$("#event-artists").append(item.render().el);
       }

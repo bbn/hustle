@@ -9,6 +9,7 @@
     "nodeunit" : "latest",
     "node-static": "latest",
     "backbone": "latest",
+    "backbone-browserify": "latest",
     "underscore": "latest",
     "journey": "latest",
     "request": "latest",

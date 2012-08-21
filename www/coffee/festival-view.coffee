@@ -1,5 +1,6 @@
 _ = require "underscore"
-Backbone = require "backbone"
+Backbone = require "backbone-browserify"
+FestivalViewButton = require "./festival-view-button"
 
 module.exports = class FestivalView extends Backbone.View
 
@@ -25,7 +26,7 @@ module.exports = class FestivalView extends Backbone.View
       twitter:"#twitter"
       sponsors:"#sponsors"
       info:"#info"
-    for key,val in buttons
+    for key,val of buttons
       button = new FestivalViewButton( { name:key, selectorLink:val } )
       @$("#buttons").append(button.render().el)
     return @

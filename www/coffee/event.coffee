@@ -1,5 +1,6 @@
 _ = require "underscore"
-Backbone = require "backbone"
+Backbone = require "backbone-browserify"
+ArtistCollection = require "./artist-collection"
 
 module.exports = class Event extends Backbone.Model
 

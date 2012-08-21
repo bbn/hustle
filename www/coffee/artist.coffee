@@ -1,4 +1,4 @@
-Backbone = require "backbone"
+Backbone = require "backbone-browserify"
 
 module.exports = class Artist extends Backbone.Model
 

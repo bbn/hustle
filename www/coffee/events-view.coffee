@@ -1,6 +1,6 @@
 _ = require "underscore"
-Backbone = require "backbone"
-EventsByDayListView = require "./events-by-day-list-view"
+Backbone = require "backbone-browserify"
+EventListView = require "./event-list-view"
 
 module.exports = class EventsView extends Backbone.View
 
@@ -29,8 +29,8 @@ module.exports = class EventsView extends Backbone.View
         dateFormatString : @dateFormatString
       eventListEl.append(item.render().el)
     
-    festival.categories.forEach (c)=>
-      tab = new CategoryFooterListView { model : c }
-      @$('#legend').append(tab.render().el)
+    # festival.categories.forEach (c)=>
+    #   tab = new CategoryFooterListView { model : c }
+    #   @$('#legend').append(tab.render().el)
     
     return @

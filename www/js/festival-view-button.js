@@ -5,7 +5,7 @@
 
   _ = require("underscore");
 
-  Backbone = require("backbone");
+  Backbone = require("backbone-browserify");
 
   module.exports = FestivalViewButton = (function(_super) {
 

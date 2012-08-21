@@ -6,7 +6,7 @@
 
   _ = require("underscore");
 
-  Backbone = require("backbone");
+  Backbone = require("backbone-browserify");
 
   module.exports = ArtistListView = (function(_super) {
 
@@ -20,8 +20,6 @@
     ArtistListView.prototype.tagName = "li";
 
     ArtistListView.prototype.template = _.template("<a href='#artist/<%= id %>'><%= name %></a>");
-
-    ArtistListView.prototype.initialize = function() {};
 
     ArtistListView.prototype.render = function() {
       this.$(this.el).html(this.template(this.model.toJSON()));

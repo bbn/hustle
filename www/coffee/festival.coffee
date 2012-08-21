@@ -1,4 +1,4 @@
-Backbone = require "backbone"
+Backbone = require "backbone-browserify"
 
 EventCollection = require "./event-collection"
 VenueCollection = require "./venue-collection"

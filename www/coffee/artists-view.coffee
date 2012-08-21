@@ -1,5 +1,5 @@
 _ = require "underscore"
-Backbone = require "backbone"
+Backbone = require "backbone-browserify"
 ArtistListView = require "./artist-list-view"
 
 module.exports = class ArtistsView extends Backbone.View

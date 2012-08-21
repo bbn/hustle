@@ -1,10 +1,20 @@
 (function() {
-  var Backbone, FestivalRouter,
+  var ArtistView, Backbone, EventView, EventsView, FestivalRouter, SponsorView, VenueView,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
-  Backbone = require("backbone");
+  Backbone = require("backbone-browserify");
+
+  EventView = require("./event-view");
+
+  EventsView = require("./events-view");
+
+  ArtistView = require("./artist-view");
+
+  VenueView = require("./venue-view");
+
+  SponsorView = require("./sponsor-view");
 
   module.exports = FestivalRouter = (function(_super) {
 
@@ -92,6 +102,7 @@
 
     FestivalRouter.prototype.event = function(id) {
       var e, eventView, evnt, _i, _len, _ref;
+      id = parseInt(id);
       evnt = null;
       _ref = this.model.events.models;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {

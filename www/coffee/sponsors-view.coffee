@@ -1,5 +1,6 @@
 _ = require "underscore"
-Backbone = require "backbone"
+Backbone = require "backbone-browserify"
+SponsorListView = require "./sponsor-list-view"
 
 module.exports = class SponsorsView extends Backbone.View
 

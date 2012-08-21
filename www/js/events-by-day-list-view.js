@@ -5,7 +5,7 @@
 
   _ = require("underscore");
 
-  Backbone = require("backbone");
+  Backbone = require("backbone-browserify");
 
   module.exports = EventsByDayListView = (function(_super) {
 

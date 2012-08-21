@@ -6,7 +6,7 @@
 
   _ = require("underscore");
 
-  Backbone = require("backbone");
+  Backbone = require("backbone-browserify");
 
   EventsByDayListView = require("./events-by-day-list-view");
 
@@ -34,11 +34,11 @@
     };
 
     EventsByDayView.prototype.render = function() {
-      var dateFromThisCollection, row, slug, _i, _len, _ref;
+      var dateFromThisCollection, row, slug, val, _ref;
       _ref = this.festival.eventsByDay;
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        slug = _ref[_i];
-        dateFromThisCollection = this.festival.eventsByDay[slug].at(0).get("date");
+      for (slug in _ref) {
+        val = _ref[slug];
+        dateFromThisCollection = val.at(0).get("date");
         row = new EventsByDayListView({
           slug: slug,
           date: dateFromThisCollection

@@ -1,4 +1,5 @@
-Backbone = require "backbone"
+_ = require "underscore"
+Backbone = require "backbone-browserify"
 
 module.exports = class InfoView extends Backbone.View
   

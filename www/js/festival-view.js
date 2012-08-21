@@ -1,11 +1,13 @@
 (function() {
-  var Backbone, FestivalView, _,
+  var Backbone, FestivalView, FestivalViewButton, _,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
   _ = require("underscore");
 
-  Backbone = require("backbone");
+  Backbone = require("backbone-browserify");
+
+  FestivalViewButton = require("./festival-view-button");
 
   module.exports = FestivalView = (function(_super) {
 
@@ -30,7 +32,7 @@
     };
 
     FestivalView.prototype.render = function() {
-      var button, buttons, key, val, _len;
+      var button, buttons, key, val;
       $(this.el).html(this.template());
       buttons = {
         schedule: "#events-by-day",
@@ -40,8 +42,8 @@
         sponsors: "#sponsors",
         info: "#info"
       };
-      for (val = 0, _len = buttons.length; val < _len; val++) {
-        key = buttons[val];
+      for (key in buttons) {
+        val = buttons[key];
         button = new FestivalViewButton({
           name: key,
           selectorLink: val

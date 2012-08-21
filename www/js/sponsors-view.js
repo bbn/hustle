@@ -1,12 +1,14 @@
 (function() {
-  var Backbone, SponsorsView, _,
+  var Backbone, SponsorListView, SponsorsView, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
   _ = require("underscore");
 
-  Backbone = require("backbone");
+  Backbone = require("backbone-browserify");
+
+  SponsorListView = require("./sponsor-list-view");
 
   module.exports = SponsorsView = (function(_super) {
 
