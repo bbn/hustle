@@ -12,7 +12,7 @@ exec = (command,exitCallback)->
   x.on 'exit', exitCallback 
 
 
-CORDOVA_PATH = "../../Desktop/cordova"
+CORDOVA_PATH = "../../../../Desktop/cordova"
 APP_PATH = "NFF2012"
 PACKAGE_NAME = "com.sportsbutter.newformsfest2012"
 PROJECT_NAME = "NewFormsFest2012"
@@ -34,10 +34,16 @@ task "copyconfig", 'Copy configuration into build source', (options)->
     print "copied config.\n"
     invoke "copyres"
 
-task "copyres", "Copy res image files", (options)->
-  exec "cp -R config/res/ #{CORDOVA_PATH}/#{APP_PATH}/www/res", (code)->
-    print "copied res.\n"
+task "copyicons", "Copy icon files", (options)->
+  exec "cp -R icons/ #{CORDOVA_PATH}/#{APP_PATH}/#{PROJECT_NAME}/Resources/icons", (code)->
+    print "copied icons.\n"
+    invoke "copysplash"
+
+task "copysplash", "Copy splash files", (options)->
+  exec "cp -R splash/ #{CORDOVA_PATH}/#{APP_PATH}/#{PROJECT_NAME}/Resources/splash", (code)->
+    print "copied splash.\n"
     invoke "build-debug"
+
 
 task "build-debug", 'Build phonegap debug', (options) ->
   exec "#{CORDOVA_PATH}/#{APP_PATH}/cordova/debug", (code)->
