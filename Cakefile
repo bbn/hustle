@@ -12,15 +12,16 @@ exec = (command,exitCallback)->
   x.on 'exit', exitCallback 
 
 
-CORDOVA_PATH = "../../Desktop/cordova"
+CORDOVA_PATH = "../../../../Desktop/cordova"
 APP_PATH = "NFF2012"
-PACKAGE_NAME = "com.sportsbutter.new_forms_fest_2012"
+PACKAGE_NAME = "com.sportsbutter.newformsfest2012"
 PROJECT_NAME = "NewFormsFest2012"
 
 task 'build', 'Build phonegap project', (options) ->
   invoke "copywww"
 
 task "create", 'Create phonegap project', (options)->
+  console.log "../phonegap-2.0/lib/ios/bin/create #{CORDOVA_PATH}/#{APP_PATH} #{PACKAGE_NAME} #{PROJECT_NAME}"
   exec "../phonegap-2.0/lib/ios/bin/create #{CORDOVA_PATH}/#{APP_PATH} #{PACKAGE_NAME} #{PROJECT_NAME}", (code)->
     print "xcode project created.\n"
 
