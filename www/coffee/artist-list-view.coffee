@@ -10,5 +10,5 @@ module.exports = class ArtistListView extends Backbone.View
     # _.bindAll(this,"render");
 
   render: ()=>
-    $(@el).html @template @model.toJSON()
+    @$(@el).html @template @model.toJSON()
     return @

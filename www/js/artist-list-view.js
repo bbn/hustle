@@ -24,7 +24,7 @@
     ArtistListView.prototype.initialize = function() {};
 
     ArtistListView.prototype.render = function() {
-      $(this.el).html(this.template(this.model.toJSON()));
+      this.$(this.el).html(this.template(this.model.toJSON()));
       return this;
     };
 

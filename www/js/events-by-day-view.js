@@ -1,27 +1,55 @@
-var EventsByDayView = Backbone.View.extend({
+(function() {
+  var Backbone, EventsByDayListView, EventsByDayView, _,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
-  className : "events-by-day",
+  _ = require("underscore");
 
-  title : "Events",
+  Backbone = require("backbone");
 
-  backLabel : "Back",
+  EventsByDayListView = require("./events-by-day-list-view");
 
-  template : _.template('<ul id="events-by-day-list" class="listview"></ul>'),
+  module.exports = EventsByDayView = (function(_super) {
 
-  events : {},
+    __extends(EventsByDayView, _super);
 
-  initialize : function(options) {
-    _.bindAll(this,"render");
-    this.festival = options.festival;
-  },
-
-  render : function() {
-    for (var slug in this.festival.eventsByDay) {
-      var dateFromThisCollection = this.festival.eventsByDay[slug].at(0).get("date");
-      row = new EventsByDayListView( { slug : slug , date : dateFromThisCollection } );
-      $(this.el).append(row.render().el);
+    function EventsByDayView() {
+      this.render = __bind(this.render, this);
+      EventsByDayView.__super__.constructor.apply(this, arguments);
     }
-    return this;
-  }
 
-});
+    EventsByDayView.prototype.className = "events-by-day";
+
+    EventsByDayView.prototype.title = "Events";
+
+    EventsByDayView.prototype.backLabel = "Back";
+
+    EventsByDayView.prototype.template = _.template('<ul id="events-by-day-list" class="listview"></ul>');
+
+    EventsByDayView.prototype.events = {};
+
+    EventsByDayView.prototype.initialize = function(options) {
+      return this.festival = options.festival;
+    };
+
+    EventsByDayView.prototype.render = function() {
+      var dateFromThisCollection, row, slug, _i, _len, _ref;
+      _ref = this.festival.eventsByDay;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        slug = _ref[_i];
+        dateFromThisCollection = this.festival.eventsByDay[slug].at(0).get("date");
+        row = new EventsByDayListView({
+          slug: slug,
+          date: dateFromThisCollection
+        });
+        $(this.el).append(row.render().el);
+      }
+      return this;
+    };
+
+    return EventsByDayView;
+
+  })(Backbone.View);
+
+}).call(this);

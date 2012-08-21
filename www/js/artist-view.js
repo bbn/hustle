@@ -1,32 +1,57 @@
-var ArtistView = Backbone.View.extend({
-  
-  title: null,
-  backLabel: "Back",
-  
-  template : _.template('<div class="artist-img loading"></div><div class="copy-block"><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url"><%= url %></a></div><label>WHEN</label></div><ul id="artist-events" class="listview"></ul>'),
-  
-  initialize : function() {
-    _.bindAll(this, "render");
-    this.title = this.model.get("name");
-  },
+(function() {
+  var ArtistView, Backbone, EventListView, _,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
-  render : function() {
-    $(this.el).html(this.template(this.model.toJSON()));
-    var artist = this.model.toJSON();
-    if (artist.image == '' || artist.image == null){
-      var artistimage = 'img/artists/noimage.png'
-    }
-    else {
-       var artistimage = artist.image;
-    }
-    this.$(".artist-img").html('<img src="img/artists/'+artistimage+'" class="artist-img-src">');
-    
-    var events = this.model.events();
-    for (var i=0;i<events.length;i++) {
-     var item = new EventListView({ model : events.at(i) });
-     this.$("#artist-events").append(item.render().el);
-    }
-    return this;
-  }
+  _ = require("underscore");
 
-});
+  Backbone = require("backbone");
+
+  EventListView = require("./event-list-view");
+
+  module.exports = ArtistView = (function(_super) {
+
+    __extends(ArtistView, _super);
+
+    function ArtistView() {
+      this.render = __bind(this.render, this);
+      ArtistView.__super__.constructor.apply(this, arguments);
+    }
+
+    ArtistView.prototype.title = null;
+
+    ArtistView.prototype.backLabel = "Back";
+
+    ArtistView.prototype.template = _.template('<div class="artist-img loading"></div><div class="copy-block"><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url"><%= url %></a></div><label>WHEN</label></div><ul id="artist-events" class="listview"></ul>');
+
+    ArtistView.prototype.initialize = function() {
+      return this.title = this.model.get("name");
+    };
+
+    ArtistView.prototype.render = function() {
+      var artist, artistimage, event, item, _i, _len, _ref;
+      $(this.el).html(this.template(this.model.toJSON()));
+      artist = this.model.toJSON();
+      if (artist.image === '' || artist.image === null) {
+        artistimage = 'img/artists/noimage.png';
+      } else {
+        artistimage = artist.image;
+      }
+      this.$(".artist-img").html("<img src='img/artists/" + artistimage + " class='artist-img-src'>");
+      _ref = this.model.events();
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        event = _ref[_i];
+        item = new EventListView({
+          model: event
+        });
+        this.$("#artist-events").append(item.render().el);
+      }
+      return this;
+    };
+
+    return ArtistView;
+
+  })(Backbone.View);
+
+}).call(this);

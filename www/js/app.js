@@ -1,5 +1,13 @@
 (function() {
-  var ArtistsView, conHeight, footHeight, headHeight;
+  var ArtistsView, Backbone, Festival, FestivalRouter, FestivalView, conHeight, footHeight, headHeight;
+
+  Backbone = require("backbone");
+
+  Festival = require("./festival");
+
+  FestivalRouter = require("./festival-router");
+
+  FestivalView = require("./festival-view");
 
   ArtistsView = require("./artists-view");
 

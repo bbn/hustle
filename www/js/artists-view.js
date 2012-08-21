@@ -33,13 +33,12 @@
 
     ArtistsView.prototype.render = function() {
       var artist, row, _i, _len, _ref;
-      console.log($(this.el));
-      $(this.el).html(this.template());
-      _ref = window.festival.artists;
+      this.$(this.el).html(this.template());
+      _ref = window.festival.artists.models;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         artist = _ref[_i];
         row = new ArtistListView({
-          model: window.festival.artists.at(i)
+          model: artist
         });
         this.$('ul#artist-list').append(row.render().el);
       }

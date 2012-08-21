@@ -1,3 +1,8 @@
+Backbone = require "backbone"
+Festival = require "./festival"
+FestivalRouter = require "./festival-router"
+FestivalView = require "./festival-view"
+
 ArtistsView = require "./artists-view"
 
 
@@ -76,7 +81,9 @@ window.app =
     # TODO adapt backbone code so that data can be updated in real-time if necessary.
     window.festival = new Festival data
     window.festivalRouter = new FestivalRouter {model:window.festival}
-    window.festivalView = new FestivalView {model:window.festival, router:window.festivalRouter} 
+    window.festivalView = new FestivalView
+      model: window.festival
+      router: window.festivalRouter
     window.festivalView.render()
 
     Backbone.history.start()

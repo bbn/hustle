@@ -1,27 +1,52 @@
-var SponsorsView = Backbone.View.extend({
+(function() {
+  var Backbone, SponsorsView, _,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
-  className : "sponsors-page",
-  
-  title : "Sponsors",
+  _ = require("underscore");
 
-  backLabel : "Back",
+  Backbone = require("backbone");
 
-  template : _.template('<ul id="sponsor-list" class="listview"></ul>'),
+  module.exports = SponsorsView = (function(_super) {
 
-  events : {},
-  
-  initialize : function(options) {
-    _.bindAll(this,"render");
-    this.festival = options.festival;
-  },
+    __extends(SponsorsView, _super);
 
-  render : function() {
-    $(this.el).html(this.template());
-    for (i=0;i<this.festival.sponsors.length;i++) {
-      row = new SponsorListView( { model : this.festival.sponsors.at(i) } );
-      this.$('ul#sponsor-list').append(row.render().el);
+    function SponsorsView() {
+      this.render = __bind(this.render, this);
+      SponsorsView.__super__.constructor.apply(this, arguments);
     }
-    return this;
-  }
 
-});
+    SponsorsView.prototype.className = "sponsors-page";
+
+    SponsorsView.prototype.title = "Sponsors";
+
+    SponsorsView.prototype.backLabel = "Back";
+
+    SponsorsView.prototype.template = _.template('<ul id="sponsor-list" class="listview"></ul>');
+
+    SponsorsView.prototype.events = {};
+
+    SponsorsView.prototype.initialize = function(options) {
+      return this.festival = options.festival;
+    };
+
+    SponsorsView.prototype.render = function() {
+      var row, sponsor, _i, _len, _ref;
+      $(this.el).html(this.template());
+      _ref = this.festival.sponsors.models;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        sponsor = _ref[_i];
+        row = new SponsorListView({
+          model: sponsor
+        });
+        this.$('ul#sponsor-list').append(row.render().el);
+      }
+      return this;
+    };
+
+    return SponsorsView;
+
+  })(Backbone.View);
+
+}).call(this);

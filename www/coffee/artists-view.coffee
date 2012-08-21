@@ -18,10 +18,10 @@ module.exports = class ArtistsView extends Backbone.View
     # _.bindAll(this,"render")
 
   render: ()=> 
-    $(@el).html @template()
+    @$(@el).html @template()
 
-    for artist in window.festival.artists
-      row = new ArtistListView { model:window.festival.artists.at(i) }
+    for artist in window.festival.artists.models
+      row = new ArtistListView { model:artist }
       @$('ul#artist-list').append row.render().el
 
     return @

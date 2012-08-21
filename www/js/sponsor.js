@@ -1,10 +1,24 @@
-//backbone model for a sponsor
+(function() {
+  var Backbone, Sponsor,
+    __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
-window.Sponsor = Backbone.Model.extend( {  
+  Backbone = require("backbone");
 
-  defaults : {
-    //"image" : "no image",
-    "blurb" : ""
-  }
+  module.exports = Sponsor = (function(_super) {
 
-} );
+    __extends(Sponsor, _super);
+
+    function Sponsor() {
+      Sponsor.__super__.constructor.apply(this, arguments);
+    }
+
+    Sponsor.prototype.defaults = {
+      "blurb": ""
+    };
+
+    return Sponsor;
+
+  })(Backbone.Model);
+
+}).call(this);

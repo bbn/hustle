@@ -1,42 +1,67 @@
-var EventsView = Backbone.View.extend({
+(function() {
+  var Backbone, EventsByDayListView, EventsView, _,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
-  title : null,
+  _ = require("underscore");
 
-  backLabel : "Back",
-  
-  initialize : function(options) {
-    _.bindAll(this, "render");
-    this.title = options.title;
-    this.eventsToList = options.eventsToList;
-    if (options.dateFormatString) {
-      this.dateFormatString = options.dateFormatString;
+  Backbone = require("backbone");
+
+  EventsByDayListView = require("./events-by-day-list-view");
+
+  module.exports = EventsView = (function(_super) {
+
+    __extends(EventsView, _super);
+
+    function EventsView() {
+      this.render = __bind(this.render, this);
+      EventsView.__super__.constructor.apply(this, arguments);
     }
-  },
-  
-  template : _.template('<ul id="event-list" class="listview"></ul>'),
-	
-	dateFormatString : "dddd, mmmm dS h:MM TT",
-	
-  render : function() {
-    
-    $(this.el).html(this.template( { title : this.title }));
-    
-    //event list
-    var eventListEl = this.$("#event-list");
-    var dateFormatString = this.dateFormatString;
-    this.eventsToList.forEach(function(e) {
-      var item = new EventListView({ model : e, dateFormatString : dateFormatString });
-      eventListEl.append(item.render().el);
-    });
-    
-    //legend
-    var legendEl = this.$('#legend');
-    festival.categories.forEach(function(c) {
-      tab = new CategoryFooterListView( { model : c } );
-      legendEl.append(tab.render().el);
-    });
-    
-    return this;
-  }
-  
-});
+
+    EventsView.prototype.title = null;
+
+    EventsView.prototype.backLabel = "Back";
+
+    EventsView.prototype.initialize = function(options) {
+      this.title = options.title;
+      this.eventsToList = options.eventsToList;
+      if (options.dateFormatString) {
+        return this.dateFormatString = options.dateFormatString;
+      }
+    };
+
+    EventsView.prototype.template = _.template('<ul id="event-list" class="listview"></ul>');
+
+    EventsView.prototype.dateFormatString = "dddd, mmmm dS h:MM TT";
+
+    EventsView.prototype.render = function() {
+      var eventListEl,
+        _this = this;
+      $(this.el).html(this.template({
+        title: this.title
+      }));
+      eventListEl = this.$("#event-list");
+      this.eventsToList.forEach(function(e) {
+        var item;
+        item = new EventListView({
+          model: e,
+          dateFormatString: _this.dateFormatString
+        });
+        return eventListEl.append(item.render().el);
+      });
+      festival.categories.forEach(function(c) {
+        var tab;
+        tab = new CategoryFooterListView({
+          model: c
+        });
+        return _this.$('#legend').append(tab.render().el);
+      });
+      return this;
+    };
+
+    return EventsView;
+
+  })(Backbone.View);
+
+}).call(this);
