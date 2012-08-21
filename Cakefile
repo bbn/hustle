@@ -33,6 +33,11 @@ task "copywww", 'Copy www directory into build source', (options)->
 task "copyconfig", 'Copy configuration into build source', (options)->
   exec "cp config/Cordova.plist #{CORDOVA_PATH}/#{APP_PATH}/#{PROJECT_NAME}/", (code)->
     print "copied config.\n"
+    invoke "copyres"
+
+task "copyres", "Copy res image files", (options)->
+  exec "cp -R config/res/ #{CORDOVA_PATH}/#{APP_PATH}/www/res", (code)->
+    print "copied res.\n"
     invoke "build-debug"
 
 task "build-debug", 'Build phonegap debug', (options) ->
