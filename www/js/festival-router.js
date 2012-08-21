@@ -147,6 +147,7 @@
 
     FestivalRouter.prototype.venue = function(id) {
       var v, venue, venueView, _i, _len, _ref;
+      id = parseInt(id);
       venue = null;
       _ref = this.model.venues.models;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -174,6 +175,7 @@
 
     FestivalRouter.prototype.sponsor = function(id) {
       var s, sponsor, view, _i, _len, _ref;
+      id = parseInt(id);
       sponsor = null;
       _ref = this.model.sponsors.models;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {

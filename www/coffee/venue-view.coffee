@@ -1,5 +1,6 @@
 _ = require "underscore"
 Backbone = require "backbone-browserify"
+EventListView = require "./event-list-view"
 
 module.exports = class VenueView extends Backbone.View
   
@@ -16,7 +17,7 @@ module.exports = class VenueView extends Backbone.View
   
   render: ()->
     $(@el).html(@template(@model.toJSON()))
-    for event in @model.events()
+    for event in @model.events().models
       item = new EventListView { model : event }
       @$("#venue-events").append(item.render().el)
     return @

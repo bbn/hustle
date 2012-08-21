@@ -3417,6 +3417,7 @@ require.define("/festival-router.js", function (require, module, exports, __dirn
 
     FestivalRouter.prototype.venue = function(id) {
       var v, venue, venueView, _i, _len, _ref;
+      id = parseInt(id);
       venue = null;
       _ref = this.model.venues.models;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -3444,6 +3445,7 @@ require.define("/festival-router.js", function (require, module, exports, __dirn
 
     FestivalRouter.prototype.sponsor = function(id) {
       var s, sponsor, view, _i, _len, _ref;
+      id = parseInt(id);
       sponsor = null;
       _ref = this.model.sponsors.models;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -3519,7 +3521,7 @@ require.define("/event-view.js", function (require, module, exports, __dirname, 
       this.$("ul#venuename").html((new VenueListView({
         model: this.model.venue()
       })).render().el);
-      _ref = this.model.artists();
+      _ref = this.model.artists().models;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         artist = _ref[_i];
         item = new ArtistListView({
@@ -3797,13 +3799,15 @@ require.define("/artist-view.js", function (require, module, exports, __dirname,
 
 require.define("/venue-view.js", function (require, module, exports, __dirname, __filename) {
 (function() {
-  var Backbone, VenueView, _,
+  var Backbone, EventListView, VenueView, _,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
   _ = require("underscore");
 
   Backbone = require("backbone-browserify");
+
+  EventListView = require("./event-list-view");
 
   module.exports = VenueView = (function(_super) {
 
@@ -3828,7 +3832,7 @@ require.define("/venue-view.js", function (require, module, exports, __dirname, 
     VenueView.prototype.render = function() {
       var event, item, _i, _len, _ref;
       $(this.el).html(this.template(this.model.toJSON()));
-      _ref = this.model.events();
+      _ref = this.model.events().models;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         event = _ref[_i];
         item = new EventListView({

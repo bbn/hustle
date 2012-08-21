@@ -98,6 +98,7 @@ module.exports = class FestivalRouter extends Backbone.Router
     @showPage(window.venuesView)
   
   venue: (id)=>
+    id = parseInt(id)
     venue = null
     for v in @model.venues.models
       if v.id == id
@@ -115,6 +116,7 @@ module.exports = class FestivalRouter extends Backbone.Router
     @showPage(window.sponsorsView)
     
   sponsor: (id)=>
+    id = parseInt(id)
     sponsor = null
     for s in @model.sponsors.models
       if s.id == id

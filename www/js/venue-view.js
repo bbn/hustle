@@ -1,11 +1,13 @@
 (function() {
-  var Backbone, VenueView, _,
+  var Backbone, EventListView, VenueView, _,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
   _ = require("underscore");
 
   Backbone = require("backbone-browserify");
+
+  EventListView = require("./event-list-view");
 
   module.exports = VenueView = (function(_super) {
 
@@ -30,7 +32,7 @@
     VenueView.prototype.render = function() {
       var event, item, _i, _len, _ref;
       $(this.el).html(this.template(this.model.toJSON()));
-      _ref = this.model.events();
+      _ref = this.model.events().models;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         event = _ref[_i];
         item = new EventListView({

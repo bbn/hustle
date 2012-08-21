@@ -23,7 +23,7 @@ module.exports = class EventView extends Backbone.View
     $(@el).html(@template(data))
     @$("ul#venuename").html((new VenueListView({model:@model.venue()})).render().el)
     
-    for artist in @model.artists()
+    for artist in @model.artists().models
       item = new ArtistListView { model : artist }
       @$("#event-artists").append(item.render().el)
 

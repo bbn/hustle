@@ -44,7 +44,7 @@
       this.$("ul#venuename").html((new VenueListView({
         model: this.model.venue()
       })).render().el);
-      _ref = this.model.artists();
+      _ref = this.model.artists().models;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         artist = _ref[_i];
         item = new ArtistListView({
