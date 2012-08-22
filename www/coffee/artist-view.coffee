@@ -7,7 +7,7 @@ module.exports = class ArtistView extends Backbone.View
   title: null
   backLabel: "Back"
   
-  template: _.template('<div class="artist-img loading"></div><div class="copy-block"><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url"><%= url %></a></div><label>WHEN</label></div><ul id="artist-events" class="listview"></ul>')
+  template: _.template('<div class="artist-img loading"></div><div class="copy-block"><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url" target="_blank"><%= url %></a></div><label>WHEN</label></div><ul id="artist-events" class="listview"></ul>')
   
   initialize: ()->
     @title = @model.get "name"

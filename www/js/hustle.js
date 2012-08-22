@@ -3792,7 +3792,7 @@ require.define("/www/js/artist-view.js",function(require,module,exports,__dirnam
 
     ArtistView.prototype.backLabel = "Back";
 
-    ArtistView.prototype.template = _.template('<div class="artist-img loading"></div><div class="copy-block"><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url"><%= url %></a></div><label>WHEN</label></div><ul id="artist-events" class="listview"></ul>');
+    ArtistView.prototype.template = _.template('<div class="artist-img loading"></div><div class="copy-block"><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url" target="_blank"><%= url %></a></div><label>WHEN</label></div><ul id="artist-events" class="listview"></ul>');
 
     ArtistView.prototype.initialize = function() {
       return this.title = this.model.get("name");
