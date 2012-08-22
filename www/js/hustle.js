@@ -3532,7 +3532,7 @@ require.define("/www/js/event-view.js",function(require,module,exports,__dirname
 
     EventView.prototype.backLabel = "Back";
 
-    EventView.prototype.template = _.template('<div class="copy-block"><label>WHEN</label><div id="date"><%= dateString %></div><label>WHERE</label><ul id="venuename"></ul><label>WHAT</label><div id="description"><%= description %></div></div><ul class="listview" id="event-artists"></ul>');
+    EventView.prototype.template = _.template('<div class="copy-block"><label>WHEN</label><div id="date"><%= dateString %></div><label>WHAT</label><div id="description"><%= description %></div><label>WHERE</label></div><ul id="venuename" class="listview"></ul><ul class="listview" id="event-artists"></ul>');
 
     EventView.prototype.initialize = function() {
       this.title = this.model.get("name");
@@ -3590,7 +3590,7 @@ require.define("/www/js/venue-list-view.js",function(require,module,exports,__di
 
     VenueListView.prototype.tagName = "li";
 
-    VenueListView.prototype.template = _.template("<a href='#venue/<%= id %>'><%= name %></a>");
+    VenueListView.prototype.template = _.template("<a class='button-wide' href='#venue/<%= id %>'><%= name %></a>");
 
     VenueListView.prototype.render = function() {
       $(this.el).html(this.template(this.model.toJSON()));

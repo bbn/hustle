@@ -18,7 +18,7 @@
 
     VenueListView.prototype.tagName = "li";
 
-    VenueListView.prototype.template = _.template("<a href='#venue/<%= id %>'><%= name %></a>");
+    VenueListView.prototype.template = _.template("<a class='button-wide' href='#venue/<%= id %>'><%= name %></a>");
 
     VenueListView.prototype.render = function() {
       $(this.el).html(this.template(this.model.toJSON()));

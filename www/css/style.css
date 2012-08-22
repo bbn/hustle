@@ -122,7 +122,7 @@ a {
 }
 
 .copy-block {
-  padding:15px;
+  padding:15px 15px 5px 15px;
 }
 
 .header {
@@ -197,7 +197,7 @@ a.back:hover{
 .listview li a {
   display:block;
   list-style:none;
-  padding:12px;
+  padding:15px;
   border-bottom:1px solid #ccc;
   background: transparent url('images/list-arrow.png') no-repeat 98% center;
   overflow:hidden;
@@ -325,10 +325,10 @@ a.back:hover{
 
 .button {
   padding:20px 4px 16px 0px;
-  color:#646464;
-  font-size:13px;
+  color:#333;
+  font-size:14px;
   text-align:left;
-  border-bottom: 2px solid #646464;
+  border-bottom: 2px solid #A0A0A0;
   text-decoration:none;
   display:block;
   margin:0 auto 0 auto;
@@ -338,18 +338,14 @@ a.back:hover{
   background: transparent url('images/list-arrow-lt.png') no-repeat 98% center;
 }
 
-.button-wide {
-  padding:20px 4px 16px 0px;
+.event-content #venuename .button-wide {
+  padding:0px 4px 0px 15px !important;
   color:#646464;
-  font-size:13px;
   text-align:left;
-  border-bottom: 2px solid #646464;
   text-decoration:none;
   display:block;
   margin:0 auto 0 auto;
-  font-weight:normal;
-  text-transform: uppercase;
-  background: transparent url('images/list-arrow-lt.png') no-repeat 98% center;
+  border-bottom: 0 !important;
 }
 
 .pressed {
@@ -404,16 +400,16 @@ a.back:hover{
   padding:20px 16px 14px 16px;
 }
 
-#artist-events, #event-artists, #venue-events {
-  border-top:1px solid #ccc;
+#event-artists, #venue-events {
+  border-top:2px solid #A0A0A0;
+}
+
+#artist-events {
+  margin-top: -10px;
 }
 
 #artist-page .copy-block {
   padding-bottom:0;
-}
-
-#venue-page .address {
-  padding:12px;
 }
 
 #map {
@@ -422,7 +418,7 @@ a.back:hover{
 }
 
 .address {
-  padding: 12px;
+  padding: 15px;
 }
 
 .loading {
@@ -529,10 +525,11 @@ a.back:hover{
   display:none!important;
 }
 
-#event-page label, #artist-page label {
-  font-size:18px;
-  margin:6px 0 3px 0;
+label {
+  font-size:15px;
+  margin:10px 0 0 0;
   display:block;
+  color: #9E9E9E;
 }
 
 #event-page #date {
@@ -542,8 +539,9 @@ a.back:hover{
 
 
 #venuename li a {
-  font-size:20px;
+  font-size:18px;
   font-weight: bold;
+  text-transform: none;
 }
 
 #venuename li {

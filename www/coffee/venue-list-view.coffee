@@ -5,7 +5,7 @@ module.exports = class VenueListView extends Backbone.View
 
   tagName : "li"
 
-  template : _.template("<a href='#venue/<%= id %>'><%= name %></a>")
+  template : _.template("<a class='button-wide' href='#venue/<%= id %>'><%= name %></a>")
 
   render : ()-> 
     $(@el).html(@template(@model.toJSON()))
