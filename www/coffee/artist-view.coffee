@@ -19,8 +19,8 @@ module.exports = class ArtistView extends Backbone.View
       artistimage = 'img/artists/noimage.png'
     else 
        artistimage = artist.image
-    @$(".artist-img").html("<img src='img/artists/#{artistimage} class='artist-img-src'>")
-    for event in @model.events()
+    @$(".artist-img").html("<img src='img/artists/#{artistimage}' class='artist-img-src'>")
+    for event in @model.events().models
       item = new EventListView { model: event }
       @$("#artist-events").append item.render().el
     return @

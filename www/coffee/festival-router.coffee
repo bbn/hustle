@@ -39,6 +39,15 @@ module.exports = class FestivalRouter extends Backbone.Router
     else
       setTimeout (()->view.$("a.pressed").removeClass('pressed')),200
 
+  findObjectWithId: (id,objects)->
+    id = parseInt(id)
+    x = null
+    for y in objects
+      if y.id == id
+        x = y
+        break
+    return x
+
 
   handleNavigateBack : ()->
     history.back()
@@ -57,12 +66,7 @@ module.exports = class FestivalRouter extends Backbone.Router
     @showPage(view)
 
   event: (id)=>
-    id = parseInt(id)
-    evnt = null
-    for e in @model.events.models
-      if e.id == id
-        evnt = e
-        break
+    evnt = @findObjectWithId id,@model.events.models
     eventView = new EventView { model : evnt }
     eventView.render()
     @showPage(eventView)
@@ -85,11 +89,7 @@ module.exports = class FestivalRouter extends Backbone.Router
     @showPage(window.artistsView)
   
   artist: (id)=>
-    artist = null
-    for a in @model.artists.models
-      if a.id == id
-        artist = a
-        break
+    artist = @findObjectWithId id,@model.artists.models
     artistView = new ArtistView { model : artist }
     artistView.render()
     @showPage(artistView)
@@ -98,12 +98,7 @@ module.exports = class FestivalRouter extends Backbone.Router
     @showPage(window.venuesView)
   
   venue: (id)=>
-    id = parseInt(id)
-    venue = null
-    for v in @model.venues.models
-      if v.id == id
-        venue = v
-        break
+    venue = @findObjectWithId id,@model.venues.models
     venueView = new VenueView { model : venue }
     venueView.render()
     @showPage(venueView)
@@ -116,12 +111,7 @@ module.exports = class FestivalRouter extends Backbone.Router
     @showPage(window.sponsorsView)
     
   sponsor: (id)=>
-    id = parseInt(id)
-    sponsor = null
-    for s in @model.sponsors.models
-      if s.id == id
-        sponsor = s
-        break
+    sponsor = @findObjectWithId id,@model.sponsors.models
     view = new SponsorView { model : sponsor }
     view.render()
     @showPage(view)
