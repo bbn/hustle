@@ -25,19 +25,16 @@ module.exports = class FestivalRouter extends Backbone.Router
     "info":                 "info"
     "event/:id":            "event" 
   
-  showPage : (view)->
-    viewDescriptor =
+  showPage : (view)=>
+    window.viewNavigator.pushView
       title: view.title
       backLabel: view.backLabel
       backCallback: @handleNavigateBack
       view: view.$el
-    window.viewNavigator.pushView( viewDescriptor )
-
     if !view.noClickDelay
-      new NoClickDelay( view.el )
-      view.noClickDelay = true
+      view.noClickDelay = new NoClickDelay( view.el )
     else
-      setTimeout (()->view.$("a.pressed").removeClass('pressed')),200
+      setTimeout (()->$(view.noClickDelay.pressedTarget).removeClass('pressed')),200
 
   findObjectWithId: (id,objects)->
     id = parseInt(id)
@@ -47,7 +44,6 @@ module.exports = class FestivalRouter extends Backbone.Router
         x = y
         break
     return x
-
 
   handleNavigateBack : ()->
     history.back()

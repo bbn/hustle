@@ -26,7 +26,11 @@ NoClickDelay.prototype = {
 
 		this.theTarget = document.elementFromPoint(e.targetTouches[0].clientX, e.targetTouches[0].clientY);
 		if(this.theTarget.nodeType == 3) this.theTarget = theTarget.parentNode;
-		this.theTarget.className+= ' pressed';
+		
+		if (this.theTarget.getAttribute("href")) {
+			this.theTarget.className+= ' pressed';
+		}
+		
 		// alert( this.theTarget.className );
 
 		this.element.addEventListener('touchmove', this, false);
@@ -47,6 +51,7 @@ NoClickDelay.prototype = {
 			var theEvent = document.createEvent('MouseEvents');
 			theEvent.initEvent('click', true, true);
 			this.theTarget.dispatchEvent(theEvent);
+			this.pressedTarget = this.theTarget;
 		}
 
 		this.theTarget = undefined;
