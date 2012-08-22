@@ -334,7 +334,7 @@ a.back:hover{
   width:210px;
   font-weight:normal;
   text-transform: uppercase;
-  background: transparent url('images/list-arrow.png') no-repeat 98% center;
+  background: transparent url('images/list-arrow-lt.png') no-repeat 98% center;
 }
 
 .pressed {
@@ -404,6 +404,10 @@ a.back:hover{
 #map {
   height:200px;
   width:320px;
+}
+
+.address {
+  padding: 12px;
 }
 
 .loading {
