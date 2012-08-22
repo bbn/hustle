@@ -1,16 +1,18 @@
-var require = function (file, cwd) {
+(function(){var require = function (file, cwd) {
     var resolved = require.resolve(file, cwd || '/');
     var mod = require.modules[resolved];
     if (!mod) throw new Error(
         'Failed to resolve module ' + file + ', tried ' + resolved
     );
-    var res = mod._cached ? mod._cached : mod();
+    var cached = require.cache[resolved];
+    var res = cached? cached.exports : mod();
     return res;
-}
+};
 
 require.paths = [];
 require.modules = {};
-require.extensions = [".js",".coffee"];
+require.cache = {};
+require.extensions = [".js",".coffee",".json"];
 
 require._core = {
     'assert': true,
@@ -41,6 +43,7 @@ require.resolve = (function () {
         throw new Error("Cannot find module '" + x + "'");
         
         function loadAsFileSync (x) {
+            x = path.normalize(x);
             if (require.modules[x]) {
                 return x;
             }
@@ -53,7 +56,7 @@ require.resolve = (function () {
         
         function loadAsDirectorySync (x) {
             x = x.replace(/\/+$/, '');
-            var pkgfile = x + '/package.json';
+            var pkgfile = path.normalize(x + '/package.json');
             if (require.modules[pkgfile]) {
                 var pkg = require.modules[pkgfile]();
                 var b = pkg.browserify;
@@ -118,7 +121,7 @@ require.alias = function (from, to) {
     
     var keys = (Object.keys || function (obj) {
         var res = [];
-        for (var key in obj) res.push(key)
+        for (var key in obj) res.push(key);
         return res;
     })(require.modules);
     
@@ -134,80 +137,62 @@ require.alias = function (from, to) {
     }
 };
 
-require.define = function (filename, fn) {
-    var dirname = require._core[filename]
-        ? ''
-        : require.modules.path().dirname(filename)
-    ;
+(function () {
+    var process = {};
     
-    var require_ = function (file) {
-        return require(file, dirname)
-    };
-    require_.resolve = function (name) {
-        return require.resolve(name, dirname);
-    };
-    require_.modules = require.modules;
-    require_.define = require.define;
-    var module_ = { exports : {} };
-    
-    require.modules[filename] = function () {
-        require.modules[filename]._cached = module_.exports;
-        fn.call(
-            module_.exports,
-            require_,
-            module_,
-            module_.exports,
-            dirname,
-            filename
-        );
-        require.modules[filename]._cached = module_.exports;
-        return module_.exports;
-    };
-};
-
-if (typeof process === 'undefined') process = {};
-
-if (!process.nextTick) process.nextTick = (function () {
-    var queue = [];
-    var canPost = typeof window !== 'undefined'
-        && window.postMessage && window.addEventListener
-    ;
-    
-    if (canPost) {
-        window.addEventListener('message', function (ev) {
-            if (ev.source === window && ev.data === 'browserify-tick') {
-                ev.stopPropagation();
-                if (queue.length > 0) {
-                    var fn = queue.shift();
-                    fn();
-                }
-            }
-        }, true);
-    }
-    
-    return function (fn) {
-        if (canPost) {
-            queue.push(fn);
-            window.postMessage('browserify-tick', '*');
+    require.define = function (filename, fn) {
+        if (require.modules.__browserify_process) {
+            process = require.modules.__browserify_process();
         }
-        else setTimeout(fn, 0);
+        
+        var dirname = require._core[filename]
+            ? ''
+            : require.modules.path().dirname(filename)
+        ;
+        
+        var require_ = function (file) {
+            var requiredModule = require(file, dirname);
+            var cached = require.cache[require.resolve(file, dirname)];
+
+            if (cached && cached.parent === null) {
+                cached.parent = module_;
+            }
+
+            return requiredModule;
+        };
+        require_.resolve = function (name) {
+            return require.resolve(name, dirname);
+        };
+        require_.modules = require.modules;
+        require_.define = require.define;
+        require_.cache = require.cache;
+        var module_ = {
+            id : filename,
+            filename: filename,
+            exports : {},
+            loaded : false,
+            parent: null
+        };
+        
+        require.modules[filename] = function () {
+            require.cache[filename] = module_;
+            fn.call(
+                module_.exports,
+                require_,
+                module_,
+                module_.exports,
+                dirname,
+                filename,
+                process
+            );
+            module_.loaded = true;
+            return module_.exports;
+        };
     };
 })();
 
-if (!process.title) process.title = 'browser';
 
-if (!process.binding) process.binding = function (name) {
-    if (name === 'evals') return require('vm')
-    else throw new Error('No such module')
-};
-
-if (!process.cwd) process.cwd = function () { return '.' };
-
-if (!process.env) process.env = {};
-if (!process.argv) process.argv = [];
-
-require.define("path", function (require, module, exports, __dirname, __filename) {
-function filter (xs, fn) {
+require.define("path",function(require,module,exports,__dirname,__filename,process){function filter (xs, fn) {
     var res = [];
     for (var i = 0; i < xs.length; i++) {
         if (fn(xs[i], i, xs)) res.push(xs[i]);
@@ -344,12 +329,61 @@ exports.extname = function(path) {
 
 });
 
-require.define("/node_modules/backbone-browserify/package.json", function (require, module, exports, __dirname, __filename) {
-module.exports = {"main":"lib/backbone-browserify.js","browserify":{"dependencies":{"underscore":">=1.1.2"},"main":"lib/backbone-browserify.js"}}
+require.define("__browserify_process",function(require,module,exports,__dirname,__filename,process){var process = module.exports = {};
+
+process.nextTick = (function () {
+    var queue = [];
+    var canPost = typeof window !== 'undefined'
+        && window.postMessage && window.addEventListener
+    ;
+    
+    if (canPost) {
+        window.addEventListener('message', function (ev) {
+            if (ev.source === window && ev.data === 'browserify-tick') {
+                ev.stopPropagation();
+                if (queue.length > 0) {
+                    var fn = queue.shift();
+                    fn();
+                }
+            }
+        }, true);
+    }
+    
+    return function (fn) {
+        if (canPost) {
+            queue.push(fn);
+            window.postMessage('browserify-tick', '*');
+        }
+        else setTimeout(fn, 0);
+    };
+})();
+
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+
+process.binding = function (name) {
+    if (name === 'evals') return (require)('vm')
+    else throw new Error('No such module. (Possibly not yet loaded)')
+};
+
+(function () {
+    var cwd = '/';
+    var path;
+    process.cwd = function () { return cwd };
+    process.chdir = function (dir) {
+        if (!path) path = require('path');
+        cwd = path.resolve(dir, cwd);
+    };
+})();
+
 });
 
-require.define("/node_modules/backbone-browserify/lib/backbone-browserify.js", function (require, module, exports, __dirname, __filename) {
-//     Backbone.js 0.9.2
+require.define("/node_modules/backbone-browserify/package.json",function(require,module,exports,__dirname,__filename,process){module.exports = {"main":"lib/backbone-browserify.js","browserify":{"dependencies":{"underscore":">=1.1.2"},"main":"lib/backbone-browserify.js"}}
+});
+
+require.define("/node_modules/backbone-browserify/lib/backbone-browserify.js",function(require,module,exports,__dirname,__filename,process){//     Backbone.js 0.9.2
 
 //     (c) 2010-2012 Jeremy Ashkenas, DocumentCloud Inc.
 //     Backbone may be freely distributed under the MIT license.
@@ -1790,12 +1824,10 @@ require.define("/node_modules/backbone-browserify/lib/backbone-browserify.js", f
 }(this);
 });
 
-require.define("/node_modules/underscore/package.json", function (require, module, exports, __dirname, __filename) {
-module.exports = {"main":"underscore.js"}
+require.define("/node_modules/underscore/package.json",function(require,module,exports,__dirname,__filename,process){module.exports = {"main":"underscore.js"}
 });
 
-require.define("/node_modules/underscore/underscore.js", function (require, module, exports, __dirname, __filename) {
-//     Underscore.js 1.3.3
+require.define("/node_modules/underscore/underscore.js",function(require,module,exports,__dirname,__filename,process){//     Underscore.js 1.3.3
 //     (c) 2009-2012 Jeremy Ashkenas, DocumentCloud Inc.
 //     Underscore is freely distributable under the MIT license.
 //     Portions of Underscore are inspired or borrowed from Prototype,
@@ -2857,8 +2889,7 @@ require.define("/node_modules/underscore/underscore.js", function (require, modu
 
 });
 
-require.define("/festival.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/festival.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var ArtistCollection, Backbone, CategoryCollection, EventCollection, Festival, SponsorCollection, VenueCollection, slugify,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -2921,8 +2952,7 @@ require.define("/festival.js", function (require, module, exports, __dirname, __
 
 });
 
-require.define("/event-collection.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/event-collection.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, Event, EventCollection,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -2953,8 +2983,7 @@ require.define("/event-collection.js", function (require, module, exports, __dir
 
 });
 
-require.define("/event.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/event.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var ArtistCollection, Backbone, Event, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
@@ -3021,8 +3050,7 @@ require.define("/event.js", function (require, module, exports, __dirname, __fil
 
 });
 
-require.define("/artist-collection.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/artist-collection.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Artist, ArtistCollection, Backbone,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -3049,8 +3077,7 @@ require.define("/artist-collection.js", function (require, module, exports, __di
 
 });
 
-require.define("/artist.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/artist.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Artist, Backbone,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -3084,8 +3111,7 @@ require.define("/artist.js", function (require, module, exports, __dirname, __fi
 
 });
 
-require.define("/venue-collection.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/venue-collection.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, Venue, VenueCollection,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -3112,8 +3138,7 @@ require.define("/venue-collection.js", function (require, module, exports, __dir
 
 });
 
-require.define("/venue.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/venue.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, EventCollection, Venue,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -3148,8 +3173,7 @@ require.define("/venue.js", function (require, module, exports, __dirname, __fil
 
 });
 
-require.define("/category-collection.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/category-collection.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, Category, CategoryCollection,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -3176,8 +3200,7 @@ require.define("/category-collection.js", function (require, module, exports, __
 
 });
 
-require.define("/category.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/category.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, Category, EventCollection,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -3211,8 +3234,7 @@ require.define("/category.js", function (require, module, exports, __dirname, __
 
 });
 
-require.define("/sponsor-collection.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/sponsor-collection.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, Sponsor, SponsorCollection,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -3239,8 +3261,7 @@ require.define("/sponsor-collection.js", function (require, module, exports, __d
 
 });
 
-require.define("/sponsor.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/sponsor.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, Sponsor,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -3267,8 +3288,7 @@ require.define("/sponsor.js", function (require, module, exports, __dirname, __f
 
 });
 
-require.define("/festival-router.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/festival-router.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var ArtistView, Backbone, EventView, EventsView, FestivalRouter, SponsorView, VenueView,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
@@ -3474,8 +3494,7 @@ require.define("/festival-router.js", function (require, module, exports, __dirn
 
 });
 
-require.define("/event-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/event-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var ArtistListView, Backbone, EventView, VenueListView, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
@@ -3540,8 +3559,7 @@ require.define("/event-view.js", function (require, module, exports, __dirname, 
 
 });
 
-require.define("/venue-list-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/venue-list-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, VenueListView, _,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -3575,8 +3593,7 @@ require.define("/venue-list-view.js", function (require, module, exports, __dirn
 
 });
 
-require.define("/artist-list-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/artist-list-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var ArtistListView, Backbone, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
@@ -3612,8 +3629,7 @@ require.define("/artist-list-view.js", function (require, module, exports, __dir
 
 });
 
-require.define("/events-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/events-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, EventListView, EventsView, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
@@ -3676,8 +3692,7 @@ require.define("/events-view.js", function (require, module, exports, __dirname,
 
 });
 
-require.define("/event-list-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/event-list-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, EventListView, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
@@ -3736,8 +3751,7 @@ require.define("/event-list-view.js", function (require, module, exports, __dirn
 
 });
 
-require.define("/artist-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/artist-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var ArtistView, Backbone, EventListView, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
@@ -3797,8 +3811,7 @@ require.define("/artist-view.js", function (require, module, exports, __dirname,
 
 });
 
-require.define("/venue-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/venue-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, EventListView, VenueView, _,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -3851,8 +3864,7 @@ require.define("/venue-view.js", function (require, module, exports, __dirname, 
 
 });
 
-require.define("/sponsor-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/sponsor-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, SponsorView, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
@@ -3898,8 +3910,7 @@ require.define("/sponsor-view.js", function (require, module, exports, __dirname
 
 });
 
-require.define("/festival-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/festival-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, FestivalView, FestivalViewButton, _,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -3962,8 +3973,7 @@ require.define("/festival-view.js", function (require, module, exports, __dirnam
 
 });
 
-require.define("/festival-view-button.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/festival-view-button.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, FestivalViewButton, _,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -4003,8 +4013,7 @@ require.define("/festival-view-button.js", function (require, module, exports, _
 
 });
 
-require.define("/artists-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/artists-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var ArtistListView, ArtistsView, Backbone, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
@@ -4059,8 +4068,7 @@ require.define("/artists-view.js", function (require, module, exports, __dirname
 
 });
 
-require.define("/events-by-day-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/events-by-day-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, EventsByDayListView, EventsByDayView, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
@@ -4118,8 +4126,7 @@ require.define("/events-by-day-view.js", function (require, module, exports, __d
 
 });
 
-require.define("/events-by-day-list-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/events-by-day-list-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, EventsByDayListView, _,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -4163,8 +4170,7 @@ require.define("/events-by-day-list-view.js", function (require, module, exports
 
 });
 
-require.define("/sponsors-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/sponsors-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, SponsorListView, SponsorsView, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
@@ -4221,8 +4227,7 @@ require.define("/sponsors-view.js", function (require, module, exports, __dirnam
 
 });
 
-require.define("/sponsor-list-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/sponsor-list-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, SponsorListView, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
@@ -4258,8 +4263,7 @@ require.define("/sponsor-list-view.js", function (require, module, exports, __di
 
 });
 
-require.define("/venues-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/venues-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, VenueListView, VenuesView, _,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -4314,8 +4318,7 @@ require.define("/venues-view.js", function (require, module, exports, __dirname,
 
 });
 
-require.define("/info-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/info-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, InfoView, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
@@ -4355,8 +4358,7 @@ require.define("/info-view.js", function (require, module, exports, __dirname, _
 
 });
 
-require.define("/twitter-view.js", function (require, module, exports, __dirname, __filename) {
-(function() {
+require.define("/www/js/twitter-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, TwitterView, _,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -4433,8 +4435,7 @@ require.define("/twitter-view.js", function (require, module, exports, __dirname
 
 });
 
-require.define("/app.js", function (require, module, exports, __dirname, __filename) {
-    (function() {
+require.define("/www/js/app.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var ArtistsView, Backbone, EventsByDayView, Festival, FestivalRouter, FestivalView, InfoView, SponsorsView, TwitterView, VenuesView, conHeight, footHeight, headHeight;
 
   Backbone = require("backbone-browserify");
@@ -4577,4 +4578,5 @@ require.define("/app.js", function (require, module, exports, __dirname, __filen
 }).call(this);
 
 });
-require("/app.js");
+require("/www/js/app.js");
+})();

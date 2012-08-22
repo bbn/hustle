@@ -6,6 +6,7 @@
     "npm":  "1.x.x"
   },
   "dependencies": {
+    "browserify" : "latest",
     "nodeunit" : "latest",
     "node-static": "latest",
     "backbone": "latest",

@@ -40,19 +40,21 @@ task 'build', 'Build phonegap project', (options) ->
       sourceCount -= 1
       if sourceCount == 0
         print "compiled successfully.\n"
-        print "browserifying...\n"
-        browserify (resultCode) ->
-          if resultCode != 0
-            print "ERROR BROWSERIFYING"
-            return
-          invoke "copywww"
+        invoke 'npmupdate'
 
-browserify = (callback) ->
-  exec "browserify www/js/app.js -o www/js/hustle.js", (code)->
-    if code is 0
+task "npmupdate", "update npm install", (options) ->
+  exec "npm install", (code) ->
+    print "node_modules updated.\n"
+    invoke "browserify"
+
+task "browserify", "browserify all JS files", (options) ->
+  print "browserifying...\n"
+  exec "./node_modules/browserify/bin/cmd.js www/js/app.js -o www/js/hustle.js", (code)->
+    if code != 0
+      print "ERROR BROWSERIFYING"
+    else
       print "browserified!\n"
-    callback(code)
-
+      invoke "copywww"
 
 task "copywww", 'Copy www directory into build source', (options)->
   exec "cp -R www/ #{CORDOVA_PATH}/#{APP_PATH}/www/", (code)->
