@@ -34,7 +34,7 @@
 
     ArtistsView.prototype.render = function() {
       var artist, row, _i, _len, _ref;
-      this.$(this.el).html(this.template());
+      $(this.el).html(this.template());
       _ref = window.festival.artists.models;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         artist = _ref[_i];

@@ -3643,7 +3643,7 @@ require.define("/www/js/artist-list-view.js",function(require,module,exports,__d
     ArtistListView.prototype.template = _.template("<a href='#artist/<%= id %>'><%= name %></a>");
 
     ArtistListView.prototype.render = function() {
-      this.$(this.el).html(this.template(this.model.toJSON()));
+      $(this.el).html(this.template(this.model.toJSON()));
       return this;
     };
 
@@ -4082,7 +4082,7 @@ require.define("/www/js/artists-view.js",function(require,module,exports,__dirna
 
     ArtistsView.prototype.render = function() {
       var artist, row, _i, _len, _ref;
-      this.$(this.el).html(this.template());
+      $(this.el).html(this.template());
       _ref = window.festival.artists.models;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         artist = _ref[_i];

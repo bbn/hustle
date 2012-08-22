@@ -23,7 +23,7 @@
     ArtistListView.prototype.template = _.template("<a href='#artist/<%= id %>'><%= name %></a>");
 
     ArtistListView.prototype.render = function() {
-      this.$(this.el).html(this.template(this.model.toJSON()));
+      $(this.el).html(this.template(this.model.toJSON()));
       return this;
     };
 

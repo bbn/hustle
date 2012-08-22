@@ -18,7 +18,7 @@ module.exports = class ArtistsView extends Backbone.View
     # _.bindAll(this,"render")
 
   render: ()=> 
-    @$(@el).html @template()
+    $(@el).html @template()
 
     for artist in window.festival.artists.models
       row = new ArtistListView { model:artist }
