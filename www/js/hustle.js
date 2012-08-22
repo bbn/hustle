@@ -332,12 +332,18 @@ exports.extname = function(path) {
 require.define("__browserify_process",function(require,module,exports,__dirname,__filename,process){var process = module.exports = {};
 
 process.nextTick = (function () {
-    var queue = [];
+    var canSetImmediate = typeof window !== 'undefined'
+        && window.setImmediate;
     var canPost = typeof window !== 'undefined'
         && window.postMessage && window.addEventListener
     ;
-    
+
+    if (canSetImmediate) {
+        return window.setImmediate;
+    }
+
     if (canPost) {
+        var queue = [];
         window.addEventListener('message', function (ev) {
             if (ev.source === window && ev.data === 'browserify-tick') {
                 ev.stopPropagation();
@@ -347,14 +353,15 @@ process.nextTick = (function () {
                 }
             }
         }, true);
-    }
-    
-    return function (fn) {
-        if (canPost) {
+
+        return function nextTick(fn) {
             queue.push(fn);
             window.postMessage('browserify-tick', '*');
-        }
-        else setTimeout(fn, 0);
+        };
+    }
+
+    return function nextTick(fn) {
+        setTimeout(fn, 0);
     };
 })();
 

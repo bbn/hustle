@@ -323,17 +323,18 @@ a.back:hover{
 /*END directional buttons*/
 
 .button {
-  padding:16px 4px 12px 0px;
+  padding:20px 4px 16px 0px;
   color:#646464;
   font-size:13px;
   text-align:left;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #646464;
   text-decoration:none;
   display:block;
-  margin:0 auto 10px auto;
+  margin:0 auto 0 auto;
   width:210px;
   font-weight:normal;
   text-transform: uppercase;
+  background: transparent url('images/list-arrow.png') no-repeat 98% center;
 }
 
 .pressed {
