@@ -7,4 +7,4 @@
 *.tmproj
 *.pyc
 node_modules
-js
+js/*.js
