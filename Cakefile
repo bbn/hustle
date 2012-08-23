@@ -12,7 +12,7 @@ exec = (command,exitCallback)->
   x.on 'exit', exitCallback 
 
 
-CORDOVA_PATH = "../../../../Desktop/cordova"
+CORDOVA_PATH = "../../Desktop/cordova"
 APP_PATH = "NFF2012"
 PACKAGE_NAME = "com.sportsbutter.newformsfest2012"
 PROJECT_NAME = "NewFormsFest2012"
