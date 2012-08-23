@@ -48,12 +48,12 @@ window.app =
     # // storeCache.readAsText('data/cityarts.json'); 
 
 
-    storedData = window.localStorage.getItem "festivalData"
-    if storedData
-      # //TODO apparently there is no JSON object in Android 1.5 + 1.6.
-      # //(source: https://groups.google.com/forum/?fromgroups#!topic/phonegap/OtiUFqjhW_E%5B1-25%5D)
-      parsedData = JSON.parse storedData
-      postDataLoad parsedData
+    # storedData = window.localStorage.getItem "festivalData"
+    # if storedData
+    #   # //TODO apparently there is no JSON object in Android 1.5 + 1.6.
+    #   # //(source: https://groups.google.com/forum/?fromgroups#!topic/phonegap/OtiUFqjhW_E%5B1-25%5D)
+    #   parsedData = JSON.parse storedData
+    #   postDataLoad parsedData
 
     $.ajax
       dataType: "jsonp"
