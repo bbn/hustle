@@ -27,8 +27,19 @@ NoClickDelay.prototype = {
 		this.theTarget = document.elementFromPoint(e.targetTouches[0].clientX, e.targetTouches[0].clientY);
 		if(this.theTarget.nodeType == 3) this.theTarget = theTarget.parentNode;
 		
-		if (this.theTarget.getAttribute("href")) {
-			this.theTarget.className+= ' pressed';
+		var el = $(this.theTarget);
+		var href = el.attr("href");
+		var count = 0;
+		while ((!href)&&(count<3)) {
+			el = el.parent();
+			href = el.attr("href");
+			count = count+1;
+		}
+		if (href) {
+			this.anchor = el;
+			this.anchor.addClass('pressed');		
+		} else {
+			this.anchor = null;
 		}
 		
 		// alert( this.theTarget.className );
@@ -39,7 +50,10 @@ NoClickDelay.prototype = {
 
 	onTouchMove: function(e) {
 		this.moved = true;
-		this.theTarget.className = this.theTarget.className.replace(/ ?pressed/gi, '');
+		if (this.anchor) {
+			this.anchor.removeClass("pressed");
+		}
+		// this.theTarget.className = this.theTarget.className.replace(/ ?pressed/gi, '');	
 	},
 
 	onTouchEnd: function(e) {
@@ -52,6 +66,7 @@ NoClickDelay.prototype = {
 			theEvent.initEvent('click', true, true);
 			this.theTarget.dispatchEvent(theEvent);
 			this.pressedTarget = this.theTarget;
+			this.pressedAnchor = this.anchor;
 		}
 
 		this.theTarget = undefined;

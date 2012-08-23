@@ -11,8 +11,8 @@ module.exports = class EventsView extends Backbone.View
   initialize : (options)-> 
     @title = options.title
     @eventsToList = options.eventsToList
-    if options.dateFormatString
-      @dateFormatString = options.dateFormatString
+    @dateFormatString = options.dateFormatString if options.dateFormatString
+    
   
   template : _.template '<ul id="event-list" class="listview"></ul>'
   

@@ -33,13 +33,10 @@
       this.events = __bind(this.events, this);
       this.eventsByDay = __bind(this.eventsByDay, this);
       this.home = __bind(this.home, this);
+      this.handleNavigateBack = __bind(this.handleNavigateBack, this);
       this.showPage = __bind(this.showPage, this);
       FestivalRouter.__super__.constructor.apply(this, arguments);
     }
-
-    FestivalRouter.prototype.initialize = function(options) {
-      return this.model = options.model;
-    };
 
     FestivalRouter.prototype.routes = {
       "": "home",
@@ -57,20 +54,39 @@
       "event/:id": "event"
     };
 
+    FestivalRouter.prototype.initialize = function(options) {
+      return this.model = options.model;
+    };
+
+    FestivalRouter.prototype.viewStack = [];
+
     FestivalRouter.prototype.showPage = function(view) {
+      this.viewStack.push(view);
       window.viewNavigator.pushView({
         title: view.title,
         backLabel: view.backLabel,
         backCallback: this.handleNavigateBack,
         view: view.$el
       });
-      if (!view.noClickDelay) {
-        return view.noClickDelay = new NoClickDelay(view.el);
-      } else {
-        return setTimeout((function() {
-          return $(view.noClickDelay.pressedTarget).removeClass('pressed');
-        }), 200);
+      if (!view.noClickDelay) return view.noClickDelay = new NoClickDelay(view.el);
+    };
+
+    FestivalRouter.prototype.goingBack = false;
+
+    FestivalRouter.prototype.handleNavigateBack = function() {
+      var newView, oldView;
+      oldView = this.viewStack.pop();
+      newView = this.viewStack[this.viewStack.length - 1];
+      setTimeout(this.unpress(newView), 250);
+      this.goingBack = true;
+      return history.back();
+    };
+
+    FestivalRouter.prototype.unpress = function(view) {
+      if (view.noClickDelay.pressedAnchor) {
+        view.noClickDelay.pressedAnchor.removeClass("pressed");
       }
+      return view.noClickDelay.pressedAnchor = null;
     };
 
     FestivalRouter.prototype.findObjectWithId = function(id, objects) {
@@ -87,20 +103,20 @@
       return x;
     };
 
-    FestivalRouter.prototype.handleNavigateBack = function() {
-      return history.back();
-    };
-
     FestivalRouter.prototype.home = function() {
+      if (this.goingBack) return this.goingBack = false;
       return this.showPage(window.festivalView);
     };
 
     FestivalRouter.prototype.eventsByDay = function() {
+      if (this.goingBack) return this.goingBack = false;
+      alert("eventsByDayy!!!!");
       return this.showPage(window.eventsByDayView);
     };
 
     FestivalRouter.prototype.events = function(slug) {
       var dateString, events, view;
+      if (this.goingBack) return this.goingBack = false;
       events = festival.eventsByDay[slug];
       dateString = dateFormat(new Date(events.at(0).get("date")), "dddd mm/dd");
       view = new EventsView({
@@ -114,6 +130,7 @@
 
     FestivalRouter.prototype.event = function(id) {
       var eventView, evnt;
+      if (this.goingBack) return this.goingBack = false;
       evnt = this.findObjectWithId(id, this.model.events.models);
       eventView = new EventView({
         model: evnt
@@ -123,11 +140,13 @@
     };
 
     FestivalRouter.prototype.artists = function() {
+      if (this.goingBack) return this.goingBack = false;
       return this.showPage(window.artistsView);
     };
 
     FestivalRouter.prototype.artist = function(id) {
       var artist, artistView;
+      if (this.goingBack) return this.goingBack = false;
       artist = this.findObjectWithId(id, this.model.artists.models);
       artistView = new ArtistView({
         model: artist
@@ -137,11 +156,13 @@
     };
 
     FestivalRouter.prototype.venues = function() {
+      if (this.goingBack) return this.goingBack = false;
       return this.showPage(window.venuesView);
     };
 
     FestivalRouter.prototype.venue = function(id) {
       var venue, venueView;
+      if (this.goingBack) return this.goingBack = false;
       venue = this.findObjectWithId(id, this.model.venues.models);
       venueView = new VenueView({
         model: venue
@@ -151,16 +172,19 @@
     };
 
     FestivalRouter.prototype.twitter = function() {
+      if (this.goingBack) return this.goingBack = false;
       this.showPage(window.twitterView);
       return window.twitterView.render();
     };
 
     FestivalRouter.prototype.sponsors = function() {
+      if (this.goingBack) return this.goingBack = false;
       return this.showPage(window.sponsorsView);
     };
 
     FestivalRouter.prototype.sponsor = function(id) {
       var sponsor, view;
+      if (this.goingBack) return this.goingBack = false;
       sponsor = this.findObjectWithId(id, this.model.sponsors.models);
       view = new SponsorView({
         model: sponsor
@@ -170,6 +194,7 @@
     };
 
     FestivalRouter.prototype.info = function() {
+      if (this.goingBack) return this.goingBack = false;
       return this.showPage(window.infoView);
     };
 

@@ -7,9 +7,6 @@ SponsorView = require "./sponsor-view"
 
 module.exports = class FestivalRouter extends Backbone.Router
   
-  initialize : (options)->
-    @model = options.model
-
   routes:
     "":                     "home"
     "events-by-day":        "eventsByDay"
@@ -24,8 +21,16 @@ module.exports = class FestivalRouter extends Backbone.Router
     "sponsor/:id":          "sponsor"
     "info":                 "info"
     "event/:id":            "event" 
+
+  initialize : (options)->
+    @model = options.model
+
+
   
+  viewStack: []
+
   showPage : (view)=>
+    @viewStack.push view
     window.viewNavigator.pushView
       title: view.title
       backLabel: view.backLabel
@@ -33,8 +38,20 @@ module.exports = class FestivalRouter extends Backbone.Router
       view: view.$el
     if !view.noClickDelay
       view.noClickDelay = new NoClickDelay( view.el )
-    else
-      setTimeout (()->$(view.noClickDelay.pressedTarget).removeClass('pressed')),200
+
+  goingBack: false
+
+  handleNavigateBack : ()=>
+    oldView = @viewStack.pop()
+    newView = @viewStack[@viewStack.length-1]
+    setTimeout @unpress(newView), 250
+    @goingBack = true
+    history.back()
+
+  unpress: (view)->
+    view.noClickDelay.pressedAnchor.removeClass("pressed") if view.noClickDelay.pressedAnchor
+    view.noClickDelay.pressedAnchor = null
+
 
   findObjectWithId: (id,objects)->
     id = parseInt(id)
@@ -44,17 +61,18 @@ module.exports = class FestivalRouter extends Backbone.Router
         x = y
         break
     return x
-
-  handleNavigateBack : ()->
-    history.back()
   
   home : ()=>
+    return @goingBack = false if @goingBack    
     @showPage(window.festivalView)
   
   eventsByDay: ()=>
+    return @goingBack = false if @goingBack
+    alert "eventsByDayy!!!!"      
     @showPage(window.eventsByDayView)
 
   events: (slug)=>
+    return @goingBack = false if @goingBack      
     events = festival.eventsByDay[slug]
     dateString = dateFormat((new Date(events.at(0).get("date"))), "dddd mm/dd")
     view = new EventsView( { title : dateString, eventsToList : events, dateFormatString : "h:MM TT" } )
@@ -62,6 +80,7 @@ module.exports = class FestivalRouter extends Backbone.Router
     @showPage(view)
 
   event: (id)=>
+    return @goingBack = false if @goingBack      
     evnt = @findObjectWithId id,@model.events.models
     eventView = new EventView { model : evnt }
     eventView.render()
@@ -82,35 +101,43 @@ module.exports = class FestivalRouter extends Backbone.Router
   # },
   
   artists: ()=>
+    return @goingBack = false if @goingBack      
     @showPage(window.artistsView)
   
   artist: (id)=>
+    return @goingBack = false if @goingBack      
     artist = @findObjectWithId id,@model.artists.models
     artistView = new ArtistView { model : artist }
     artistView.render()
     @showPage(artistView)
 
   venues: ()=>
+    return @goingBack = false if @goingBack      
     @showPage(window.venuesView)
   
   venue: (id)=>
+    return @goingBack = false if @goingBack      
     venue = @findObjectWithId id,@model.venues.models
     venueView = new VenueView { model : venue }
     venueView.render()
     @showPage(venueView)
     
   twitter: ()=>
+    return @goingBack = false if @goingBack      
     @showPage(window.twitterView)
     window.twitterView.render()
   
   sponsors: ()=>
+    return @goingBack = false if @goingBack      
     @showPage(window.sponsorsView)
     
   sponsor: (id)=>
+    return @goingBack = false if @goingBack      
     sponsor = @findObjectWithId id,@model.sponsors.models
     view = new SponsorView { model : sponsor }
     view.render()
     @showPage(view)
 
   info: ()=>
+    return @goingBack = false if @goingBack      
     @showPage(window.infoView)
