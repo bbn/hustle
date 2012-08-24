@@ -4554,7 +4554,7 @@ require.define("/www/js/app.js",function(require,module,exports,__dirname,__file
       return app.prepData();
     },
     prepData: function() {
-      var hasLoadedData, parsedData, postDataLoad, storedData;
+      var hasLoadedData, postDataLoad;
       window.viewNavigator = new ViewNavigator('body');
       hasLoadedData = false;
       postDataLoad = function(data) {
@@ -4563,11 +4563,6 @@ require.define("/www/js/app.js",function(require,module,exports,__dirname,__file
           return app.loadData(data);
         }
       };
-      storedData = window.localStorage.getItem("festivalData");
-      if (storedData) {
-        parsedData = JSON.parse(storedData);
-        postDataLoad(parsedData);
-      }
       $.ajax({
         dataType: "jsonp",
         jsonpCallback: "jsonp1",

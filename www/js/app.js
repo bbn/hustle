@@ -38,7 +38,7 @@
       return app.prepData();
     },
     prepData: function() {
-      var hasLoadedData, parsedData, postDataLoad, storedData;
+      var hasLoadedData, postDataLoad;
       window.viewNavigator = new ViewNavigator('body');
       hasLoadedData = false;
       postDataLoad = function(data) {
@@ -47,11 +47,6 @@
           return app.loadData(data);
         }
       };
-      storedData = window.localStorage.getItem("festivalData");
-      if (storedData) {
-        parsedData = JSON.parse(storedData);
-        postDataLoad(parsedData);
-      }
       $.ajax({
         dataType: "jsonp",
         jsonpCallback: "jsonp1",
