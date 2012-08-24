@@ -20,7 +20,7 @@ module.exports = class FestivalView extends Backbone.View
   render : ()-> 
     $(@el).html(@template())
     buttons = 
-      schedule:"#events-by-day"
+      events:"#events-by-day"
       artists:"#artists"
       venues:"#venues"
       twitter:"#twitter"
