@@ -24,7 +24,7 @@
 
     ArtistView.prototype.backLabel = "Back";
 
-    ArtistView.prototype.template = _.template('<div class="artist-img loading"></div><div class="copy-block"><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url" target="_blank"><%= url %></a></div><label>WHEN</label></div><ul id="artist-events" class="listview"></ul>');
+    ArtistView.prototype.template = _.template('<div class="artist-img"></div><div class="copy-block"><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url" target="_blank">Visit Link</a></div><label>WHEN</label></div><ul id="artist-events" class="listview"></ul>');
 
     ArtistView.prototype.initialize = function() {
       return this.title = this.model.get("name");
@@ -35,7 +35,7 @@
       $(this.el).html(this.template(this.model.toJSON()));
       artist = this.model.toJSON();
       if (artist.image === '' || artist.image === null) {
-        artistimage = 'img/artists/noimage.png';
+        artistimage = 'img/artists/nff-default.png';
       } else {
         artistimage = artist.image;
       }

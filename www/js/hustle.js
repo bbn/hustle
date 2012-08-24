@@ -3848,7 +3848,7 @@ require.define("/www/js/artist-view.js",function(require,module,exports,__dirnam
 
     ArtistView.prototype.backLabel = "Back";
 
-    ArtistView.prototype.template = _.template('<div class="artist-img loading"></div><div class="copy-block"><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url" target="_blank"><%= url %></a></div><label>WHEN</label></div><ul id="artist-events" class="listview"></ul>');
+    ArtistView.prototype.template = _.template('<div class="artist-img"></div><div class="copy-block"><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url" target="_blank">Visit Link</a></div><label>WHEN</label></div><ul id="artist-events" class="listview"></ul>');
 
     ArtistView.prototype.initialize = function() {
       return this.title = this.model.get("name");
@@ -3859,7 +3859,7 @@ require.define("/www/js/artist-view.js",function(require,module,exports,__dirnam
       $(this.el).html(this.template(this.model.toJSON()));
       artist = this.model.toJSON();
       if (artist.image === '' || artist.image === null) {
-        artistimage = 'img/artists/noimage.png';
+        artistimage = 'img/artists/nff-default.png';
       } else {
         artistimage = artist.image;
       }
@@ -3903,7 +3903,7 @@ require.define("/www/js/venue-view.js",function(require,module,exports,__dirname
       return VenueView.__super__.constructor.apply(this, arguments);
     }
 
-    VenueView.prototype.template = _.template('<div id="map" class="loading"><img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= address %>&zoom=15&size=320x200&markers=color:red%7C<%=address%>&sensor=false"></div><div class="address"><div class="name"><%= name %></div><%= address %></div><div id="venue-wrapper"><ul id="venue-events" class="listview"></ul></div>');
+    VenueView.prototype.template = _.template('<div id="map" class="loading"><img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= address %>&zoom=15&size=320x200&markers=color:red%7C<%=address%>&sensor=false"></div><div class="address"><div class="name"><%= name %></div><%= address %><label>EVENTS AT THIS VENUE</label></div><div id="venue-wrapper"><ul id="venue-events" class="listview"></ul></div>');
 
     VenueView.prototype.title = null;
 
@@ -3957,7 +3957,7 @@ require.define("/www/js/sponsor-view.js",function(require,module,exports,__dirna
       return SponsorView.__super__.constructor.apply(this, arguments);
     }
 
-    SponsorView.prototype.template = _.template('<div class="image loading"><img src="img/sponsors/<%= image %>" width="320" height="125"></div><div class="blurb"><%= blurb %></div><div class="url"><a href="<%= url %>" class="url"><%= url %></a></div>');
+    SponsorView.prototype.template = _.template('<div class="image"><img src="img/sponsors/<%= image %>" width="320" height="125"></div><div class="blurb"><%= blurb %></div><div class="url"><a href="<%= url %>" class="url"><%= url %></a></div>');
 
     SponsorView.prototype.title = null;
 
