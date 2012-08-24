@@ -24,7 +24,7 @@
       return this.name = options.name;
     };
 
-    EventsByDayListView.prototype.template = _.template("<a class='button' href='#events/<%= slug %>'><%= name %></a>");
+    EventsByDayListView.prototype.template = _.template("<a class='button' href='#event/<%= slug %>'><%= name %></a>");
 
     EventsByDayListView.prototype.render = function() {
       var dateString;

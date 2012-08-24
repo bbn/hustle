@@ -10,7 +10,7 @@ module.exports = class EventsByDayListView extends Backbone.View
     @date = options.date
     @name = options.name
 
-  template : _.template("<a class='button' href='#events/<%= slug %>'><%= name %></a>")
+  template : _.template("<a class='button' href='#event/<%= slug %>'><%= name %></a>")
 
   render : ()->
     dateString = dateFormat(@date, "dddd, mmmm dS")

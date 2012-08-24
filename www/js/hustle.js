@@ -3439,7 +3439,6 @@ require.define("/www/js/festival-router.js",function(require,module,exports,__di
       if (this.goingBack) {
         return this.goingBack = false;
       }
-      alert("eventsByDayy!!!!");
       return this.showPage(window.eventsByDayView);
     };
 
@@ -4178,11 +4177,11 @@ require.define("/www/js/events-by-day-view.js",function(require,module,exports,_
 
     EventsByDayView.prototype.render = function() {
       var dateFromThisCollection, name, row, slug, val, _ref;
-      _ref = this.festival.eventsByDay;
+      _ref = this.festival.events.models;
       for (slug in _ref) {
         val = _ref[slug];
-        dateFromThisCollection = val.at(0).get("date");
-        name = val.at(0).get("name");
+        dateFromThisCollection = val.get("date");
+        name = val.get("name");
         row = new EventsByDayListView({
           slug: slug,
           date: dateFromThisCollection,
@@ -4227,7 +4226,7 @@ require.define("/www/js/events-by-day-list-view.js",function(require,module,expo
       return this.name = options.name;
     };
 
-    EventsByDayListView.prototype.template = _.template("<a class='button' href='#events/<%= slug %>'><%= name %></a>");
+    EventsByDayListView.prototype.template = _.template("<a class='button' href='#event/<%= slug %>'><%= name %></a>");
 
     EventsByDayListView.prototype.render = function() {
       var dateString;

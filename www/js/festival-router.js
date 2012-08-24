@@ -130,7 +130,6 @@
       if (this.goingBack) {
         return this.goingBack = false;
       }
-      alert("eventsByDayy!!!!");
       return this.showPage(window.eventsByDayView);
     };
 
