@@ -3957,7 +3957,7 @@ require.define("/www/js/sponsor-view.js",function(require,module,exports,__dirna
       return SponsorView.__super__.constructor.apply(this, arguments);
     }
 
-    SponsorView.prototype.template = _.template('<div class="image loading"><img src="img/sponsors/<%= image %>" width="320" height="125"></div><div class="blurb"><%= blurb %></div><div class="url"><a href="<%= url %>" class="url"><%= url %></a></div>');
+    SponsorView.prototype.template = _.template('<div class="image loading"><img src="img/sponsors/<%= image %>" max-width="320" max-height="125"></div><div class="blurb"><%= blurb %></div><div class="url"><a href="<%= url %>" class="url"><%= url %></a></div>');
 
     SponsorView.prototype.title = null;
 
@@ -4182,14 +4182,16 @@ require.define("/www/js/events-by-day-view.js",function(require,module,exports,_
     };
 
     EventsByDayView.prototype.render = function() {
-      var dateFromThisCollection, name, row, slug, val, _ref;
+      var dateFromThisCollection, id, name, row, slug, val, _ref;
       _ref = this.festival.events.models;
       for (slug in _ref) {
         val = _ref[slug];
         dateFromThisCollection = val.get("date");
         name = val.get("name");
+        id = val.get("id");
         row = new EventsByDayListView({
           slug: slug,
+          id: id,
           date: dateFromThisCollection,
           name: name
         });
@@ -4227,18 +4229,18 @@ require.define("/www/js/events-by-day-list-view.js",function(require,module,expo
     EventsByDayListView.prototype.tagName = "li";
 
     EventsByDayListView.prototype.initialize = function(options) {
-      this.slug = options.slug;
+      this.id = options.id;
       this.date = options.date;
       return this.name = options.name;
     };
 
-    EventsByDayListView.prototype.template = _.template("<a class='button' href='#event/<%= slug %>'><%= name %></a>");
+    EventsByDayListView.prototype.template = _.template("<a class='button' href='#event/<%= id %>'><%= name %></a>");
 
     EventsByDayListView.prototype.render = function() {
       var dateString;
       dateString = dateFormat(this.date, "dddd, mmmm dS");
       $(this.el).html(this.template({
-        slug: this.slug,
+        id: this.id,
         dateString: dateString,
         name: this.name
       }));
