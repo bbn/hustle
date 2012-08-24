@@ -3590,7 +3590,7 @@ require.define("/www/js/event-view.js",function(require,module,exports,__dirname
     };
 
     EventView.prototype.render = function() {
-      var artist, data, item, _i, _len, _ref;
+      var artist, artistimage, data, item, _i, _len, _ref;
       data = this.model.toJSON();
       _.extend(data, {
         name: this.model.name(),
@@ -3601,6 +3601,12 @@ require.define("/www/js/event-view.js",function(require,module,exports,__dirname
       this.$("ul#venuename").html((new VenueListView({
         model: this.model.venue()
       })).render().el);
+      if (data.image === '' || data.image === null) {
+        artistimage = 'img/artists/noimage.png';
+      } else {
+        artistimage = data.image;
+      }
+      this.$(".artist-img").html("<img src='img/artists/" + artistimage + "' class='artist-img-src'>");
       _ref = this.model.artists().models;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         artist = _ref[_i];

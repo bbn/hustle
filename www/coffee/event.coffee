@@ -5,7 +5,7 @@ ArtistCollection = require "./artist-collection"
 module.exports = class Event extends Backbone.Model
 
   initialize: ()-> 
-    # _.bindAll(this, "dereference", "name", "description", "category", "artists", "venue");
+    # _.bindAll(this, "dereference", "name", "image", "description", "category", "artists", "venue");
   
   
   dereference : (fieldName, modelCollection)=>

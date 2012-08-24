@@ -22,6 +22,11 @@ module.exports = class EventView extends Backbone.View
       dateString : dateFormat(@model.get("date"), "dddd, mmmm dS, yyyy, h:MM:ss TT")
     $(@el).html(@template(data))
     @$("ul#venuename").html((new VenueListView({model:@model.venue()})).render().el)
+    if (data.image == '' || data.image == null) 
+      artistimage = 'img/artists/noimage.png'
+    else 
+       artistimage = data.image
+    @$(".artist-img").html("<img src='img/artists/#{artistimage}' class='artist-img-src'>")
     
     for artist in @model.artists().models
       item = new ArtistListView { model : artist }
