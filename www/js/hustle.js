@@ -3957,7 +3957,7 @@ require.define("/www/js/sponsor-view.js",function(require,module,exports,__dirna
       return SponsorView.__super__.constructor.apply(this, arguments);
     }
 
-    SponsorView.prototype.template = _.template('<div class="image loading"><img src="img/sponsors/<%= image %>" max-width="320" max-height="125"></div><div class="blurb"><%= blurb %></div><div class="url"><a href="<%= url %>" class="url"><%= url %></a></div>');
+    SponsorView.prototype.template = _.template('<div class="image loading"><img src="img/sponsors/<%= image %>" width="320" height="125"></div><div class="blurb"><%= blurb %></div><div class="url"><a href="<%= url %>" class="url"><%= url %></a></div>');
 
     SponsorView.prototype.title = null;
 

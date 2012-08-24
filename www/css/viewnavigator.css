@@ -49,7 +49,7 @@ body {
 .viewNavigator_header {
 	position:absolute;
 	width:100%;
-	height:46px;
+	height:56px;
 	overflow:hide;
 	padding:0px;
 	background: #5A5A5A;
@@ -101,7 +101,7 @@ body {
 
 .viewNavigator_content {
 	position:absolute;
-	top:46px;
+	top:56px;
 	left:0px;
 	right:0px;
 	bottom:0px;
@@ -169,7 +169,7 @@ body {
 .viewNavigator_backButtonPosition {
 	position:absolute;
 	left: 5px;
-	top: .6em;
+	top: .9em;
 }
 
 .viewNavigator_backButton
