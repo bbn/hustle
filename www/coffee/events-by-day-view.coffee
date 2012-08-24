@@ -21,7 +21,8 @@ module.exports = class EventsByDayView extends Backbone.View
 
     for slug,val of @festival.eventsByDay
       dateFromThisCollection = val.at(0).get("date")
-      row = new EventsByDayListView { slug : slug , date : dateFromThisCollection }
+      name = val.at(0).get("name")
+      row = new EventsByDayListView { slug : slug , date : dateFromThisCollection, name : name }
       $(@el).append(row.render().el)
     
     return @

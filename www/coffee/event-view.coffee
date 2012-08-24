@@ -8,7 +8,7 @@ module.exports = class EventView extends Backbone.View
   title: null
   backLabel : "Back"
 
-  template : _.template('<div class="copy-block"><label>WHEN</label><div id="date"><%= dateString %></div><label>WHAT</label><div id="description"><%= description %></div><label>WHERE</label></div><ul id="venuename" class="listview"></ul><ul class="listview" id="event-artists"></ul>')
+  template : _.template('<div class="artist-img loading"></div><div class="copy-block"><label>WHEN</label><div id="date"><%= dateString %></div><label>WHAT</label><div id="description"><%= description %></div><label>WHERE</label></div><ul id="venuename" class="listview"></ul><ul class="listview" id="event-artists"></ul>')
   
   initialize : ()->
     @title = @model.get("name")

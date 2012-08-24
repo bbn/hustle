@@ -35,14 +35,16 @@
     };
 
     EventsByDayView.prototype.render = function() {
-      var dateFromThisCollection, row, slug, val, _ref;
+      var dateFromThisCollection, name, row, slug, val, _ref;
       _ref = this.festival.eventsByDay;
       for (slug in _ref) {
         val = _ref[slug];
         dateFromThisCollection = val.at(0).get("date");
+        name = val.at(0).get("name");
         row = new EventsByDayListView({
           slug: slug,
-          date: dateFromThisCollection
+          date: dateFromThisCollection,
+          name: name
         });
         $(this.el).append(row.render().el);
       }
