@@ -61,7 +61,7 @@ module.exports = class FestivalRouter extends Backbone.Router
         x = y
         break
     return x
-  
+
   home : ()=>
     return @goingBack = false if @goingBack    
     @showPage(window.festivalView)
@@ -123,9 +123,9 @@ module.exports = class FestivalRouter extends Backbone.Router
     @showPage(venueView)
     
   twitter: ()=>
-    return @goingBack = false if @goingBack      
+    return @goingBack = false if @goingBack
+    $("#twitter-wrapper").show()
     @showPage(window.twitterView)
-    window.twitterView.render()
   
   sponsors: ()=>
     return @goingBack = false if @goingBack      

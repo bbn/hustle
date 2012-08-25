@@ -103,20 +103,12 @@ window.app =
 
     window.venuesView = new VenuesView {festival:festival}
     window.venuesView.render()
-     
-     # // //TODO remove the below.
-     # // //create a view for the events-by-day div. populate the category footer in there.
-     # // //create a view for the category footer. use it all over.
-     # // festival.categories.forEach(function(c) {
-     # //   tab = new CategoryFooterListView( { model : c } );
-     # //   $("#legend").append(tab.render().el);
-     # // });
 
     window.infoView = new InfoView {model:festival.get("info")}
     window.infoView.render()
 
     window.twitterView = new TwitterView {search:"@NewFormsFest"} #//festival.get("twitter").search });
-    # //window.twitterView.render(); 
+    window.twitterView.render()
    
 
 # TODO do we need the below method??
