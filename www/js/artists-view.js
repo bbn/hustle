@@ -32,11 +32,13 @@
     ArtistsView.prototype.initialize = function(options) {};
 
     ArtistsView.prototype.render = function() {
-      var artist, row, _i, _len, _ref;
+      var artist, artists, row, _i, _len;
       $(this.el).html(this.template());
-      _ref = window.festival.artists.models;
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        artist = _ref[_i];
+      artists = _(window.festival.artists.models).sortBy(function(artist) {
+        return artist.get("name").toLowerCase();
+      });
+      for (_i = 0, _len = artists.length; _i < _len; _i++) {
+        artist = artists[_i];
         row = new ArtistListView({
           model: artist
         });
