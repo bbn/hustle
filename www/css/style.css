@@ -331,14 +331,6 @@ a.back:hover{
   background-color:#BD1717!important;
 }
 
-#home-page {
-  background:#333 url('../img/home-bg-long.jpg') no-repeat top center;
-} 
-
-#home-page #buttons {
-  padding:114px 0 0 0 ;
-}
-
 #sponsor-page .url {
   padding:15px;
   text-align: center;
@@ -501,8 +493,6 @@ label {
 #event-page #date {
   margin:0 0 16px 0;
 }
-
-
 
 #venuename li a {
   font-size:18px;

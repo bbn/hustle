@@ -3957,7 +3957,7 @@ require.define("/www/js/sponsor-view.js",function(require,module,exports,__dirna
       return SponsorView.__super__.constructor.apply(this, arguments);
     }
 
-    SponsorView.prototype.template = _.template('<div class="image"><img src="img/sponsors/<%= image %>" width="200" height="78" style="margin:10px auto;display:block"></div><div class="blurb"><%= blurb %></div><div class="url"><a href="<%= url %>" class="url"><%= url %></a></div>');
+    SponsorView.prototype.template = _.template('<div class="copy-block"><div class="image"><img src="img/sponsors/<%= image %>" width="200" height="78" style="margin:10px auto;display:block"></div><div class="blurb"><%= blurb %></div><div class="url"><a href="<%= url %>" class="url"><%= url %></a></div></div>');
 
     SponsorView.prototype.title = null;
 
@@ -4335,7 +4335,7 @@ require.define("/www/js/sponsor-list-view.js",function(require,module,exports,__
 
     SponsorListView.prototype.tagName = "li";
 
-    SponsorListView.prototype.template = _.template("<a href='#sponsor/<%= id %>'><%= name %></a>");
+    SponsorListView.prototype.template = _.template("<a class='details button' href='#sponsor/<%= id %>'><%= name %></a>");
 
     SponsorListView.prototype.render = function() {
       $(this.el).html(this.template(this.model.toJSON()));
@@ -4432,7 +4432,7 @@ require.define("/www/js/info-view.js",function(require,module,exports,__dirname,
 
     InfoView.prototype.backLabel = "Back";
 
-    InfoView.prototype.template = _.template('<p><%= ticketinfo %></p><p><%= about %></p><p><a href="<%= url %>" class="url"><%= url %></a></p><div id="credit"><h3>Who made this app?</h3><br>Your pals at <a id="credit-link" href="http://www.mainsocial.com">mainsocial</a> made this.</div>');
+    InfoView.prototype.template = _.template('<div class="copy-block"><p><%= ticketinfo %></p><p><%= about %></p><p><a href="<%= url %>" class="url"><%= url %></a></p><div id="credit"><h3>Who made this app?</h3><br>Your pals at <a id="credit-link" href="http://www.mainsocial.com">mainsocial</a> made this.</div></div>');
 
     InfoView.prototype.render = function() {
       $(this.el).html(this.template(this.model));

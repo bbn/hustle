@@ -20,7 +20,7 @@
 
     SponsorListView.prototype.tagName = "li";
 
-    SponsorListView.prototype.template = _.template("<a href='#sponsor/<%= id %>'><%= name %></a>");
+    SponsorListView.prototype.template = _.template("<a class='details button' href='#sponsor/<%= id %>'><%= name %></a>");
 
     SponsorListView.prototype.render = function() {
       $(this.el).html(this.template(this.model.toJSON()));

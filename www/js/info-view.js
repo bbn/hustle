@@ -24,7 +24,7 @@
 
     InfoView.prototype.backLabel = "Back";
 
-    InfoView.prototype.template = _.template('<p><%= ticketinfo %></p><p><%= about %></p><p><a href="<%= url %>" class="url"><%= url %></a></p><div id="credit"><h3>Who made this app?</h3><br>Your pals at <a id="credit-link" href="http://www.mainsocial.com">mainsocial</a> made this.</div>');
+    InfoView.prototype.template = _.template('<div class="copy-block"><p><%= ticketinfo %></p><p><%= about %></p><p><a href="<%= url %>" class="url"><%= url %></a></p><div id="credit"><h3>Who made this app?</h3><br>Your pals at <a id="credit-link" href="http://www.mainsocial.com">mainsocial</a> made this.</div></div>');
 
     InfoView.prototype.render = function() {
       $(this.el).html(this.template(this.model));

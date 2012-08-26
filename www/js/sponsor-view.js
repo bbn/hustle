@@ -18,7 +18,7 @@
       return SponsorView.__super__.constructor.apply(this, arguments);
     }
 
-    SponsorView.prototype.template = _.template('<div class="image"><img src="img/sponsors/<%= image %>" width="200" height="78" style="margin:10px auto;display:block"></div><div class="blurb"><%= blurb %></div><div class="url"><a href="<%= url %>" class="url"><%= url %></a></div>');
+    SponsorView.prototype.template = _.template('<div class="copy-block"><div class="image"><img src="img/sponsors/<%= image %>" width="200" height="78" style="margin:10px auto;display:block"></div><div class="blurb"><%= blurb %></div><div class="url"><a href="<%= url %>" class="url"><%= url %></a></div></div>');
 
     SponsorView.prototype.title = null;
 
