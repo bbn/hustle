@@ -44,7 +44,6 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-  background: url('../img/appBG.png');
   font-family:'PTSansNarrowRegular', sans-serif;
   font-size:14px;
   line-height:1.4em;
@@ -344,7 +343,7 @@ a.back:hover{
   padding:15px;
   text-align: center;
 }
-
+/*
 .cat {
   width:8px;
   height:8px;
@@ -352,7 +351,7 @@ a.back:hover{
   display:block;
   float:left;
   margin: -11px 8px 4px 0px;
-}
+}*/
 
 .details {
   width: 90%;

@@ -126,7 +126,6 @@ body {
 
 
 .viewNavigator_contentHolder > div:first-child {
-    background: url('../img/appBG.png');
     min-height:100%;
 }
 
@@ -143,7 +142,6 @@ body {
 	left:0px;
 	right:0px;
 	bottom:0px;
-	/*background-color:white;*/
 	overflow:auto;
 	padding:0px;
 	margin:0px;
@@ -157,7 +155,8 @@ body {
 	
 	transform: translate3d(0,0,0);
 	-webkit-transform: translate3d(0,0,0);
-
+  background: url('../img/appBG.png') repeat-y fixed center;
+  background-size: 120%;
 }
 
 .viewNavigator_backface {
