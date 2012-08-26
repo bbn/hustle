@@ -24,7 +24,7 @@
 
     ArtistView.prototype.backLabel = "Back";
 
-    ArtistView.prototype.template = _.template('<div class="copy-block"><div class="artist-img"></div><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url" target="_blank">Visit Link</a></div><label>WHEN</label></div><ul id="artist-events" class="details button"></ul>');
+    ArtistView.prototype.template = _.template('<div class="copy-block"><div class="artist-img"></div><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url" target="_blank">Visit Link</a></div></div><ul id="artist-events" class="listview"></ul>');
 
     ArtistView.prototype.initialize = function() {
       return this.title = this.model.get("name");

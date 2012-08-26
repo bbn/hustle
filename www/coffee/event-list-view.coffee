@@ -5,7 +5,7 @@ module.exports = class EventListView extends Backbone.View
 
   tagName : "li"
   
-  template : _.template("<a href='#event/<%= id %>'><span class='cat'></span><div class='details'><span class='name'><%= eventName %></span><span class='venue'><%= venuename %></span><span class='time'><%= timeString %></span></div></a>")
+  template : _.template("<a href='#event/<%= id %>'><span class='cat'></span><div class='details button'><span class='name'><%= eventName %></span><span class='venue'><%= venuename %></span><span class='time'><%= timeString %></span></div></a>")
 
   initialize : (options)->
     if options.dateFormatString

@@ -20,7 +20,7 @@
 
     ArtistListView.prototype.tagName = "li";
 
-    ArtistListView.prototype.template = _.template("<a class='button' href='#artist/<%= id %>'><%= name %></a>");
+    ArtistListView.prototype.template = _.template("<a class='details button' href='#artist/<%= id %>'><%= name %></a>");
 
     ArtistListView.prototype.render = function() {
       $(this.el).html(this.template(this.model.toJSON()));

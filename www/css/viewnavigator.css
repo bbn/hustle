@@ -126,7 +126,7 @@ body {
 
 
 .viewNavigator_contentHolder > div:first-child {
-    background: url('../img/nffBG.png');
+    background: url('../img/appBG.png');
     min-height:100%;
 }
 

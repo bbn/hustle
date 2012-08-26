@@ -3582,7 +3582,7 @@ require.define("/www/js/event-view.js",function(require,module,exports,__dirname
 
     EventView.prototype.backLabel = "Back";
 
-    EventView.prototype.template = _.template('<div class="copy-block"><div class="artist-img loading"></div><label>WHEN</label><div id="date"><%= dateString %></div><label>WHAT</label><div id="description"><%= description %></div><label>WHERE</label></div><ul id="venuename" class="listview"></ul><ul class="listview" id="event-artists"></ul>');
+    EventView.prototype.template = _.template('<div class="copy-block"><div class="artist-img loading"></div><label>WHEN</label><div id="date"><%= dateString %></div><label>WHAT</label><div id="description"><%= description %></div><label>WHERE</label><ul id="venuename"></ul></div><ul class="listview" id="event-artists"></ul>');
 
     EventView.prototype.initialize = function() {
       this.title = this.model.get("name");
@@ -3646,7 +3646,7 @@ require.define("/www/js/venue-list-view.js",function(require,module,exports,__di
 
     VenueListView.prototype.tagName = "li";
 
-    VenueListView.prototype.template = _.template("<a class='button-wide' href='#venue/<%= id %>'><%= name %></a>");
+    VenueListView.prototype.template = _.template("<a class='details button' href='#venue/<%= id %>'><%= name %></a>");
 
     VenueListView.prototype.render = function() {
       $(this.el).html(this.template(this.model.toJSON()));
@@ -3683,7 +3683,7 @@ require.define("/www/js/artist-list-view.js",function(require,module,exports,__d
 
     ArtistListView.prototype.tagName = "li";
 
-    ArtistListView.prototype.template = _.template("<a class='button' href='#artist/<%= id %>'><%= name %></a>");
+    ArtistListView.prototype.template = _.template("<a class='details button' href='#artist/<%= id %>'><%= name %></a>");
 
     ArtistListView.prototype.render = function() {
       $(this.el).html(this.template(this.model.toJSON()));
@@ -3784,7 +3784,7 @@ require.define("/www/js/event-list-view.js",function(require,module,exports,__di
 
     EventListView.prototype.tagName = "li";
 
-    EventListView.prototype.template = _.template("<a href='#event/<%= id %>'><span class='cat'></span><div class='details'><span class='name'><%= eventName %></span><span class='venue'><%= venuename %></span><span class='time'><%= timeString %></span></div></a>");
+    EventListView.prototype.template = _.template("<a href='#event/<%= id %>'><span class='cat'></span><div class='details button'><span class='name'><%= eventName %></span><span class='venue'><%= venuename %></span><span class='time'><%= timeString %></span></div></a>");
 
     EventListView.prototype.initialize = function(options) {
       if (options.dateFormatString) {
@@ -3848,7 +3848,7 @@ require.define("/www/js/artist-view.js",function(require,module,exports,__dirnam
 
     ArtistView.prototype.backLabel = "Back";
 
-    ArtistView.prototype.template = _.template('<div class="copy-block"><div class="artist-img"></div><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url" target="_blank">Visit Link</a></div><label>WHEN</label></div><ul id="artist-events" class="details button"></ul>');
+    ArtistView.prototype.template = _.template('<div class="copy-block"><div class="artist-img"></div><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url" target="_blank">Visit Link</a></div></div><ul id="artist-events" class="listview"></ul>');
 
     ArtistView.prototype.initialize = function() {
       return this.title = this.model.get("name");
@@ -3903,7 +3903,7 @@ require.define("/www/js/venue-view.js",function(require,module,exports,__dirname
       return VenueView.__super__.constructor.apply(this, arguments);
     }
 
-    VenueView.prototype.template = _.template('<div id="map" class="loading"><img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= address %>&zoom=15&size=320x200&markers=color:red%7C<%=address%>&sensor=false"></div><div class="address"><div class="name"><%= name %></div><%= address %><label>EVENTS AT THIS VENUE</label></div><div id="venue-wrapper"><ul id="venue-events" class="listview"></ul></div>');
+    VenueView.prototype.template = _.template('<div class="copy-block"><div id="map" class="loading"><img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= address %>&zoom=15&size=320x200&markers=color:red%7C<%=address%>&sensor=false"></div><div class="name"><%= name %></div><%= address %><label>EVENTS AT THIS VENUE</label></div><div id="venue-wrapper"><ul id="venue-events" class="listview"></ul></div>');
 
     VenueView.prototype.title = null;
 

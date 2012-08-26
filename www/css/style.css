@@ -127,6 +127,15 @@ a {
   width: 90%;
 }
 
+.copy-block #url a {
+  padding: 6px;
+  display: inline-block;
+  background: #444;
+  color: white;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
 .header {
 	position:absolute; 
 	z-index:5;
@@ -190,29 +199,12 @@ a.back:hover{
   color:#fff;
 }
  
-
- 
 .listview {
   overflow:hidden;
 } 
 
-.listview li a {
-/*  display:block;
-  list-style:none;
-  padding:0 10px;
-  background: transparent url('images/list-arrow.png') no-repeat 98% center;
-  overflow:hidden;
-  color:#333;
-  text-decoration:none;*/
-}
-
 .info-view {
   padding: 0 15px;
-}
-
-#event-list li a, #artist-events li a, #venue-events li a {
-/*  background: transparent url('images/list-arrow.png') no-repeat 98% 35%;
-  margin-top: -15px;*/
 }
 
 #info h3 {
@@ -324,7 +316,7 @@ a.back:hover{
 .button,
 .details {
   padding:10px 32px 10px 0px;
-  color:#ADADAD;
+  color:#888;
   font-size:14px;
   text-align:right;
   text-decoration:none;
@@ -334,16 +326,6 @@ a.back:hover{
   font-weight:normal;
   text-transform: uppercase;
   background: #FFF url('images/list-arrow-lt.png') no-repeat 96% center;
-}
-
-.event-content #venuename .button-wide {
-  padding:10px 4px 10px 15px !important;
-  color:#646464;
-  text-align:left;
-  text-decoration:none;
-  display:block;
-  margin:0 auto 0 auto;
-  border-bottom: 0 !important;
 }
 
 .pressed {
@@ -363,20 +345,19 @@ a.back:hover{
   text-align: center;
 }
 
-
-/*.cat {
+.cat {
   width:8px;
   height:8px;
   border-radius:50px;
   display:block;
   float:left;
   margin: -11px 8px 4px 0px;
-}*/
+}
 
 .details {
   width: 90%;
   text-align: left;
-  padding: 6px 10px 5px 10px;
+  padding: 15px 10px 15px 10px;
 }
 
 .name {
@@ -390,24 +371,6 @@ a.back:hover{
 
 .events-by-day li {
   list-style: none;
-}
-
-#artist-list li a, #event-artists li a, #venue-list li a, #sponsor-list li a, #events-by-day-list li a {
-/*  text-transform:uppercase;
-  font-size:14px;
-  padding:20px 16px 14px 16px;*/
-}
-
-#event-artists, #venue-events {
-  border-top:2px solid #A0A0A0;
-}
-
-#artist-events {
-  margin-top: -10px;
-}
-
-#artist-page .copy-block {
-  padding-bottom:0;
 }
 
 #map {
@@ -465,8 +428,13 @@ a.back:hover{
   text-transform:uppercase;
 }
 
-.artist-img img {
-  width:320px;
+.listview li a {
+  text-decoration: none;
+}
+
+.artist-img img,
+#map img {
+  width:90%;
 }
 
 .artist-img {
@@ -541,15 +509,14 @@ label {
   font-size:18px;
   font-weight: bold;
   text-transform: none;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  width: 100%;
 }
 
 #venuename li {
   margin:0 0 16px 0;
   list-style-type:none;
-}
-
-#artist-page #url {
-  margin:10px 0 20px 0;
 }
 
 /*twitter*/

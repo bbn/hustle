@@ -18,7 +18,7 @@
       return VenueView.__super__.constructor.apply(this, arguments);
     }
 
-    VenueView.prototype.template = _.template('<div id="map" class="loading"><img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= address %>&zoom=15&size=320x200&markers=color:red%7C<%=address%>&sensor=false"></div><div class="address"><div class="name"><%= name %></div><%= address %><label>EVENTS AT THIS VENUE</label></div><div id="venue-wrapper"><ul id="venue-events" class="listview"></ul></div>');
+    VenueView.prototype.template = _.template('<div class="copy-block"><div id="map" class="loading"><img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= address %>&zoom=15&size=320x200&markers=color:red%7C<%=address%>&sensor=false"></div><div class="name"><%= name %></div><%= address %><label>EVENTS AT THIS VENUE</label></div><div id="venue-wrapper"><ul id="venue-events" class="listview"></ul></div>');
 
     VenueView.prototype.title = null;
 
