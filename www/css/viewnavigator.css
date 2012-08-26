@@ -52,7 +52,7 @@ body {
 	height:50px;
 	overflow:hide;
 	padding:0px;
-	background: #5A5A5A;
+	background: #3C3C3C;
 }
 
 .viewNavigator_header_backlink {
@@ -72,7 +72,7 @@ body {
 .viewNavigator_header_title {
   text-transform: uppercase;
 	position:absolute;
-	top:12px;
+	top:17px;
 	left:0%;
 	right:0%;
 	margin-left:auto;

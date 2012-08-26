@@ -4577,7 +4577,7 @@ require.define("/www/js/app.js",function(require,module,exports,__dirname,__file
       $.ajax({
         dataType: "jsonp",
         jsonpCallback: "jsonp1",
-        url: 'http://www.mainsocial.com/fest/nff2012.json?callback=?',
+        url: 'http://www.mainsocial.com/fest/olio2012.json?callback=?',
         success: function(data) {
           postDataLoad(data);
           return window.localStorage.setItem("festivalData", JSON.stringify(data));
