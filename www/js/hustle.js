@@ -3582,7 +3582,7 @@ require.define("/www/js/event-view.js",function(require,module,exports,__dirname
 
     EventView.prototype.backLabel = "Back";
 
-    EventView.prototype.template = _.template('<div class="artist-img loading"></div><div class="copy-block"><label>WHEN</label><div id="date"><%= dateString %></div><label>WHAT</label><div id="description"><%= description %></div><label>WHERE</label></div><ul id="venuename" class="listview"></ul><ul class="listview" id="event-artists"></ul>');
+    EventView.prototype.template = _.template('<div class="copy-block"><div class="artist-img loading"></div><label>WHEN</label><div id="date"><%= dateString %></div><label>WHAT</label><div id="description"><%= description %></div><label>WHERE</label></div><ul id="venuename" class="listview"></ul><ul class="listview" id="event-artists"></ul>');
 
     EventView.prototype.initialize = function() {
       this.title = this.model.get("name");
@@ -3683,7 +3683,7 @@ require.define("/www/js/artist-list-view.js",function(require,module,exports,__d
 
     ArtistListView.prototype.tagName = "li";
 
-    ArtistListView.prototype.template = _.template("<a href='#artist/<%= id %>'><%= name %></a>");
+    ArtistListView.prototype.template = _.template("<a class='button' href='#artist/<%= id %>'><%= name %></a>");
 
     ArtistListView.prototype.render = function() {
       $(this.el).html(this.template(this.model.toJSON()));
@@ -3848,7 +3848,7 @@ require.define("/www/js/artist-view.js",function(require,module,exports,__dirnam
 
     ArtistView.prototype.backLabel = "Back";
 
-    ArtistView.prototype.template = _.template('<div class="artist-img"></div><div class="copy-block"><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url" target="_blank">Visit Link</a></div><label>WHEN</label></div><ul id="artist-events" class="listview"></ul>');
+    ArtistView.prototype.template = _.template('<div class="copy-block"><div class="artist-img"></div><label>WHO</label><div id="blurb"><%= blurb %></div><div id="url"><a href="<%= url %>" class="url" target="_blank">Visit Link</a></div><label>WHEN</label></div><ul id="artist-events" class="details button"></ul>');
 
     ArtistView.prototype.initialize = function() {
       return this.title = this.model.get("name");

@@ -26,7 +26,7 @@
 
     EventView.prototype.backLabel = "Back";
 
-    EventView.prototype.template = _.template('<div class="artist-img loading"></div><div class="copy-block"><label>WHEN</label><div id="date"><%= dateString %></div><label>WHAT</label><div id="description"><%= description %></div><label>WHERE</label></div><ul id="venuename" class="listview"></ul><ul class="listview" id="event-artists"></ul>');
+    EventView.prototype.template = _.template('<div class="copy-block"><div class="artist-img loading"></div><label>WHEN</label><div id="date"><%= dateString %></div><label>WHAT</label><div id="description"><%= description %></div><label>WHERE</label></div><ul id="venuename" class="listview"></ul><ul class="listview" id="event-artists"></ul>');
 
     EventView.prototype.initialize = function() {
       this.title = this.model.get("name");
