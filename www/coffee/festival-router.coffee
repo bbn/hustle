@@ -71,9 +71,9 @@ module.exports = class FestivalRouter extends Backbone.Router
     # alert "eventsByDayy!!!!"      
     @showPage(window.eventsByDayView)
 
-  events: (slug)=>
+  events: (id)=>
     return @goingBack = false if @goingBack      
-    events = festival.eventsByDay[slug]
+    events = festival.eventsByDay[id]
     dateString = dateFormat((new Date(events.at(0).get("date"))), "dddd mm/dd")
     view = new EventsView( { title : dateString, eventsToList : events, dateFormatString : "h:MM TT" } )
     view.render()

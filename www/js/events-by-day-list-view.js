@@ -23,7 +23,7 @@
       return this.date = options.date;
     };
 
-    EventsByDayListView.prototype.template = _.template("<a class='button' href='#event/<%= slug %>'><%= dateString %></a>");
+    EventsByDayListView.prototype.template = _.template("<a class='button' href='#events/<%= slug %>'><%= dateString %></a>");
 
     EventsByDayListView.prototype.render = function() {
       var dateString;

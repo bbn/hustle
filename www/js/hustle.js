@@ -3442,12 +3442,12 @@ require.define("/www/js/festival-router.js",function(require,module,exports,__di
       return this.showPage(window.eventsByDayView);
     };
 
-    FestivalRouter.prototype.events = function(slug) {
+    FestivalRouter.prototype.events = function(id) {
       var dateString, events, view;
       if (this.goingBack) {
         return this.goingBack = false;
       }
-      events = festival.eventsByDay[slug];
+      events = festival.eventsByDay[id];
       dateString = dateFormat(new Date(events.at(0).get("date")), "dddd mm/dd");
       view = new EventsView({
         title: dateString,
@@ -4229,7 +4229,7 @@ require.define("/www/js/events-by-day-list-view.js",function(require,module,expo
       return this.date = options.date;
     };
 
-    EventsByDayListView.prototype.template = _.template("<a class='button' href='#event/<%= slug %>'><%= dateString %></a>");
+    EventsByDayListView.prototype.template = _.template("<a class='button' href='#events/<%= slug %>'><%= dateString %></a>");
 
     EventsByDayListView.prototype.render = function() {
       var dateString;
