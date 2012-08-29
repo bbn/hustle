@@ -315,7 +315,7 @@ a.back:hover{
 .button,
 .details {
   padding:10px 32px 10px 0px;
-  color:#888;
+  color:#686868;
   font-size:14px;
   text-align:right;
   text-decoration:none;
@@ -337,12 +337,11 @@ a.back:hover{
 }
 
 .cat {
-  width:8px;
-  height:8px;
-  border-radius:50px;
-  display:block;
-  float:left;
-  margin: -11px 8px 4px 0px;
+  width: 8px;
+  height: 36px;
+  display: block;
+  float: left;
+  margin: 0px 12px 25px 0px;
 }
 
 .details {
@@ -388,24 +387,28 @@ a.back:hover{
 }
 
 /*TODO improve category stuff -- */
-.music.cat, .music .cat/*, .music .time*/ {
-  background-color:#F9D307;
-}
-
-.art.cat, .art .cat {
-  background-color: #EC1C24;
-}
-
-.poetry.cat, .poetry .cat {
-  background-color:#25B3B3;
+.fashion.cat, .fashion .cat {
+  background-color:#CF1293;
 }
 
 .film.cat, .film .cat {
-  background-color:#8BC53F;
+  background-color: #073f92;
 }
 
-.performance.cat, .performance .cat {
-  background-color:#808080;
+.comedy.cat, .comedy .cat {
+  background-color:#75b636;
+}
+
+.music.cat, .music .cat {
+  background-color:#cd1608;
+}
+
+.art.cat, .art .cat {
+  background-color:#1695D1;
+}
+
+.skate.cat, .skate .cat {
+  background-color:#F1A532;
 }
 
 

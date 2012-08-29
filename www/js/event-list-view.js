@@ -20,7 +20,7 @@
 
     EventListView.prototype.tagName = "li";
 
-    EventListView.prototype.template = _.template("<a href='#event/<%= id %>'><span class='cat'></span><div class='details button'><span class='name'><%= eventName %></span><span class='venue'><%= venuename %></span><span class='time'><%= timeString %></span></div></a>");
+    EventListView.prototype.template = _.template("<a href='#event/<%= id %>'><div class='details button'><span class='cat'></span><span class='name'><%= eventName %></span><span class='venue'><%= venuename %></span><span class='time'><%= timeString %></span></div></a>");
 
     EventListView.prototype.initialize = function(options) {
       if (options.dateFormatString) {
