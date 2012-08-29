@@ -4022,7 +4022,7 @@ require.define("/www/js/festival-view.js",function(require,module,exports,__dirn
       var button, buttons, key, val;
       $(this.el).html(this.template());
       buttons = {
-        events: "#events-by-day",
+        schedule: "#events-by-day",
         artists: "#artists",
         venues: "#venues",
         twitter: "#twitter",
@@ -4182,18 +4182,14 @@ require.define("/www/js/events-by-day-view.js",function(require,module,exports,_
     };
 
     EventsByDayView.prototype.render = function() {
-      var dateFromThisCollection, id, name, row, slug, val, _ref;
-      _ref = this.festival.events.models;
+      var dateFromThisCollection, row, slug, val, _ref;
+      _ref = this.festival.eventsByDay;
       for (slug in _ref) {
         val = _ref[slug];
-        dateFromThisCollection = val.get("date");
-        name = val.get("name");
-        id = val.get("id");
+        dateFromThisCollection = val.at(0).get("date");
         row = new EventsByDayListView({
           slug: slug,
-          id: id,
-          date: dateFromThisCollection,
-          name: name
+          date: dateFromThisCollection
         });
         $(this.el).append(row.render().el);
       }
@@ -4229,20 +4225,18 @@ require.define("/www/js/events-by-day-list-view.js",function(require,module,expo
     EventsByDayListView.prototype.tagName = "li";
 
     EventsByDayListView.prototype.initialize = function(options) {
-      this.id = options.id;
-      this.date = options.date;
-      return this.name = options.name;
+      this.slug = options.slug;
+      return this.date = options.date;
     };
 
-    EventsByDayListView.prototype.template = _.template("<a class='button' href='#event/<%= id %>'><%= name %></a>");
+    EventsByDayListView.prototype.template = _.template("<a class='button' href='#event/<%= slug %>'><%= dateString %></a>");
 
     EventsByDayListView.prototype.render = function() {
       var dateString;
       dateString = dateFormat(this.date, "dddd, mmmm dS");
       $(this.el).html(this.template({
-        id: this.id,
-        dateString: dateString,
-        name: this.name
+        slug: this.slug,
+        dateString: dateString
       }));
       return this;
     };

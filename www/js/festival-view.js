@@ -36,7 +36,7 @@
       var button, buttons, key, val;
       $(this.el).html(this.template());
       buttons = {
-        events: "#events-by-day",
+        schedule: "#events-by-day",
         artists: "#artists",
         venues: "#venues",
         twitter: "#twitter",

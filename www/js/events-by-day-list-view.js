@@ -19,20 +19,18 @@
     EventsByDayListView.prototype.tagName = "li";
 
     EventsByDayListView.prototype.initialize = function(options) {
-      this.id = options.id;
-      this.date = options.date;
-      return this.name = options.name;
+      this.slug = options.slug;
+      return this.date = options.date;
     };
 
-    EventsByDayListView.prototype.template = _.template("<a class='button' href='#event/<%= id %>'><%= name %></a>");
+    EventsByDayListView.prototype.template = _.template("<a class='button' href='#event/<%= slug %>'><%= dateString %></a>");
 
     EventsByDayListView.prototype.render = function() {
       var dateString;
       dateString = dateFormat(this.date, "dddd, mmmm dS");
       $(this.el).html(this.template({
-        id: this.id,
-        dateString: dateString,
-        name: this.name
+        slug: this.slug,
+        dateString: dateString
       }));
       return this;
     };
