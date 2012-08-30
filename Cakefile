@@ -1,4 +1,4 @@
- fs = require 'fs'
+fs = require 'fs'
 util = require 'util'
 
 {print} = require 'util'
