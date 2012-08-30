@@ -127,6 +127,7 @@ a {
 }
 
 .copy-block #url a {
+  font-family: 'PTSansNarrowRegular';
   padding: 6px;
   display: inline-block;
   background: #444;
