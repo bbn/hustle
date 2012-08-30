@@ -127,7 +127,6 @@ body {
 
 .viewNavigator_contentHolder > div:first-child {
     min-height:100%;
-    margin-top: 20px;
 }
 
 .viewNavigator_content div {
