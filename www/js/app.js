@@ -1,5 +1,5 @@
 (function() {
-  var ArtistsView, Backbone, EventsByDayView, Festival, FestivalRouter, FestivalView, InfoView, SponsorsView, TwitterView, VenuesView, conHeight, footHeight, headHeight;
+  var ArtistsView, Backbone, CategoriesView, EventsByDayView, Festival, FestivalRouter, FestivalView, InfoView, SponsorsView, TwitterView, VenuesView, conHeight, footHeight, headHeight;
 
   Backbone = require("backbone-browserify");
 
@@ -10,6 +10,8 @@
   FestivalView = require("./festival-view");
 
   ArtistsView = require("./artists-view");
+
+  CategoriesView = require("./categories-view");
 
   EventsByDayView = require("./events-by-day-view");
 
@@ -88,6 +90,10 @@
         router: window.festivalRouter
       });
       window.artistsView.render();
+      window.categoriesView = new CategoriesView({
+        router: window.festivalRouter
+      });
+      window.categoriesView.render();
       window.eventsByDayView = new EventsByDayView({
         festival: festival
       });

@@ -30,7 +30,7 @@
     EventListView.prototype.dateFormatString = "dddd, mmmm dS h:MM TT";
 
     EventListView.prototype.render = function() {
-      var category, event, j;
+      var categories, category, event, j, _i, _len;
       j = this.model.toJSON();
       event = this.model;
       _.extend(j, {
@@ -39,12 +39,15 @@
         venuename: event.venue().get('name')
       });
       $(this.el).html(this.template(j));
-      category = event.category();
-      if (!category) {
-        console.log("PROBLEM: no category for " + (event.name()));
+      categories = event.categories().models;
+      if (!categories) {
+        console.log("PROBLEM: no categories for " + (event.name()));
       } else {
-        $(this.el).addClass(category.attributes.name);
-        this.$('cat').addClass(category.attributes.name);
+        for (_i = 0, _len = categories.length; _i < _len; _i++) {
+          category = categories[_i];
+          $(this.el).addClass(category.attributes.name);
+          this.$('cat').addClass(category.attributes.name);
+        }
       }
       return this;
     };

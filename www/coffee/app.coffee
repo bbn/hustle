@@ -4,6 +4,7 @@ FestivalRouter = require "./festival-router"
 FestivalView = require "./festival-view"
 
 ArtistsView = require "./artists-view"
+CategoriesView = require "./categories-view"
 EventsByDayView = require "./events-by-day-view"
 SponsorsView = require "./sponsors-view"
 VenuesView = require "./venues-view"
@@ -94,6 +95,9 @@ window.app =
 
     window.artistsView = new ArtistsView {router:window.festivalRouter}
     window.artistsView.render()
+
+    window.categoriesView = new CategoriesView {router:window.festivalRouter}
+    window.categoriesView.render()
 
     window.eventsByDayView = new EventsByDayView {festival:festival}
     window.eventsByDayView.render()

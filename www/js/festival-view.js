@@ -35,12 +35,13 @@
       var button, buttons, key, val;
       $(this.el).html(this.template());
       buttons = {
-        events: "#events-by-day",
+        schedule: "#events-by-day",
+        categories: "#categories",
         artists: "#artists",
         venues: "#venues",
-        twitter: "#twitter",
         sponsors: "#sponsors",
-        info: "#info"
+        info: "#info",
+        twitter: "#twitter"
       };
       for (key in buttons) {
         val = buttons[key];

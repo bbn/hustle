@@ -20,12 +20,13 @@ module.exports = class FestivalView extends Backbone.View
   render : ()-> 
     $(@el).html(@template())
     buttons = 
-      events:"#events-by-day"
+      schedule:"#events-by-day"
+      categories:"#categories"
       artists:"#artists"
       venues:"#venues"
-      twitter:"#twitter"
       sponsors:"#sponsors"
       info:"#info"
+      twitter:"#twitter"
     for key,val of buttons
       button = new FestivalViewButton( { name:key, selectorLink:val } )
       @$("#buttons").append(button.render().el)

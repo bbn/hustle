@@ -29,6 +29,8 @@
       this.venues = __bind(this.venues, this);
       this.artist = __bind(this.artist, this);
       this.artists = __bind(this.artists, this);
+      this.category = __bind(this.category, this);
+      this.categories = __bind(this.categories, this);
       this.event = __bind(this.event, this);
       this.events = __bind(this.events, this);
       this.eventsByDay = __bind(this.eventsByDay, this);
@@ -42,6 +44,7 @@
       "": "home",
       "events-by-day": "eventsByDay",
       "events/:slug": "events",
+      "categories": "categories",
       "category/:id": "category",
       "artists": "artists",
       "artist/:id": "artist",
@@ -136,6 +139,23 @@
       });
       eventView.render();
       return this.showPage(eventView);
+    };
+
+    FestivalRouter.prototype.categories = function() {
+      if (this.goingBack) return this.goingBack = false;
+      return this.showPage(window.categoriesView);
+    };
+
+    FestivalRouter.prototype.category = function(id) {
+      var cat, view;
+      if (this.goingBack) return this.goingBack = false;
+      cat = this.findObjectWithId(id, this.model.categories.models);
+      view = new EventsView({
+        title: cat.get("name"),
+        eventsToList: cat.events()
+      });
+      view.render();
+      return this.showPage(view);
     };
 
     FestivalRouter.prototype.artists = function() {

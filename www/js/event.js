@@ -1,14 +1,17 @@
 (function() {
-  var ArtistCollection, Backbone, Event, _,
+  var ArtistCollection, Backbone, CategoryCollection, Event, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; },
+    __indexOf = Array.prototype.indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   _ = require("underscore");
 
   Backbone = require("backbone-browserify");
 
   ArtistCollection = require("./artist-collection");
+
+  CategoryCollection = require("./category-collection");
 
   module.exports = Event = (function(_super) {
 
@@ -19,16 +22,15 @@
       Event.__super__.constructor.apply(this, arguments);
     }
 
-    Event.prototype.initialize = function() {};
-
     Event.prototype.dereference = function(fieldName, modelCollection) {
-      var modelId;
-      modelId = this.get(fieldName);
+      var references;
+      references = this.get(fieldName);
       return modelCollection.filter(function(model) {
-        if (typeof modelId === "object") {
-          return modelId.indexOf(model.id) !== -1;
+        var _ref;
+        if (typeof references === "object") {
+          return _ref = model.id, __indexOf.call(references, _ref) >= 0;
         } else {
-          return model.id === modelId;
+          return model.id === references;
         }
       });
     };
@@ -45,8 +47,8 @@
       return this.get("image") || this.artists().at(0).get("image");
     };
 
-    Event.prototype.category = function() {
-      return this.dereference("category", festival.categories)[0];
+    Event.prototype.categories = function() {
+      return new CategoryCollection(this.dereference("category", festival.categories));
     };
 
     Event.prototype.artists = function() {

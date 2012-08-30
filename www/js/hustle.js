@@ -2984,16 +2984,19 @@ require.define("/www/js/event-collection.js",function(require,module,exports,__d
 });
 
 require.define("/www/js/event.js",function(require,module,exports,__dirname,__filename,process){(function() {
-  var ArtistCollection, Backbone, Event, _,
+  var ArtistCollection, Backbone, CategoryCollection, Event, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; },
+    __indexOf = Array.prototype.indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   _ = require("underscore");
 
   Backbone = require("backbone-browserify");
 
   ArtistCollection = require("./artist-collection");
+
+  CategoryCollection = require("./category-collection");
 
   module.exports = Event = (function(_super) {
 
@@ -3004,16 +3007,15 @@ require.define("/www/js/event.js",function(require,module,exports,__dirname,__fi
       Event.__super__.constructor.apply(this, arguments);
     }
 
-    Event.prototype.initialize = function() {};
-
     Event.prototype.dereference = function(fieldName, modelCollection) {
-      var modelId;
-      modelId = this.get(fieldName);
+      var references;
+      references = this.get(fieldName);
       return modelCollection.filter(function(model) {
-        if (typeof modelId === "object") {
-          return modelId.indexOf(model.id) !== -1;
+        var _ref;
+        if (typeof references === "object") {
+          return _ref = model.id, __indexOf.call(references, _ref) >= 0;
         } else {
-          return model.id === modelId;
+          return model.id === references;
         }
       });
     };
@@ -3030,8 +3032,8 @@ require.define("/www/js/event.js",function(require,module,exports,__dirname,__fi
       return this.get("image") || this.artists().at(0).get("image");
     };
 
-    Event.prototype.category = function() {
-      return this.dereference("category", festival.categories)[0];
+    Event.prototype.categories = function() {
+      return new CategoryCollection(this.dereference("category", festival.categories));
     };
 
     Event.prototype.artists = function() {
@@ -3112,6 +3114,68 @@ require.define("/www/js/artist.js",function(require,module,exports,__dirname,__f
 
 });
 
+require.define("/www/js/category-collection.js",function(require,module,exports,__dirname,__filename,process){(function() {
+  var Backbone, Category, CategoryCollection,
+    __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+
+  Backbone = require("backbone-browserify");
+
+  Category = require("./category");
+
+  module.exports = CategoryCollection = (function(_super) {
+
+    __extends(CategoryCollection, _super);
+
+    function CategoryCollection() {
+      CategoryCollection.__super__.constructor.apply(this, arguments);
+    }
+
+    CategoryCollection.prototype.model = Category;
+
+    return CategoryCollection;
+
+  })(Backbone.Collection);
+
+}).call(this);
+
+});
+
+require.define("/www/js/category.js",function(require,module,exports,__dirname,__filename,process){(function() {
+  var Backbone, Category,
+    __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; },
+    __indexOf = Array.prototype.indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+
+  Backbone = require("backbone-browserify");
+
+  module.exports = Category = (function(_super) {
+
+    __extends(Category, _super);
+
+    function Category() {
+      Category.__super__.constructor.apply(this, arguments);
+    }
+
+    Category.prototype.events = function() {
+      var EventCollection, events,
+        _this = this;
+      EventCollection = require("./event-collection");
+      events = festival.events.filter(function(e) {
+        var _ref;
+        return _ref = _this.id, __indexOf.call(e.categories().pluck("id"), _ref) >= 0;
+      });
+      return new EventCollection(events);
+    };
+
+    return Category;
+
+  })(Backbone.Model);
+
+}).call(this);
+
+});
+
 require.define("/www/js/venue-collection.js",function(require,module,exports,__dirname,__filename,process){(function() {
   var Backbone, Venue, VenueCollection,
     __hasProp = Object.prototype.hasOwnProperty,
@@ -3167,67 +3231,6 @@ require.define("/www/js/venue.js",function(require,module,exports,__dirname,__fi
     };
 
     return Venue;
-
-  })(Backbone.Model);
-
-}).call(this);
-
-});
-
-require.define("/www/js/category-collection.js",function(require,module,exports,__dirname,__filename,process){(function() {
-  var Backbone, Category, CategoryCollection,
-    __hasProp = Object.prototype.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
-
-  Backbone = require("backbone-browserify");
-
-  Category = require("./category");
-
-  module.exports = CategoryCollection = (function(_super) {
-
-    __extends(CategoryCollection, _super);
-
-    function CategoryCollection() {
-      CategoryCollection.__super__.constructor.apply(this, arguments);
-    }
-
-    CategoryCollection.prototype.model = Category;
-
-    return CategoryCollection;
-
-  })(Backbone.Collection);
-
-}).call(this);
-
-});
-
-require.define("/www/js/category.js",function(require,module,exports,__dirname,__filename,process){(function() {
-  var Backbone, Category, EventCollection,
-    __hasProp = Object.prototype.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
-
-  Backbone = require("backbone-browserify");
-
-  EventCollection = require("./event-collection");
-
-  module.exports = Category = (function(_super) {
-
-    __extends(Category, _super);
-
-    function Category() {
-      Category.__super__.constructor.apply(this, arguments);
-    }
-
-    Category.prototype.events = function() {
-      var events,
-        _this = this;
-      events = festival.events.filter(function(e) {
-        return e.get("category") === _this.id;
-      });
-      return new EventCollection(events);
-    };
-
-    return Category;
 
   })(Backbone.Model);
 
@@ -3320,6 +3323,8 @@ require.define("/www/js/festival-router.js",function(require,module,exports,__di
       this.venues = __bind(this.venues, this);
       this.artist = __bind(this.artist, this);
       this.artists = __bind(this.artists, this);
+      this.category = __bind(this.category, this);
+      this.categories = __bind(this.categories, this);
       this.event = __bind(this.event, this);
       this.events = __bind(this.events, this);
       this.eventsByDay = __bind(this.eventsByDay, this);
@@ -3333,6 +3338,7 @@ require.define("/www/js/festival-router.js",function(require,module,exports,__di
       "": "home",
       "events-by-day": "eventsByDay",
       "events/:slug": "events",
+      "categories": "categories",
       "category/:id": "category",
       "artists": "artists",
       "artist/:id": "artist",
@@ -3427,6 +3433,23 @@ require.define("/www/js/festival-router.js",function(require,module,exports,__di
       });
       eventView.render();
       return this.showPage(eventView);
+    };
+
+    FestivalRouter.prototype.categories = function() {
+      if (this.goingBack) return this.goingBack = false;
+      return this.showPage(window.categoriesView);
+    };
+
+    FestivalRouter.prototype.category = function(id) {
+      var cat, view;
+      if (this.goingBack) return this.goingBack = false;
+      cat = this.findObjectWithId(id, this.model.categories.models);
+      view = new EventsView({
+        title: cat.get("name"),
+        eventsToList: cat.events()
+      });
+      view.render();
+      return this.showPage(view);
     };
 
     FestivalRouter.prototype.artists = function() {
@@ -3732,7 +3755,7 @@ require.define("/www/js/event-list-view.js",function(require,module,exports,__di
     EventListView.prototype.dateFormatString = "dddd, mmmm dS h:MM TT";
 
     EventListView.prototype.render = function() {
-      var category, event, j;
+      var categories, category, event, j, _i, _len;
       j = this.model.toJSON();
       event = this.model;
       _.extend(j, {
@@ -3741,12 +3764,15 @@ require.define("/www/js/event-list-view.js",function(require,module,exports,__di
         venuename: event.venue().get('name')
       });
       $(this.el).html(this.template(j));
-      category = event.category();
-      if (!category) {
-        console.log("PROBLEM: no category for " + (event.name()));
+      categories = event.categories().models;
+      if (!categories) {
+        console.log("PROBLEM: no categories for " + (event.name()));
       } else {
-        $(this.el).addClass(category.attributes.name);
-        this.$('cat').addClass(category.attributes.name);
+        for (_i = 0, _len = categories.length; _i < _len; _i++) {
+          category = categories[_i];
+          $(this.el).addClass(category.attributes.name);
+          this.$('cat').addClass(category.attributes.name);
+        }
       }
       return this;
     };
@@ -3955,12 +3981,13 @@ require.define("/www/js/festival-view.js",function(require,module,exports,__dirn
       var button, buttons, key, val;
       $(this.el).html(this.template());
       buttons = {
-        events: "#events-by-day",
+        schedule: "#events-by-day",
+        categories: "#categories",
         artists: "#artists",
         venues: "#venues",
-        twitter: "#twitter",
         sponsors: "#sponsors",
-        info: "#info"
+        info: "#info",
+        twitter: "#twitter"
       };
       for (key in buttons) {
         val = buttons[key];
@@ -4071,6 +4098,95 @@ require.define("/www/js/artists-view.js",function(require,module,exports,__dirna
     };
 
     return ArtistsView;
+
+  })(Backbone.View);
+
+}).call(this);
+
+});
+
+require.define("/www/js/categories-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
+  var Backbone, CategoriesView, CategoryListView, _,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+
+  _ = require("underscore");
+
+  Backbone = require("backbone-browserify");
+
+  CategoryListView = require("./category-list-view");
+
+  module.exports = CategoriesView = (function(_super) {
+
+    __extends(CategoriesView, _super);
+
+    function CategoriesView() {
+      this.render = __bind(this.render, this);
+      CategoriesView.__super__.constructor.apply(this, arguments);
+    }
+
+    CategoriesView.prototype.className = "categories-page";
+
+    CategoriesView.prototype.title = "Categories";
+
+    CategoriesView.prototype.backLabel = "Back";
+
+    CategoriesView.prototype.template = _.template('<ul id="category-list" class="listview"></ul>');
+
+    CategoriesView.prototype.render = function() {
+      var cat, categories, row, _i, _len;
+      $(this.el).html(this.template());
+      categories = _(window.festival.categories.models).sortBy(function(category) {
+        return category.get("name").toLowerCase();
+      });
+      for (_i = 0, _len = categories.length; _i < _len; _i++) {
+        cat = categories[_i];
+        row = new CategoryListView({
+          model: cat
+        });
+        this.$('ul#category-list').append(row.render().el);
+      }
+      return this;
+    };
+
+    return CategoriesView;
+
+  })(Backbone.View);
+
+}).call(this);
+
+});
+
+require.define("/www/js/category-list-view.js",function(require,module,exports,__dirname,__filename,process){(function() {
+  var Backbone, CategoryListView, _,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+
+  _ = require("underscore");
+
+  Backbone = require("backbone-browserify");
+
+  module.exports = CategoryListView = (function(_super) {
+
+    __extends(CategoryListView, _super);
+
+    function CategoryListView() {
+      this.render = __bind(this.render, this);
+      CategoryListView.__super__.constructor.apply(this, arguments);
+    }
+
+    CategoryListView.prototype.tagName = "li";
+
+    CategoryListView.prototype.template = _.template("<a href='#category/<%= id %>'><%= name %></a>");
+
+    CategoryListView.prototype.render = function() {
+      $(this.el).html(this.template(this.model.toJSON()));
+      return this;
+    };
+
+    return CategoryListView;
 
   })(Backbone.View);
 
@@ -4451,7 +4567,7 @@ require.define("/www/js/twitter-view.js",function(require,module,exports,__dirna
 });
 
 require.define("/www/js/app.js",function(require,module,exports,__dirname,__filename,process){(function() {
-  var ArtistsView, Backbone, EventsByDayView, Festival, FestivalRouter, FestivalView, InfoView, SponsorsView, TwitterView, VenuesView, conHeight, footHeight, headHeight;
+  var ArtistsView, Backbone, CategoriesView, EventsByDayView, Festival, FestivalRouter, FestivalView, InfoView, SponsorsView, TwitterView, VenuesView, conHeight, footHeight, headHeight;
 
   Backbone = require("backbone-browserify");
 
@@ -4462,6 +4578,8 @@ require.define("/www/js/app.js",function(require,module,exports,__dirname,__file
   FestivalView = require("./festival-view");
 
   ArtistsView = require("./artists-view");
+
+  CategoriesView = require("./categories-view");
 
   EventsByDayView = require("./events-by-day-view");
 
@@ -4540,6 +4658,10 @@ require.define("/www/js/app.js",function(require,module,exports,__dirname,__file
         router: window.festivalRouter
       });
       window.artistsView.render();
+      window.categoriesView = new CategoriesView({
+        router: window.festivalRouter
+      });
+      window.categoriesView.render();
       window.eventsByDayView = new EventsByDayView({
         festival: festival
       });
