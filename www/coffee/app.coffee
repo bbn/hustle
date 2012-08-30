@@ -46,7 +46,7 @@ window.app =
     # // storeCache.onerror = function(err){ 
     # //   console.log("error: "+JSON.stringify(err)); 
     # // }; 
-    # // storeCache.readAsText('data/cityarts.json'); 
+    # // storeCache.readAsText('data/olio2012.json'); 
 
 
     #  // storedData = window.localStorage.getItem "festivalData"

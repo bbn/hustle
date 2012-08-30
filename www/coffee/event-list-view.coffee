@@ -28,5 +28,5 @@ module.exports = class EventListView extends Backbone.View
     else
       for category in categories
         $(@el).addClass category.attributes.name
-        @$('ul.event-categories').append "<li class='#{category.get('name')}'></li>"
+        @$('ul.event-categories').append "<li class='#{category.get('name')}'><span class='cat #{category.get('name')}'></span></li>"
     return @
