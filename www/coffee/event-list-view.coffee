@@ -5,7 +5,7 @@ module.exports = class EventListView extends Backbone.View
 
   tagName : "li"
   
-  template : _.template("<a href='#event/<%= id %>'><div class='details button'><span class='cat'></span><div class='event-info'><span class='name'><%= eventName %></span><span class='venue'><%= venuename %></span><span class='time'><%= timeString %></span></div></div></a>")
+  template : _.template("<a href='#event/<%= id %>'><div class='details button'><ul class='event-categories'></ul><div class='event-info'><span class='name'><%= eventName %></span><span class='venue'><%= venuename %></span><span class='time'><%= timeString %></span></div></div></a>")
 
   initialize : (options)->
     if options.dateFormatString
@@ -28,5 +28,5 @@ module.exports = class EventListView extends Backbone.View
     else
       for category in categories
         $(@el).addClass category.attributes.name
-        @$('cat').addClass(category.attributes.name)
+        @$('ul.event-categories').append "<li class='#{category.get('name')}'></li>"
     return @
