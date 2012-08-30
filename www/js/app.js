@@ -112,7 +112,7 @@
       });
       window.infoView.render();
       window.twitterView = new TwitterView({
-        search: "@NewFormsFest"
+        search: "@oliofestival"
       });
       return window.twitterView.render();
     }

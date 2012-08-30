@@ -4758,7 +4758,7 @@ require.define("/www/js/app.js",function(require,module,exports,__dirname,__file
       });
       window.infoView.render();
       window.twitterView = new TwitterView({
-        search: "@NewFormsFest"
+        search: "@oliofestival"
       });
       return window.twitterView.render();
     }

@@ -13,9 +13,9 @@ exec = (command,exitCallback)->
 
 
 CORDOVA_PATH = "../../../../Desktop/cordova"
-APP_PATH = "NFF2012"
-PACKAGE_NAME = "com.sportsbutter.newformsfest2012"
-PROJECT_NAME = "NewFormsFest2012"
+APP_PATH = "Olio2012"
+PACKAGE_NAME = "com.sportsbutter.olio2012"
+PROJECT_NAME = "Olio2012"
 
 task "create", 'Create phonegap project', (options)->
   exec "../phonegap-2.0/lib/ios/bin/create #{CORDOVA_PATH}/#{APP_PATH} #{PACKAGE_NAME} #{PROJECT_NAME}", (code)->
