@@ -3,7 +3,8 @@ Backbone = require "backbone-browserify"
 
 module.exports = class TwitterView extends Backbone.View
 
-  className : "twitter-view"
+  el: "#twitter-wrapper"
+  #className : "twitter-view"
 
   title : "Twitter"
 
@@ -17,7 +18,7 @@ module.exports = class TwitterView extends Backbone.View
     @search = options.search
 
   render : ()->
-    $(@el).html(@template(@model))
+    # $(@el).html(@template(@model))
     @widget = new TWTR.Widget
       version: 2
       id: "twitter-wrapper"

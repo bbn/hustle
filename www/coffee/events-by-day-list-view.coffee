@@ -6,12 +6,14 @@ module.exports = class EventsByDayListView extends Backbone.View
   tagName : "li"
   
   initialize : (options)-> 
-    @slug = options.slug
+    @id = options.id
     @date = options.date
+    @name = options.name
 
-  template : _.template("<a class='button' href='#events/<%= slug %>'><%= dateString %></a>")
+  template : _.template("<a class='button' href='#event/<%= id %>'><%= name %></a>")
 
   render : ()->
     dateString = dateFormat(@date, "dddd, mmmm dS")
-    $(@el).html(@template({slug:@slug, dateString:dateString}))
+    $(@el).html(@template({id:@id, dateString:dateString, name:@name}))
+
     return @

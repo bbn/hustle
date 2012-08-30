@@ -1,9 +1,9 @@
 Backbone = require "backbone-browserify"
-EventCollection = require "./event-collection"
 
 module.exports = class Category extends Backbone.Model
 
   events : ()->
+    EventCollection = require "./event-collection"
     events = festival.events.filter (e)=>
-      return e.get("category") == @id
+      return @id in e.categories().pluck "id"
     return new EventCollection(events)

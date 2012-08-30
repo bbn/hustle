@@ -205,6 +205,10 @@ a.back:hover{
   text-decoration:none;
 }
 
+.info-view {
+  padding: 0 15px;
+}
+
 #event-list li a, #artist-events li a, #venue-events li a {
   background: transparent url('images/list-arrow.png') no-repeat 98% 35%;
   margin-top: -20px;
@@ -281,13 +285,6 @@ a.back:hover{
 	-webkit-background-clip: content;
 }
 
-/*.back:hover > span {
-  background-image: -webkit-gradient(linear, left top, right bottom, 
-    from(#4286f5), 
-    color-stop(0.5, #4286f5),
-    color-stop(0.5, #194fdb),
-    to(#194fdb));
-}*/
 .dir-button.next {
 	position: relative;
 	padding-right: 5px;
@@ -339,7 +336,7 @@ a.back:hover{
 }
 
 .event-content #venuename .button-wide {
-  padding:0px 4px 0px 15px !important;
+  padding:10px 4px 10px 15px !important;
   color:#646464;
   text-align:left;
   text-decoration:none;
@@ -378,7 +375,6 @@ a.back:hover{
 .details {
   float:left;
   width:85%;
-/*  margin:-15px 0 0 0;*/
 }
 
 .name {

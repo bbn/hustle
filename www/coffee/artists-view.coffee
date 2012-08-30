@@ -20,7 +20,9 @@ module.exports = class ArtistsView extends Backbone.View
   render: ()=> 
     $(@el).html @template()
 
-    for artist in window.festival.artists.models
+    artists = _(window.festival.artists.models).sortBy (artist) -> artist.get("name").toLowerCase()
+
+    for artist in artists
       row = new ArtistListView { model:artist }
       @$('ul#artist-list').append row.render().el
 
