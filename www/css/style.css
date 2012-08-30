@@ -457,7 +457,7 @@ a.back:hover{
 }
 
 .copy-block label {
-  background: url('images/label-red.jpg') no-repeat 0px 4px;
+  background: url('images/label-red.jpg') no-repeat 0px 3px;
   padding-left: 10px;
   color: #444;
 }
