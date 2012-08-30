@@ -19,7 +19,7 @@
 
     EventListView.prototype.tagName = "li";
 
-    EventListView.prototype.template = _.template("<a href='#event/<%= id %>'><div class='details button'><span class='cat'></span><div class='event-info'><span class='name'><%= eventName %></span><span class='venue'><%= venuename %></span><span class='time'><%= timeString %></span></div></div></a>");
+    EventListView.prototype.template = _.template("<a href='#event/<%= id %>'><div class='details button'><ul class='event-categories'></ul><div class='event-info'><span class='name'><%= eventName %></span><span class='venue'><%= venuename %></span><span class='time'><%= timeString %></span></div></div></a>");
 
     EventListView.prototype.initialize = function(options) {
       if (options.dateFormatString) {
@@ -46,7 +46,7 @@
         for (_i = 0, _len = categories.length; _i < _len; _i++) {
           category = categories[_i];
           $(this.el).addClass(category.attributes.name);
-          this.$('cat').addClass(category.attributes.name);
+          this.$('ul.event-categories').append("<li class='" + (category.get('name')) + "'>" + (category.get('name')) + "</li>");
         }
       }
       return this;
