@@ -202,6 +202,10 @@ a.back:hover{
   overflow:hidden;
 } 
 
+.listview .event-info {
+  overflow: hidden;
+}
+
 .info-view {
   padding: 0 15px;
 }
