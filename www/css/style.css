@@ -59,7 +59,7 @@ strong {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight:bold;
+  font-family: 'PTSansNarrowRegular';
   line-height:1,3em;
 }
 
@@ -355,6 +355,7 @@ a.back:hover{
 }
 
 .name {
+  font-family: 'PTSansNarrowRegular';
   font-weight:bold;
   text-transform:uppercase;
 }
@@ -433,12 +434,19 @@ a.back:hover{
 .artist-img img,
 #map img {
   width:90%;
+  overflow: hidden;
 }
 
 .artist-img {
-  width:320px;
+  width:305px;
   height:125px;
   overflow:hidden;
+}
+
+.copy-block {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #777;
+  font-size: 12px;
 }
 
 .event-img img {
@@ -502,6 +510,7 @@ label {
 }
 
 #venuename li a {
+  font-family: 'PTSansNarrowRegular';
   font-size:18px;
   font-weight: bold;
   text-transform: none;
