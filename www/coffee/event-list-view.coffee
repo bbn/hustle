@@ -22,11 +22,11 @@ module.exports = class EventListView extends Backbone.View
       venuename: event.venue().get('name') 
     $(@el).html @template(j)
     
-    category = event.category()
-    if !category
-      console.log "PROBLEM: no category for #{event.name()}"
+    categories = event.categories().models
+    if !categories
+      console.log "PROBLEM: no categories for #{event.name()}"
     else
-      $(@el).addClass category.attributes.name
-      @$('cat').addClass(category.attributes.name)
-
+      for category in categories
+        $(@el).addClass category.attributes.name
+        @$('cat').addClass(category.attributes.name)
     return @

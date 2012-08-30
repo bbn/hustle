@@ -11,6 +11,7 @@ module.exports = class FestivalRouter extends Backbone.Router
     "":                     "home"
     "events-by-day":        "eventsByDay"
     "events/:slug":         "events"
+    "categories":           "categories"
     "category/:id" :        "category"
     "artists":              "artists"
     "artist/:id":           "artist"  
@@ -41,7 +42,7 @@ module.exports = class FestivalRouter extends Backbone.Router
 
   goingBack: false
 
-  handleNavigateBack : ()=>
+  handleNavigateBack : =>
     oldView = @viewStack.pop()
     newView = @viewStack[@viewStack.length-1]
     setTimeout @unpress(newView), 250
@@ -61,12 +62,12 @@ module.exports = class FestivalRouter extends Backbone.Router
         x = y
         break
     return x
-  
-  home : ()=>
+
+  home : =>
     return @goingBack = false if @goingBack    
     @showPage(window.festivalView)
   
-  eventsByDay: ()=>
+  eventsByDay: =>
     return @goingBack = false if @goingBack
     # alert "eventsByDayy!!!!"      
     @showPage(window.eventsByDayView)
@@ -77,30 +78,29 @@ module.exports = class FestivalRouter extends Backbone.Router
     dateString = dateFormat((new Date(events.at(0).get("date"))), "dddd mm/dd")
     view = new EventsView( { title : dateString, eventsToList : events, dateFormatString : "h:MM TT" } )
     view.render()
-    @showPage(view)
+    @showPage view
 
   event: (id)=>
     return @goingBack = false if @goingBack      
     evnt = @findObjectWithId id,@model.events.models
     eventView = new EventView { model : evnt }
     eventView.render()
-    @showPage(eventView)
+    @showPage eventView
+
+  categories: =>
+    return @goingBack = false if @goingBack      
+    @showPage(window.categoriesView)
   
-  # category: function(id) {
-  #   var cat = null;
-  #   for (i=0;i<@model.categories.length;i++) {
-  #     if (@model.categories.at(i).id == id) {
-  #       cat = @model.categories.at(i);
-  #       break;
-  #     }
-  #   }
-  #   var view = new EventsView( { title : cat.get("name"), eventsToList : cat.events() } );
-  #   view.render();
-  #   @showPage('#events-page');
-  #   scrollThis('events-content');
-  # },
+  category: (id)=>
+    return @goingBack = false if @goingBack      
+    cat = @findObjectWithId id,@model.categories.models
+    view = new EventsView
+      title: cat.get("name")
+      eventsToList: cat.events()
+    view.render()
+    @showPage view
   
-  artists: ()=>
+  artists: =>
     return @goingBack = false if @goingBack      
     @showPage(window.artistsView)
   
@@ -111,7 +111,7 @@ module.exports = class FestivalRouter extends Backbone.Router
     artistView.render()
     @showPage(artistView)
 
-  venues: ()=>
+  venues: =>
     return @goingBack = false if @goingBack      
     @showPage(window.venuesView)
   
@@ -122,12 +122,12 @@ module.exports = class FestivalRouter extends Backbone.Router
     venueView.render()
     @showPage(venueView)
     
-  twitter: ()=>
-    return @goingBack = false if @goingBack      
+  twitter: =>
+    return @goingBack = false if @goingBack
+    $("#twitter-wrapper").show()
     @showPage(window.twitterView)
-    window.twitterView.render()
   
-  sponsors: ()=>
+  sponsors: =>
     return @goingBack = false if @goingBack      
     @showPage(window.sponsorsView)
     
@@ -138,6 +138,6 @@ module.exports = class FestivalRouter extends Backbone.Router
     view.render()
     @showPage(view)
 
-  info: ()=>
+  info: =>
     return @goingBack = false if @goingBack      
     @showPage(window.infoView)

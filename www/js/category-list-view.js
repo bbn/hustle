@@ -1,5 +1,5 @@
 (function() {
-  var ArtistListView, Backbone, _,
+  var Backbone, CategoryListView, _,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
@@ -8,25 +8,25 @@
 
   Backbone = require("backbone-browserify");
 
-  module.exports = ArtistListView = (function(_super) {
+  module.exports = CategoryListView = (function(_super) {
 
-    __extends(ArtistListView, _super);
+    __extends(CategoryListView, _super);
 
-    function ArtistListView() {
+    function CategoryListView() {
       this.render = __bind(this.render, this);
-      ArtistListView.__super__.constructor.apply(this, arguments);
+      CategoryListView.__super__.constructor.apply(this, arguments);
     }
 
-    ArtistListView.prototype.tagName = "li";
+    CategoryListView.prototype.tagName = "li";
 
-    ArtistListView.prototype.template = _.template("<a class='details button' href='#artist/<%= id %>'><%= name %></a>");
+    CategoryListView.prototype.template = _.template("<a href='#category/<%= id %>'><%= name %></a>");
 
-    ArtistListView.prototype.render = function() {
+    CategoryListView.prototype.render = function() {
       $(this.el).html(this.template(this.model.toJSON()));
       return this;
     };
 
-    return ArtistListView;
+    return CategoryListView;
 
   })(Backbone.View);
 
