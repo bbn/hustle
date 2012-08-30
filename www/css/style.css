@@ -456,6 +456,12 @@ a.back:hover{
   font-size: 12px;
 }
 
+.copy-block label {
+  background: url('images/label-red.jpg') no-repeat 0px 4px;
+  padding-left: 10px;
+  color: #444;
+}
+
 #venuename li a,
 .copy-block .eventname {
   font-family: 'PTSansNarrowRegular';
