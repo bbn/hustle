@@ -36,10 +36,7 @@
       $(this.el).html(this.template());
       buttons = {
         schedule: "#events-by-day",
-<<<<<<< HEAD
-=======
         categories: "#categories",
->>>>>>> master
         artists: "#artists",
         venues: "#venues",
         sponsors: "#sponsors",

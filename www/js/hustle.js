@@ -3412,9 +3412,7 @@ require.define("/www/js/festival-router.js",function(require,module,exports,__di
 
     FestivalRouter.prototype.events = function(id) {
       var dateString, events, view;
-      if (this.goingBack) {
-        return this.goingBack = false;
-      }
+      if (this.goingBack) return this.goingBack = false;
       events = festival.eventsByDay[id];
       dateString = dateFormat(new Date(events.at(0).get("date")), "dddd mm/dd");
       view = new EventsView({
@@ -3985,7 +3983,7 @@ require.define("/www/js/festival-view.js",function(require,module,exports,__dirn
       buttons = {
         schedule: "#events-by-day",
         categories: "#categories",
-     artists: "#artists",
+        artists: "#artists",
         venues: "#venues",
         sponsors: "#sponsors",
         info: "#info",

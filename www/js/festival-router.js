@@ -118,9 +118,7 @@
 
     FestivalRouter.prototype.events = function(id) {
       var dateString, events, view;
-      if (this.goingBack) {
-        return this.goingBack = false;
-      }
+      if (this.goingBack) return this.goingBack = false;
       events = festival.eventsByDay[id];
       dateString = dateFormat(new Date(events.at(0).get("date")), "dddd mm/dd");
       view = new EventsView({
