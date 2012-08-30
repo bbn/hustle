@@ -69,7 +69,6 @@ module.exports = class FestivalRouter extends Backbone.Router
   
   eventsByDay: =>
     return @goingBack = false if @goingBack
-    # alert "eventsByDayy!!!!"      
     @showPage(window.eventsByDayView)
 
   events: (id)=>
