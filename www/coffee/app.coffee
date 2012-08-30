@@ -111,7 +111,7 @@ window.app =
     window.infoView = new InfoView {model:festival.get("info")}
     window.infoView.render()
 
-    window.twitterView = new TwitterView {search:"@NewFormsFest"} #//festival.get("twitter").search });
+    window.twitterView = new TwitterView {search:"@oliofestival"} #//festival.get("twitter").search });
     window.twitterView.render()
    
 
