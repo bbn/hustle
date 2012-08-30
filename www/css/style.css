@@ -347,14 +347,6 @@ a.back:hover{
   text-align: center;
 }
 
-.cat {
-  width: 8px;
-  height: 36px;
-  display: block;
-  float: left;
-  margin: 0px 12px 25px 0px;
-}
-
 .details {
   width: 90%;
   text-align: left;
@@ -398,28 +390,51 @@ a.back:hover{
   margin:0 auto;
 }
 
-/*TODO improve category stuff -- */
-.fashion.cat, .fashion .cat {
+#category-list li,
+#event-list li {
+  list-style: none;
+}
+
+#category-list li span.cat {
+  float: left;
+}
+
+ul.event-categories {
+  float: left;
+}
+
+ul.event-categories li {
+  display: block;
+}
+
+.cat {
+  width: 8px;
+  height: 17px;
+  display: block;
+  margin: 1px 12px 2px 0px;
+}
+
+.fashion.cat{
   background-color:#CF1293;
 }
 
-.film.cat, .film .cat {
+.film.cat {
   background-color: #073f92;
 }
 
-.comedy.cat, .comedy .cat {
+.comedy.cat {
   background-color:#75b636;
 }
 
-.music.cat, .music .cat {
+.music.cat {
   background-color:#cd1608;
 }
 
-.art.cat, .art .cat {
+.art.cat {
   background-color:#1695D1;
 }
 
-.skate.cat, .skate .cat {
+.skate.cat {
   background-color:#F1A532;
 }
 
@@ -457,7 +472,7 @@ a.back:hover{
 }
 
 .copy-block label {
-  background: url('images/label-red.jpg') no-repeat 0px 3px;
+  background: url('images/label-gr.jpg') no-repeat 0px 1px;
   padding-left: 10px;
   color: #444;
 }
@@ -487,39 +502,6 @@ a.back:hover{
   width:320px;
   height:125px;
   overflow:hidden;
-}
-
-
-#legend {
-    background:#333;
-    width:100%;
-    overflow:hidden;
-}
-
-#legend li {
-  float:left;
-  padding:3px 6px;
-  text-transform:uppercase;
-  font-weight:bold;
-  font-size:12px;
-  color:#333;
-  list-style:none;
-  border-right:1px solid #fff;
-  width:45px;
-}
-#legend li:last-child {
-  border-right:0px;
-}
-
-#legend li a {
-  color:#fff;
-  text-decoration:none;
-}
-
-#legend li .cat {
-  width:100%;
-  margin:3px 4px 0 0;
-  -webkit-border-radius:3px;
 }
 
 .hidden {

@@ -47,7 +47,7 @@
         for (_i = 0, _len = categories.length; _i < _len; _i++) {
           category = categories[_i];
           $(this.el).addClass(category.attributes.name);
-          this.$('ul.event-categories').append("<li class='" + (category.get('name')) + "'></li>");
+          this.$('ul.event-categories').append("<li class='" + (category.get('name')) + "'><span class='cat " + (category.get('name')) + "'></span></li>");
         }
       }
       return this;

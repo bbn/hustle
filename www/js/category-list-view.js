@@ -20,7 +20,7 @@
 
     CategoryListView.prototype.tagName = "li";
 
-    CategoryListView.prototype.template = _.template("<a class='details button' href='#category/<%= id %>'><%= name %></a>");
+    CategoryListView.prototype.template = _.template("<a class='details button' href='#category/<%= id %>'><span class='cat <%= name %>'></span><%= name %></a>");
 
     CategoryListView.prototype.render = function() {
       $(this.el).html(this.template(this.model.toJSON()));

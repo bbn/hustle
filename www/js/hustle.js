@@ -3840,7 +3840,7 @@ require.define("/www/js/event-list-view.js",function(require,module,exports,__di
         for (_i = 0, _len = categories.length; _i < _len; _i++) {
           category = categories[_i];
           $(this.el).addClass(category.attributes.name);
-          this.$('ul.event-categories').append("<li class='" + (category.get('name')) + "'></li>");
+          this.$('ul.event-categories').append("<li class='" + (category.get('name')) + "'><span class='cat " + (category.get('name')) + "'></span></li>");
         }
       }
       return this;
@@ -3989,7 +3989,7 @@ require.define("/www/js/sponsor-view.js",function(require,module,exports,__dirna
       return SponsorView.__super__.constructor.apply(this, arguments);
     }
 
-    SponsorView.prototype.template = _.template('<div class="copy-block"><div class="image"><img src="img/sponsors/<%= image %>" width="150" height="150" style="margin:10px auto;display:block"></div><div class="blurb"><%= blurb %></div><div class="url"><a href="<%= url %>" class="url"><%= url %></a></div></div>');
+    SponsorView.prototype.template = _.template('<div id="sponsor-page" class="copy-block"><div class="image"><img src="img/sponsors/<%= image %>" width="150" height="150" style="margin:10px auto;display:block"></div><div class="blurb"><%= blurb %></div><div class="url"><a href="<%= url %>" class="url"><%= url %></a></div></div>');
 
     SponsorView.prototype.title = null;
 
@@ -4256,7 +4256,7 @@ require.define("/www/js/category-list-view.js",function(require,module,exports,_
 
     CategoryListView.prototype.tagName = "li";
 
-    CategoryListView.prototype.template = _.template("<a class='details button' href='#category/<%= id %>'><%= name %></a>");
+    CategoryListView.prototype.template = _.template("<a class='details button' href='#category/<%= id %>'><span class='cat <%= name %>'></span><%= name %></a>");
 
     CategoryListView.prototype.render = function() {
       $(this.el).html(this.template(this.model.toJSON()));
