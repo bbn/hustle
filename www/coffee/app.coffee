@@ -68,7 +68,6 @@ window.app =
       
 
   checkConnection: ()->
-    console.log "checking internet connection..."
     networkState = navigator.network.connection.type
     states = {}
     states[Connection.UNKNOWN]  = 'Unknown connection'
