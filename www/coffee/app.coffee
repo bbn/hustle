@@ -4,6 +4,7 @@ FestivalRouter = require "./festival-router"
 FestivalView = require "./festival-view"
 
 ArtistsView = require "./artists-view"
+CategoriesView = require "./categories-view"
 EventsByDayView = require "./events-by-day-view"
 SponsorsView = require "./sponsors-view"
 VenuesView = require "./venues-view"
@@ -95,6 +96,9 @@ window.app =
     window.artistsView = new ArtistsView {router:window.festivalRouter}
     window.artistsView.render()
 
+    window.categoriesView = new CategoriesView {router:window.festivalRouter}
+    window.categoriesView.render()
+
     window.eventsByDayView = new EventsByDayView {festival:festival}
     window.eventsByDayView.render()
 
@@ -103,20 +107,12 @@ window.app =
 
     window.venuesView = new VenuesView {festival:festival}
     window.venuesView.render()
-     
-     # // //TODO remove the below.
-     # // //create a view for the events-by-day div. populate the category footer in there.
-     # // //create a view for the category footer. use it all over.
-     # // festival.categories.forEach(function(c) {
-     # //   tab = new CategoryFooterListView( { model : c } );
-     # //   $("#legend").append(tab.render().el);
-     # // });
 
     window.infoView = new InfoView {model:festival.get("info")}
     window.infoView.render()
 
     window.twitterView = new TwitterView {search:"@NewFormsFest"} #//festival.get("twitter").search });
-    # //window.twitterView.render(); 
+    window.twitterView.render()
    
 
 # TODO do we need the below method??
