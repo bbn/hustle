@@ -456,6 +456,22 @@ a.back:hover{
   font-size: 12px;
 }
 
+#venuename li a,
+.copy-block .eventname {
+  font-family: 'PTSansNarrowRegular';
+  font-size:18px;
+  line-height: 1.4em;
+  text-transform: none;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  width: 100%;
+}
+
+#venuename li {
+  margin:0 0 16px 0;
+  list-style-type:none;
+}
+
 .event-img img {
   width:320px;
   height:125px;
@@ -514,21 +530,6 @@ label {
 
 #event-page #date {
   margin:0 0 16px 0;
-}
-
-#venuename li a {
-  font-family: 'PTSansNarrowRegular';
-  font-size:18px;
-  font-weight: bold;
-  text-transform: none;
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-  width: 100%;
-}
-
-#venuename li {
-  margin:0 0 16px 0;
-  list-style-type:none;
 }
 
 /*twitter*/
