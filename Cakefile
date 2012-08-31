@@ -14,7 +14,7 @@ exec = (command,exitCallback)->
 
 CORDOVA_PATH = "../../../../Desktop/cordova"
 APP_PATH = "Olio2012"
-PACKAGE_NAME = "com.sportsbutter.olio2012"
+PACKAGE_NAME = "com.sportsbutter.oliofestival"
 PROJECT_NAME = "Olio2012"
 
 task "create", 'Create phonegap project', (options)->
