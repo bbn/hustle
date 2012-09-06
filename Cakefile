@@ -12,14 +12,15 @@ exec = (command,exitCallback)->
   x.on 'exit', exitCallback 
 
 
-CORDOVA_PATH = "../../../../Desktop/cordova"
-APP_PATH = "NFF2012"
-PACKAGE_NAME = "com.sportsbutter.newformsfest2012"
-PROJECT_NAME = "NewFormsFest2012"
+data = fs.readFileSync "./config/app-info.json"
+appConfig = JSON.parse data
+
 
 task "create", 'Create phonegap project', (options)->
-  exec "../phonegap-2.0/lib/ios/bin/create #{CORDOVA_PATH}/#{APP_PATH} #{PACKAGE_NAME} #{PROJECT_NAME}", (code)->
-    print "xcode project created.\n"
+  fs.readdir appConfig.buildPath, (err,data) ->
+    fs.mkdirSync appConfig.buildPath if err
+    exec "../phonegap-2.0/lib/ios/bin/create #{appConfig.buildPath}/#{appConfig.appPath} #{appConfig.packageName} #{appConfig.projectName}", (code)->
+      print "xcode project created.\n"
 
 
 
@@ -57,36 +58,36 @@ task "browserify", "browserify all JS files", (options) ->
       invoke "copywww"
 
 task "copywww", 'Copy www directory into build source', (options)->
-  exec "cp -R www/ #{CORDOVA_PATH}/#{APP_PATH}/www/", (code)->
+  exec "cp -R www/ #{appConfig.buildPath}/#{appConfig.appPath}/www/", (code)->
     print "copied www.\n"
     invoke "copyconfig"
 
 task "copyconfig", 'Copy configuration into build source', (options)->
-  exec "cp config/Cordova.plist #{CORDOVA_PATH}/#{APP_PATH}/#{PROJECT_NAME}/", (code)->
+  exec "cp config/Cordova.plist #{appConfig.buildPath}/#{appConfig.appPath}/#{appConfig.projectName}/", (code)->
     print "copied config.\n"
     invoke "copyicons"
 
 task "copyicons", "Copy icon files", (options)->
-  exec "cp -R icons/ #{CORDOVA_PATH}/#{APP_PATH}/#{PROJECT_NAME}/Resources/icons", (code)->
+  exec "cp -R icons/ #{appConfig.buildPath}/#{appConfig.appPath}/#{appConfig.projectName}/Resources/icons", (code)->
     print "copied icons.\n"
     invoke "copysplash"
 
 task "copysplash", "Copy splash files", (options)->
-  exec "cp -R splash/ #{CORDOVA_PATH}/#{APP_PATH}/#{PROJECT_NAME}/Resources/splash", (code)->
+  exec "cp -R splash/ #{appConfig.buildPath}/#{appConfig.appPath}/#{appConfig.projectName}/Resources/splash", (code)->
     print "copied splash.\n"
     invoke "build-debug"
 
 
 task "build-debug", 'Build phonegap debug', (options) ->
-  exec "#{CORDOVA_PATH}/#{APP_PATH}/cordova/debug", (code)->
+  exec "#{appConfig.buildPath}/#{appConfig.appPath}/cordova/debug", (code)->
     print "emulator exited.\n"
-  exec "tail -f #{CORDOVA_PATH}/#{APP_PATH}/console.log", (code)->
+  exec "tail -f #{appConfig.buildPath}/#{appConfig.appPath}/console.log", (code)->
     print "tail exited.\n"
 
 task "emulate", 'Launch emulator', (options) ->
-  exec "#{CORDOVA_PATH}/#{APP_PATH}/cordova/emulate", (code)->
+  exec "#{appConfig.buildPath}/#{appConfig.appPath}/cordova/emulate", (code)->
     print "emulate complete.\n" 
-  exec "tail -f #{CORDOVA_PATH}/#{APP_PATH}/console.log", (code)->
+  exec "tail -f #{appConfig.buildPath}/#{appConfig.appPath}/console.log", (code)->
     print "tail exited.\n"
 
 
