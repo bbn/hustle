@@ -15,7 +15,6 @@ exec = (command,exitCallback)->
 data = fs.readFileSync "./config/app-info.json"
 appConfig = JSON.parse data
 
-
 task "create", 'Create phonegap project', (options)->
   fs.readdir appConfig.buildPath, (err,data) ->
     fs.mkdirSync appConfig.buildPath if err

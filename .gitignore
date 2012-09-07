@@ -7,4 +7,5 @@
 *.tmproj
 *.pyc
 node_modules
+www/js/*.js
 build

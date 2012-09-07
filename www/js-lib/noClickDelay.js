@@ -42,8 +42,6 @@ NoClickDelay.prototype = {
 			this.anchor = null;
 		}
 		
-		// alert( this.theTarget.className );
-
 		this.element.addEventListener('touchmove', this, false);
 		this.element.addEventListener('touchend', this, false);
 	},
