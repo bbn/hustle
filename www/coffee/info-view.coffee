@@ -9,7 +9,7 @@ module.exports = class InfoView extends Backbone.View
 
   backLabel : "Back"
 
-  template : _.template('<div class="copy-block"><p><%= ticketinfo %></p><p><%= about %></p><p><a href="<%= url %>" class="url"><%= url %></a></p><div id="credit"><h3>Who made this app?</h3><br>Your pals at <a id="credit-link" href="http://www.mainsocial.com">mainsocial</a> made this.</div></div>')
+  template : _.template('<div class="copy-block"><p><%= ticketinfo %></p><p><%= about %></p><p><a href="<%= url %>" class="url"><%= url %></a></p><div id="credit"><h3>Who made this app?</h3><br>Your pals at <a id="credit-link" href="http://www.mainsocial.com" target="_blank">mainsocial</a> made this.</div></div>')
 
   render : ()=>
     $(@el).html(@template(@model))
