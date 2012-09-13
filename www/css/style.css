@@ -97,7 +97,7 @@ p {
 
 a {
   color:#999;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
  
@@ -472,9 +472,12 @@ ul.event-categories li {
 }
 
 .copy-block label {
-  background: url('images/label-gr.jpg') no-repeat 0px 1px;
-  padding-left: 10px;
-  color: #444;
+  /*background: url('images/label-gr.jpg') no-repeat 0px 1px;
+    padding-left: 10px;
+    color: #444;*/
+  padding: 1px 4px;
+  color: white;
+  display: inline-block;
 }
 
 #venuename li a,
