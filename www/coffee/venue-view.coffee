@@ -4,7 +4,7 @@ EventListView = require "./event-list-view"
 
 module.exports = class VenueView extends Backbone.View
   
-  template : _.template('<div class="copy-block"><div id="map" class="loading"><img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= address %>&zoom=15&size=320x200&markers=color:red%7C<%=address%>&sensor=false"></div><div class="name"><%= name %></div><%= address %><br /><label>EVENTS AT THIS VENUE</label></div><div id="venue-wrapper"><ul id="venue-events" class="listview"></ul></div>')
+  template : _.template('<div class="copy-block"><div id="map" class="loading"><a href="http://maps.google.com/maps?q=<%= address %>&z=15" target="_blank"><img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= address %>&zoom=15&size=320x200&markers=color:red%7C<%=address%>&sensor=false"></a></div><div class="name"><%= name %></div><%= address %><br /><label>EVENTS AT THIS VENUE</label></div><div id="venue-wrapper"><ul id="venue-events" class="listview"></ul></div>')
 
   title : null
 
